@@ -1,13 +1,12 @@
-package com.example.shaumapps.kalender
+package com.example.shaumapps.ui.kalender
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.LinearLayout.LayoutParams
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.shaumapps.R
-import org.w3c.dom.Text
+import com.example.shaumapps.util.Tanggal
 
 class ListTanggalAdapter(private val listTanggal : ArrayList<Tanggal>) : RecyclerView.Adapter<ListTanggalAdapter.ListViewHolder>() {
     class ListViewHolder (itemView: View): RecyclerView.ViewHolder(itemView) {

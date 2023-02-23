@@ -1,12 +1,12 @@
-package com.example.shaumapps
+package com.example.shaumapps.ui.kalender
 
 import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.shaumapps.kalender.ListTanggalAdapter
-import com.example.shaumapps.kalender.Tanggal
+import com.example.shaumapps.R
+import com.example.shaumapps.util.Tanggal
 
 class KalenderActivity : AppCompatActivity() {
     private lateinit var rvTanggal: RecyclerView

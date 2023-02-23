@@ -1,9 +1,10 @@
-package com.example.shaumapps
+package com.example.shaumapps.ui
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.shaumapps.databinding.ActivityMainBinding
+import com.example.shaumapps.ui.kalender.KalenderActivity
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
