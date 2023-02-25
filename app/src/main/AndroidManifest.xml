@@ -3,18 +3,27 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:usesCleartextTraffic="true"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ShaumApps"
         tools:targetApi="31">
+<!--        <activity-->
+<!--            android:name=".ui.doa.DoaActivity"-->
+<!--            android:exported="false" />-->
         <activity
             android:name=".ui.MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.tasbih.TasbihActivity"
             android:exported="false" />
         <activity
             android:name=".ui.kalender.KalenderActivity"
@@ -24,7 +33,7 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".ui.tasbih.TasbihActivity"
+            android:name=".ui.doa.DoaActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
