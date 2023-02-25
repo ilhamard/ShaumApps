@@ -141,7 +141,7 @@ class TasbihActivity : AppCompatActivity() {
     }
 
     private fun alert() {
-        val colorActive = ContextCompat.getColor(this, com.example.shaumapps.R.color.teal_200)
+        val colorActive = ContextCompat.getColor(this, R.color.primary)
         if (viewModel.isVibrateAlert) {
             binding.vibrate.backgroundTintList = ColorStateList.valueOf(colorActive)
         } else {
