@@ -29,5 +29,22 @@ class DoaActivity : AppCompatActivity() {
         viewModel.doaRespone.observe(this){
             Toast.makeText(this, "$it", Toast.LENGTH_SHORT).show()
         }
+
+        viewModel.getHadis()
+
+        viewModel.hadisRespone.observe(this){
+            Log.d("DoaActivity", "cek data kedua $it")
+        }
     }
 }
+
+//HR
+//abu-daud = 4418
+//ahmad = 12
+//bukhari = 6638
+//darimi = 2949
+//ibnu-majah = 4285
+//malik = 1587
+//muslim = 4930
+//nasai = 5364
+//tirmidzi = 3625
