@@ -20,7 +20,7 @@
 <!--            android:name=".ui.doa.DoaActivity"-->
 <!--            android:exported="false" />-->
         <activity
-            android:name=".ui.MainActivity"
+            android:name=".ui.doa.DoaActivity"
             android:exported="false" />
         <activity
             android:name=".ui.tasbih.TasbihActivity"
@@ -33,7 +33,7 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".ui.doa.DoaActivity"
+            android:name=".ui.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

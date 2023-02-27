@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.MainActivity"
+    android:background="#F9FCFB">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:context=".MainActivity">
+
+        <FrameLayout
+            android:id="@+id/fragment_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <nl.joery.animatedbottombar.AnimatedBottomBar
+            android:id="@+id/animatedBottomBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/nav_rounded"
+            app:abb_indicatorAppearance="round"
+            app:abb_indicatorColor="#FF9800"
+            app:abb_indicatorHeight="4dp"
+            app:abb_indicatorLocation="bottom"
+            app:abb_indicatorMargin="16dp"
+            app:abb_selectedTabType="text"
+            app:abb_tabColor="#454545"
+            app:abb_tabColorSelected="#59CE8F"
+            app:abb_tabs="@menu/bottom_nav">
+        </nl.joery.animatedbottombar.AnimatedBottomBar>
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
