@@ -12,6 +12,11 @@ interface ApiService {
     @GET("/api")
     fun getDoaHarian(): Call<List<DoaHarianResponseItem>>
 
+    @GET("/api/doa/{judul}")
+    fun getDoaByJudul(
+        @Path("judul") judul: String
+    ): Call<DoaHarianResponseItem>
+
     @GET
     fun getRandomHadis(
         @Url url: String

@@ -47,6 +47,27 @@ class DoaViewModel : ViewModel() {
         })
     }
 
+    fun getDoaByJudul(judul: String){
+        val client = ApiConfig.getApiService().getDoaByJudul(judul)
+        client.enqueue(object : Callback<DoaHarianResponseItem>{
+            override fun onResponse(
+                call: Call<DoaHarianResponseItem>,
+                response: Response<DoaHarianResponseItem>,
+            ) {
+                if (response.isSuccessful){
+                    val responseBody = response.body()
+                    if (responseBody != null){
+                        _doaResponse.value = arrayListOf(responseBody)
+                    }
+                }
+            }
+
+            override fun onFailure(call: Call<DoaHarianResponseItem>, t: Throwable) {
+                Log.e("DoaViewModel", "onFailure: ${t.message}")
+            }
+        })
+    }
+
     fun getHadis() {
         val hrList = mutableListOf("abu-daud","ahmad","bukhari","darimi","ibnu-majah","malik","muslim","nasai","tirmidzi")
         val hrRandom = hrList.random()

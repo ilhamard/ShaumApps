@@ -33,6 +33,10 @@ class TasbihActivity : AppCompatActivity() {
         binding = ActivityTasbihBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        setSupportActionBar(binding.myToolbar)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        supportActionBar?.title = "Tasbih"
+
         sp = SoundPool.Builder()
             .setMaxStreams(10)
             .build()
@@ -48,10 +52,6 @@ class TasbihActivity : AppCompatActivity() {
         soundId = sp.load(this, R.raw.tick, 1)
 
         viewModel = ViewModelProvider(this).get(TasbihViewModel::class.java)
-
-        setSupportActionBar(binding.myToolbar)
-        supportActionBar?.setDisplayHomeAsUpEnabled(true)
-        supportActionBar?.title = "Tasbih"
 
         binding.jumlahTarget.text = "/ ${viewModel.target}"
         binding.hitung.text = "${viewModel.count}"
