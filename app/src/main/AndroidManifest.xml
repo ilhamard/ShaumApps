@@ -13,15 +13,17 @@
         android:theme="@style/Theme.ShaumApps"
         tools:targetApi="31" >
         <activity
-            android:name=".JadwalShalatActivity"
+            android:name=".ui.jadwal_shalat.JadwalShalatActivity"
             android:exported="false" >
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
+
         <activity
-            android:name=".MainActivity"
-            android:exported="true" >
+            android:name=".ui.MainActivity"
+            android:exported="true">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
