@@ -24,8 +24,8 @@ data class Todo(
     var status: Boolean? = false,
 
     @ColumnInfo("created_at")
-    var createdAt: Date? = null,
+    var createdAt: String? = null,
 
     @ColumnInfo("updated_at")
-    var updatedAt: Date? = null
+    var updatedAt: String? = null
 ): Parcelable

@@ -9,22 +9,22 @@
     <ImageView
         android:id="@+id/header"
         android:layout_width="match_parent"
-        android:layout_height="70dp"
+        android:layout_height="80dp"
         android:background="@drawable/bg_header"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btn_kembali"
-        android:layout_width="35dp"
-        android:layout_height="35dp"
-        android:layout_marginTop="15dp"
-        android:layout_marginStart="20dp"
-        android:background="@drawable/ic_kembali"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"/>
+<!--    <androidx.appcompat.widget.AppCompatButton-->
+<!--        android:id="@+id/btn_kembali"-->
+<!--        android:layout_width="35dp"-->
+<!--        android:layout_height="35dp"-->
+<!--        android:layout_marginTop="15dp"-->
+<!--        android:layout_marginStart="20dp"-->
+<!--        android:background="@drawable/ic_kembali"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"/>-->
 
     <TextView
         android:layout_width="wrap_content"
@@ -32,21 +32,175 @@
         android:text="Maret"
         android:textSize="20sp"
         android:textColor="#FFFFFF"
-        android:layout_marginEnd="72dp"
         app:layout_constraintTop_toTopOf="@id/header"
-        app:layout_constraintStart_toEndOf="@id/btn_kembali"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="@id/header"/>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_tanggal"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="90dp"
         android:scrollbars="horizontal"
+        android:layout_marginTop="24dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
         app:layout_constraintTop_toBottomOf="@id/header"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         tools:listitem="@layout/item_list_kalender"/>
+
+    <TextView
+        android:id="@+id/tv_hariIni"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hari Ini"
+        android:textSize="14sp"
+        android:textColor="#4A4949"
+        android:textStyle="bold"
+        android:layout_marginTop="24dp"
+        android:layout_marginStart="24dp"
+        app:layout_constraintTop_toBottomOf="@+id/rv_tanggal"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <CheckBox
+        android:id="@+id/chck_task1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="10dp"
+        android:buttonTint="@color/teal_200"
+        app:layout_constraintTop_toBottomOf="@+id/tv_hariIni"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_nama_task"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nama Task"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@id/chck_task1"
+        app:layout_constraintTop_toTopOf="@id/chck_task1"
+        app:layout_constraintBottom_toBottomOf="@id/chck_task1"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hari Ini"
+        android:textSize="12sp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tv_nama_task"
+        app:layout_constraintBottom_toBottomOf="@id/tv_nama_task"/>
+
+    <CheckBox
+        android:id="@+id/chck_task2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="10dp"
+        android:buttonTint="@color/teal_200"
+        app:layout_constraintTop_toBottomOf="@+id/chck_task1"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_nama_task1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nama Task"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@id/chck_task2"
+        app:layout_constraintTop_toTopOf="@id/chck_task2"
+        app:layout_constraintBottom_toBottomOf="@id/chck_task2"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hari Ini"
+        android:textSize="12sp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tv_nama_task1"
+        app:layout_constraintBottom_toBottomOf="@id/tv_nama_task1"/>
+
+    <TextView
+        android:id="@+id/tv_selesai"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Selesai"
+        android:textSize="14sp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:layout_marginTop="48dp"
+        android:layout_marginStart="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_nama_task1"/>
+
+    <CheckBox
+        android:id="@+id/chck_task3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="10dp"
+        android:buttonTint="@color/teal_200"
+        app:layout_constraintTop_toBottomOf="@+id/tv_selesai"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_nama_task2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nama Task"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@id/chck_task3"
+        app:layout_constraintTop_toTopOf="@id/chck_task3"
+        app:layout_constraintBottom_toBottomOf="@id/chck_task3"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hari Ini"
+        android:textSize="12sp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tv_nama_task2"
+        app:layout_constraintBottom_toBottomOf="@id/tv_nama_task2"/>
+
+    <CheckBox
+        android:id="@+id/chck_task4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="10dp"
+        android:buttonTint="@color/teal_200"
+        app:layout_constraintTop_toBottomOf="@+id/chck_task3"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_nama_task3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nama Task"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@id/chck_task4"
+        app:layout_constraintTop_toTopOf="@id/chck_task4"
+        app:layout_constraintBottom_toBottomOf="@id/chck_task4"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hari Ini"
+        android:textSize="12sp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tv_nama_task3"
+        app:layout_constraintBottom_toBottomOf="@id/tv_nama_task3"/>
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

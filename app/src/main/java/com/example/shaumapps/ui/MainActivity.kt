@@ -13,8 +13,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
 
-        binding.btnMasuk.setOnClickListener {
-            val intent = Intent(this@MainActivity, KalenderActivity::class.java)
+        binding.btnStart.setOnClickListener {
+            val intent = Intent(this@MainActivity, HomePageActivity::class.java)
             startActivity(intent)
         }
     }
