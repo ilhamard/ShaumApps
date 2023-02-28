@@ -26,6 +26,9 @@
             android:name=".ui.tasbih.TasbihActivity"
             android:exported="false" />
         <activity
+            android:name=".ui.HomePageActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.kalender.KalenderActivity"
             android:exported="false">
             <meta-data

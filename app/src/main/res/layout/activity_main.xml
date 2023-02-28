@@ -16,7 +16,7 @@
         app:layout_constraintBottom_toTopOf="@+id/btn_username"/>
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btn_masuk"
+        android:id="@+id/btn_start"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:text="Get Started"
@@ -38,7 +38,7 @@
         android:textColor="#81000000"
         android:layout_marginBottom="32dp"
         android:background="@drawable/btn_username"
-        app:layout_constraintBottom_toTopOf="@+id/btn_masuk"
+        app:layout_constraintBottom_toTopOf="@id/btn_start"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
 
