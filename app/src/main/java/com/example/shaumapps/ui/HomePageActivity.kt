@@ -18,7 +18,7 @@ class HomePageActivity : AppCompatActivity() {
         if (savedInstanceState == null) {
             animatedBottomBar.selectTabById(R.id.iBeranda, true)
             fragmentManager = getSupportFragmentManager()
-            val homeFragment = HomeFragment()
+            val homeFragment = BerandaFragment()
             fragmentManager!!.beginTransaction().replace(R.id.fragment_container, homeFragment)
                 .commit()
         }
@@ -31,7 +31,7 @@ class HomePageActivity : AppCompatActivity() {
             ) {
                 var fragment: Fragment? = null
                 when (newTab.id) {
-                    R.id.iBeranda -> fragment = HomeFragment()
+                    R.id.iBeranda -> fragment = BerandaFragment()
                     R.id.iCatatan -> fragment = CatatanFragment()
                     R.id.iKalender -> fragment = KalenderFragment()
                     R.id.iPengaturan -> fragment = SettingFragment()

@@ -1,22 +1,21 @@
 package com.example.shaumapps.ui.doa
 
-import androidx.appcompat.app.AppCompatActivity
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.KeyEvent
+import android.view.Menu
+import android.view.MenuInflater
+import android.view.MenuItem
+import android.view.View
 import android.view.inputmethod.EditorInfo
 import android.widget.TextView
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
-import androidx.lifecycle.get
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.shaumapps.data.remote.response.DoaHarianResponse
-import com.example.shaumapps.data.remote.response.DoaHarianResponseItem
-import com.example.shaumapps.data.remote.retrofit.ApiConfig
+import com.example.shaumapps.R
 import com.example.shaumapps.databinding.ActivityDoaBinding
-import retrofit2.Call
-import retrofit2.Callback
-import retrofit2.Response
 
 class DoaActivity : AppCompatActivity() {
 
@@ -36,25 +35,46 @@ class DoaActivity : AppCompatActivity() {
 
         viewModel = ViewModelProvider(this)[DoaViewModel::class.java]
 
-        viewModel.doaRespone.observe(this){
+        viewModel.getDoaHarian()
+
+        viewModel.doaRespone.observe(this) {
             rvAdapter.setListDoa(it)
             Log.d("DoaActivity", "cek search : $it")
         }
 
         viewModel.getHadis()
 
-        viewModel.hadisRespone.observe(this){
+        viewModel.isLoading.observe(this){
+            if (it == true){
+                binding.progressBar.visibility = View.VISIBLE
+            } else {
+                binding.progressBar.visibility = View.GONE
+            }
+        }
+
+        viewModel.hadisRespone.observe(this) {
             Log.d("DoaActivity", "cek data kedua $it")
         }
 
         setRecyclerView()
 
-        binding.edtSearch.setOnEditorActionListener(object : TextView.OnEditorActionListener{
+        binding.edtSearch.setOnEditorActionListener(object : TextView.OnEditorActionListener {
             override fun onEditorAction(v: TextView?, actionId: Int, event: KeyEvent?): Boolean {
-                if (actionId == EditorInfo.IME_ACTION_SEARCH){
+                if (actionId == EditorInfo.IME_ACTION_SEARCH) {
                     val inputed: String = binding.edtSearch.text.toString()
-                    Toast.makeText(this@DoaActivity, "Mencari sesuatu yang hilang : $inputed", Toast.LENGTH_SHORT).show()
-                    viewModel.getDoaByJudul(inputed)
+                    Log.d("DoaActivity", "hilang ha: $inputed")
+                    Toast.makeText(
+                        this@DoaActivity,
+                        "Mencari sesuatu yang hilang : $inputed",
+                        Toast.LENGTH_SHORT
+                    ).show()
+
+                    if (inputed.isNotEmpty()) {
+                        viewModel.getDoaByJudul(inputed)
+                    } else {
+                        viewModel.getDoaHarian()
+                    }
+
                     return true
                 }
                 return false
@@ -62,7 +82,26 @@ class DoaActivity : AppCompatActivity() {
         })
     }
 
-    private fun setRecyclerView(){
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        val inflater: MenuInflater = menuInflater
+        inflater.inflate(R.menu.menu_bar_doa, menu)
+        return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem) = when (item.itemId) {
+        R.id.action_bookmarked_doa -> {
+            startActivity(Intent(this@DoaActivity, BookmarkDoaActivity::class.java))
+            true
+        }
+
+        else -> {
+            // If we got here, the user's action was not recognized.
+            // Invoke the superclass to handle it.
+            super.onOptionsItemSelected(item)
+        }
+    }
+
+    private fun setRecyclerView() {
         rvAdapter = ListDoaAdapter()
         binding.rvDoa.apply {
             layoutManager = LinearLayoutManager(this@DoaActivity)

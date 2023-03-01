@@ -7,7 +7,7 @@ import androidx.room.PrimaryKey
 import com.google.gson.annotations.SerializedName
 import kotlinx.parcelize.Parcelize
 
-@Entity
+@Entity(tableName = "doa_harian")
 @Parcelize
 data class DoaHarian (
     @PrimaryKey(autoGenerate = true)
@@ -17,12 +17,12 @@ data class DoaHarian (
     @ColumnInfo(name = "judul")
     val judul: String,
 
-    @ColumnInfo(name = "arab")
-    val arab: String,
+    @ColumnInfo(name = "ayat")
+    val ayat: String,
+
+    @ColumnInfo(name = "latin")
+    val latin: String,
 
     @ColumnInfo(name = "artinya")
     val artinya: String,
-
-    @ColumnInfo(name = "latin")
-    val latin: String
 ): Parcelable

@@ -123,7 +123,7 @@ class TasbihActivity : AppCompatActivity() {
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         val inflater: MenuInflater = menuInflater
-        inflater.inflate(com.example.shaumapps.R.menu.menus_action_bar, menu)
+        inflater.inflate(R.menu.menu_bar_tasbih, menu)
         return true
     }
 

@@ -1,5 +1,6 @@
 package com.example.shaumapps.ui.doa
 
+import android.content.Intent
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -35,6 +36,11 @@ class ListDoaAdapter : RecyclerView.Adapter<ListDoaAdapter.ListDoaViewHolder>() 
             with(binding){
                 tvNomor.text = item.id
                 tvJudul.text = item.doa
+                itemDoa.setOnClickListener {
+                    val intent = Intent(it.context, DetailDoaActivity::class.java)
+                    intent.putExtra(DetailDoaActivity.EXTRA_ID_DOA, item.id)
+                    it.context.startActivity(intent)
+                }
             }
         }
     }

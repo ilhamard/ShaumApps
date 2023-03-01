@@ -20,17 +20,18 @@ class DoaViewModel : ViewModel() {
     private val _hadisResponse = MutableLiveData<HadisResponse>()
     val hadisRespone: LiveData<HadisResponse> = _hadisResponse
 
-    init {
-        getDoaHarian()
-    }
+    private val _isLoading = MutableLiveData<Boolean>()
+    val isLoading: LiveData<Boolean> = _isLoading
 
-    private fun getDoaHarian() {
+    fun getDoaHarian() {
+        _isLoading.value = true
         val client = ApiConfig.getApiService().getDoaHarian()
         client.enqueue(object : Callback<List<DoaHarianResponseItem>> {
             override fun onResponse(
                 call: Call<List<DoaHarianResponseItem>>,
                 response: Response<List<DoaHarianResponseItem>>,
             ) {
+                _isLoading.value = false
                 if (response.isSuccessful) {
                     val responseBody = response.body()
                     if (responseBody != null) {
@@ -48,12 +49,14 @@ class DoaViewModel : ViewModel() {
     }
 
     fun getDoaByJudul(judul: String){
+        _isLoading.value = true
         val client = ApiConfig.getApiService().getDoaByJudul(judul)
         client.enqueue(object : Callback<DoaHarianResponseItem>{
             override fun onResponse(
                 call: Call<DoaHarianResponseItem>,
                 response: Response<DoaHarianResponseItem>,
             ) {
+                _isLoading.value = false
                 if (response.isSuccessful){
                     val responseBody = response.body()
                     if (responseBody != null){
@@ -63,6 +66,29 @@ class DoaViewModel : ViewModel() {
             }
 
             override fun onFailure(call: Call<DoaHarianResponseItem>, t: Throwable) {
+                Log.e("DoaViewModel", "onFailure: ${t.message}")
+            }
+        })
+    }
+
+    fun getDoaById(id: String){
+        _isLoading.value = true
+        val client = ApiConfig.getApiService().getDoaById(id)
+        client.enqueue(object : Callback<List<DoaHarianResponseItem>>{
+            override fun onResponse(
+                call: Call<List<DoaHarianResponseItem>>,
+                response: Response<List<DoaHarianResponseItem>>,
+            ) {
+                _isLoading.value = false
+                if (response.isSuccessful){
+                    val responseBody = response.body()
+                    if (responseBody != null){
+                        _doaResponse.value = responseBody
+                    }
+                }
+            }
+
+            override fun onFailure(call: Call<List<DoaHarianResponseItem>>, t: Throwable) {
                 Log.e("DoaViewModel", "onFailure: ${t.message}")
             }
         })
