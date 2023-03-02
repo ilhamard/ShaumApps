@@ -42,20 +42,6 @@ class DoaActivity : AppCompatActivity() {
             Log.d("DoaActivity", "cek search : $it")
         }
 
-        viewModel.getHadis()
-
-        viewModel.isLoading.observe(this){
-            if (it == true){
-                binding.progressBar.visibility = View.VISIBLE
-            } else {
-                binding.progressBar.visibility = View.GONE
-            }
-        }
-
-        viewModel.hadisRespone.observe(this) {
-            Log.d("DoaActivity", "cek data kedua $it")
-        }
-
         setRecyclerView()
 
         binding.edtSearch.setOnEditorActionListener(object : TextView.OnEditorActionListener {

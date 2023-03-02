@@ -9,6 +9,7 @@ import androidx.fragment.app.Fragment
 import com.example.shaumapps.R
 import com.example.shaumapps.databinding.FragmentBerandaBinding
 import com.example.shaumapps.ui.doa.DoaActivity
+import com.example.shaumapps.ui.hadis.HadisActivity
 import com.example.shaumapps.ui.tasbih.TasbihActivity
 
 /**
@@ -22,7 +23,7 @@ class BerandaFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         // Inflate the layout for this fragment
         _binding = FragmentBerandaBinding.inflate(inflater, container, false)
         return binding.root
@@ -39,6 +40,10 @@ class BerandaFragment : Fragment() {
         binding.circleBgTasbih.setOnClickListener {
             val intent = Intent(requireContext(), TasbihActivity::class.java)
             startActivity(intent)
+        }
+
+        binding.circleBgHadits.setOnClickListener {
+            startActivity(Intent(requireContext(), HadisActivity::class.java))
         }
 
     }

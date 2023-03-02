@@ -11,10 +11,10 @@
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:usesCleartextTraffic="true"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ShaumApps"
+        android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
             android:name=".CompassActivityNew"
@@ -33,29 +33,35 @@
         <!-- android:name=".ui.doa.DoaActivity" -->
         <!-- android:exported="false" /> -->
         <activity
+            android:name=".ui.hadis.HadisActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.doa.BookmarkDoaActivity"
             android:exported="false"
             android:parentActivityName=".ui.doa.DoaActivity"/>
         <activity
             android:name=".ui.doa.DetailDoaActivity"
             android:exported="false"
-            android:parentActivityName=".ui.doa.DoaActivity"/>
+            android:parentActivityName=".ui.doa.DoaActivity" />
         <activity
             android:name=".ui.kalender.KalenderActivity"
             android:exported="false" />
 
+        <activity
+            android:name=".ui.doa.DoaActivity"
+            android:exported="false"
+            android:parentActivityName=".ui.HomePageActivity" />
 
         <activity
             android:name=".ui.tasbih.TasbihActivity"
             android:exported="false"
-            android:parentActivityName=".ui.HomePageActivity"/>
+            android:parentActivityName=".ui.HomePageActivity" />
         <activity
             android:name=".ui.HomePageActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.doa.DoaActivity"
+            android:name=".ui.jadwal_shalat.JadwalShalatActivity"
             android:exported="false">
-
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
