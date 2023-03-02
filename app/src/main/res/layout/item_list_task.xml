@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="25dp"
+    android:layout_marginTop="15dp"
+    android:layout_marginEnd="25dp"
+    android:paddingBottom="4dp"
+    android:background="#F7F8FA">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <View
+            android:id="@+id/vw_line"
+            android:layout_width="10dp"
+            android:layout_height="0dp"
+            android:background="#59CE8F"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <CheckBox
+            android:id="@+id/chck_task"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:buttonTint="#59CE8F"
+            android:translationX="0dp"
+            android:text="Nama Task"
+            android:translationY="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@id/vw_line"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/tv_task_hari_ini"/>
+
+<!--        <TextView-->
+<!--            android:id="@+id/tv_nama_task"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Nama Task"-->
+<!--            android:textColor="@color/black"-->
+<!--            android:textSize="14sp"-->
+<!--            app:layout_constraintBottom_toBottomOf="@id/chck_task"-->
+<!--            app:layout_constraintStart_toEndOf="@id/chck_task"-->
+<!--            app:layout_constraintTop_toTopOf="@id/chck_task" />-->
+
+        <TextView
+            android:id="@+id/tv_task_hari_ini"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:text="Hari Ini"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@id/chck_task"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/chck_task"
+            app:layout_constraintStart_toEndOf="@id/chck_task"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.cardview.widget.CardView>
