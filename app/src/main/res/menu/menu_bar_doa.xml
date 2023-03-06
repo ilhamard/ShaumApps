@@ -7,6 +7,6 @@
         android:id="@+id/action_bookmarked_doa"
         android:icon="@drawable/ic_bookmarks"
         android:title="doa tersimpan"
-        app:showAsAction="always"/>
+        app:showAsAction="always" />
 
 </menu>

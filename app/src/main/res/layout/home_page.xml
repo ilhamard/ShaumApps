@@ -32,8 +32,7 @@
             app:abb_selectedTabType="text"
             app:abb_tabColor="#454545"
             app:abb_tabColorSelected="#59CE8F"
-            app:abb_tabs="@menu/bottom_nav">
-        </nl.joery.animatedbottombar.AnimatedBottomBar>
+            app:abb_tabs="@menu/bottom_nav"></nl.joery.animatedbottombar.AnimatedBottomBar>
 
     </RelativeLayout>
 

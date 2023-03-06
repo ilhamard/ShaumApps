@@ -45,7 +45,7 @@ class TasbihActivity : AppCompatActivity() {
             if (status == 0) {
                 spLoaded = true
             } else {
-                Toast.makeText(this@TasbihActivity, "Gagal loaf", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this@TasbihActivity, "Gagal load", Toast.LENGTH_SHORT).show()
             }
         }
 

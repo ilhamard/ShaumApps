@@ -3,22 +3,22 @@
 
     <item
         android:id="@+id/iBeranda"
-        android:title="Beranda"
-        android:icon="@drawable/beranda" />
+        android:icon="@drawable/beranda"
+        android:title="Beranda" />
 
     <item
         android:id="@+id/iCatatan"
-        android:title="Catatan"
-        android:icon="@drawable/catatan" />
+        android:icon="@drawable/catatan"
+        android:title="Catatan" />
 
     <item
         android:id="@+id/iKalender"
-        android:title="Kalender"
-        android:icon="@drawable/kalender" />
+        android:icon="@drawable/kalender"
+        android:title="Kalender" />
 
     <item
         android:id="@+id/iPengaturan"
-        android:title="Pengaturan"
-        android:icon="@drawable/pengaturan" />
+        android:icon="@drawable/pengaturan"
+        android:title="Pengaturan" />
 
 </menu>

@@ -9,6 +9,7 @@ import androidx.fragment.app.Fragment
 import com.dev.shaumapps.databinding.FragmentBerandaBinding
 import com.dev.shaumapps.ui.doa.DoaActivity
 import com.dev.shaumapps.ui.hadis.HadisActivity
+import com.dev.shaumapps.ui.jadwal_shalat.JadwalShalatActivity
 import com.dev.shaumapps.ui.tasbih.TasbihActivity
 
 /**
@@ -45,5 +46,8 @@ class BerandaFragment : Fragment() {
             startActivity(Intent(requireContext(), HadisActivity::class.java))
         }
 
+        binding.circleBgJam.setOnClickListener {
+            startActivity(Intent(requireContext(), JadwalShalatActivity::class.java))
+        }
     }
 }

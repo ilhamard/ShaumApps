@@ -2,6 +2,7 @@ package com.dev.shaumapps.data.remote.retrofit
 
 import com.dev.shaumapps.data.remote.response.DoaHarianResponseItem
 import com.dev.shaumapps.data.remote.response.HadisResponse
+import com.dev.shaumapps.data.remote.response.JadwalShalatResponse
 import retrofit2.Call
 import retrofit2.http.GET
 import retrofit2.http.Path
@@ -25,4 +26,9 @@ interface ApiService {
     fun getRandomHadis(
         @Url url: String,
     ): Call<HadisResponse>
+
+    @GET
+    fun getJadwalByKota(
+        @Url url: String,
+    ): Call<JadwalShalatResponse>
 }

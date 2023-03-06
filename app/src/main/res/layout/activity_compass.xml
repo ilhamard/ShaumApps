@@ -53,57 +53,57 @@
         android:layout_height="20dp"
         android:layout_marginTop="25dp"
         android:background="@drawable/ic_location"
-        app:layout_constraintTop_toBottomOf="@id/header"
+        app:layout_constraintEnd_toStartOf="@id/tv_lokasiTerkini"
         app:layout_constraintStart_toStartOf="@id/tv_arahKiblat"
-        app:layout_constraintEnd_toStartOf="@id/tv_lokasiTerkini"/>
+        app:layout_constraintTop_toBottomOf="@id/header" />
 
     <TextView
         android:id="@+id/tv_lokasiTerkini"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Lokasi terkini"
-        android:textSize="16sp"
-        android:textColor="@color/black"
         android:layout_marginStart="8dp"
         android:layout_marginTop="24dp"
-        app:layout_constraintTop_toBottomOf="@id/header"
+        android:text="Lokasi terkini"
+        android:textColor="@color/black"
+        android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="@id/tv_arahKiblat"
-        app:layout_constraintStart_toEndOf="@id/iv_lokasi"/>
+        app:layout_constraintStart_toEndOf="@id/iv_lokasi"
+        app:layout_constraintTop_toBottomOf="@id/header" />
 
     <TextView
         android:id="@+id/tv_derajat"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Derajat Sudut Kiblat Dari Utara"
-        android:textSize="16sp"
-        android:textColor="@color/black"
         android:layout_marginStart="14dp"
         android:layout_marginTop="16dp"
-        app:layout_constraintStart_toStartOf="@id/iv_lokasi"
+        android:text="Derajat Sudut Kiblat Dari Utara"
+        android:textColor="@color/black"
+        android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="@id/tv_lokasiTerkini"
-        app:layout_constraintTop_toBottomOf="@id/tv_lokasiTerkini"/>
+        app:layout_constraintStart_toStartOf="@id/iv_lokasi"
+        app:layout_constraintTop_toBottomOf="@id/tv_lokasiTerkini" />
 
     <TextView
         android:id="@+id/tv_celcius"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="295.18°"
-        android:textSize="24sp"
-        android:textColor="@color/black"
         android:layout_marginTop="16dp"
-        app:layout_constraintTop_toBottomOf="@id/tv_derajat"
+        android:text="295.18°"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@id/tv_derajat"
         app:layout_constraintStart_toStartOf="@id/tv_derajat"
-        app:layout_constraintEnd_toEndOf="@id/tv_derajat"/>
+        app:layout_constraintTop_toBottomOf="@id/tv_derajat" />
 
 
     <ImageView
         android:id="@+id/img_compass"
         android:layout_width="300dp"
         android:layout_height="300dp"
-        android:background="@drawable/kompas_kiblat"
         android:layout_marginTop="48dp"
+        android:background="@drawable/kompas_kiblat"
         app:layout_constraintEnd_toEndOf="@id/tv_celcius"
         app:layout_constraintStart_toStartOf="@id/tv_celcius"
-        app:layout_constraintTop_toBottomOf="@id/tv_celcius"/>
+        app:layout_constraintTop_toBottomOf="@id/tv_celcius" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

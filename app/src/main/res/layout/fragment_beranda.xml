@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#F9FCFB">
 
-<!-- Start Section Header -->
+    <!-- Start Section Header -->
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout2"
@@ -34,25 +33,25 @@
         android:id="@+id/txt_greeting"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Selamat pagi!"
         android:layout_marginStart="10dp"
-        app:layout_constraintStart_toEndOf="@+id/img_profile"
-        app:layout_constraintTop_toTopOf="@+id/img_profile"
-        android:textSize="12dp"
         android:layout_marginTop="5dp"
-        android:textColor="#fff"/>
+        android:text="Selamat pagi!"
+        android:textColor="#fff"
+        android:textSize="12dp"
+        app:layout_constraintStart_toEndOf="@+id/img_profile"
+        app:layout_constraintTop_toTopOf="@+id/img_profile" />
 
     <TextView
         android:id="@+id/txt_username"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Agus Ihsan Mochamad"
         android:layout_marginStart="10dp"
-        app:layout_constraintBottom_toBottomOf="@+id/img_profile"
-        app:layout_constraintStart_toEndOf="@+id/img_profile"
-        android:textStyle="bold"
+        android:layout_marginBottom="5dp"
+        android:text="Agus Ihsan Mochamad"
         android:textColor="#fff"
-        android:layout_marginBottom="5dp"/>
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/img_profile"
+        app:layout_constraintStart_toEndOf="@+id/img_profile" />
 
     <ImageView
         android:id="@+id/img_bg_notif"
@@ -62,7 +61,7 @@
         app:layout_constraintBottom_toBottomOf="@+id/img_profile"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/img_profile"
-        app:srcCompat="@drawable/white_circle_bg_small"/>
+        app:srcCompat="@drawable/white_circle_bg_small" />
 
     <ImageView
         android:id="@+id/img_notification"
@@ -74,9 +73,9 @@
         app:layout_constraintTop_toTopOf="@+id/img_bg_notif"
         app:srcCompat="@drawable/notification" />
 
-<!-- End Section Header-->
+    <!-- End Section Header-->
 
-<!-- Start Section Menu-->
+    <!-- Start Section Menu-->
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout"
@@ -153,9 +152,9 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
                     android:layout_marginStart="16dp"
-                    android:layout_marginEnd="8dp">
+                    android:layout_marginEnd="8dp"
+                    android:orientation="vertical">
 
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="match_parent"
@@ -199,9 +198,9 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
                     android:layout_marginStart="8dp"
-                    android:layout_marginEnd="16dp">
+                    android:layout_marginEnd="16dp"
+                    android:orientation="vertical">
 
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="match_parent"
@@ -291,9 +290,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center"
-                android:paddingBottom="20dp"
                 android:paddingTop="8dp"
-                >
+                android:paddingBottom="20dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -342,10 +340,9 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
                     android:layout_marginStart="16dp"
                     android:layout_marginEnd="8dp"
-                    >
+                    android:orientation="vertical">
 
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="match_parent"
@@ -389,9 +386,9 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
                     android:layout_marginStart="8dp"
-                    android:layout_marginEnd="16dp">
+                    android:layout_marginEnd="16dp"
+                    android:orientation="vertical">
 
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="match_parent"
@@ -481,34 +478,33 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-<!-- End Section Menu-->
+    <!-- End Section Menu-->
 
-<!--Start Section Konten Highlight-->
+    <!--Start Section Konten Highlight-->
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/artikel_highlight"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingBottom="100dp"
+        android:layout_marginTop="24dp"
         android:background="@drawable/white_btn_background_konten"
         android:elevation="1dp"
-        android:layout_marginTop="24dp"
+        android:paddingBottom="100dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/constraintLayout">
 
         <TextView
             android:id="@+id/tittle_artikel"
-            android:textColor="@color/black"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="Artikel"
-            app:layout_constraintStart_toStartOf="@id/artikel_highlight"
-            app:layout_constraintTop_toTopOf="@id/artikel_highlight"
-            android:textStyle="bold"
             android:layout_marginStart="24dp"
-            android:layout_marginTop="18dp">
-        </TextView>
+            android:layout_marginTop="18dp"
+            android:text="Artikel"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@id/artikel_highlight"
+            app:layout_constraintTop_toTopOf="@id/artikel_highlight"></TextView>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -516,26 +512,25 @@
         android:id="@+id/kalam_highlight"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingBottom="100dp"
+        android:layout_marginTop="24dp"
         android:background="@drawable/white_btn_background_konten"
         android:elevation="1dp"
-        android:layout_marginTop="24dp"
+        android:paddingBottom="100dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/artikel_highlight">
 
         <TextView
             android:id="@+id/tittle_kalam"
-            android:textColor="@color/black"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="Kalam"
-            app:layout_constraintStart_toStartOf="@id/kalam_highlight"
-            app:layout_constraintTop_toTopOf="@id/kalam_highlight"
-            android:textStyle="bold"
             android:layout_marginStart="24dp"
-            android:layout_marginTop="18dp">
-        </TextView>
+            android:layout_marginTop="18dp"
+            android:text="Kalam"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@id/kalam_highlight"
+            app:layout_constraintTop_toTopOf="@id/kalam_highlight"></TextView>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -543,16 +538,16 @@
         android:id="@+id/add_image"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
-        android:elevation="2dp"
+        android:layout_marginEnd="24dp"
         android:layout_marginBottom="130dp"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:elevation="2dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginEnd="24dp">
+        app:layout_constraintEnd_toEndOf="parent">
 
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:src="@drawable/button_add"/>
+            android:src="@drawable/button_add" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
     <!--End Section Konten Highlight-->

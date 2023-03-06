@@ -43,24 +43,24 @@
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
+            android:layout_weight="1"
             android:gravity="center"
-            android:layout_weight="1">
+            android:orientation="vertical">
 
             <TextView
                 android:id="@+id/tv_nomor"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@color/text"
-                tools:text="ini id"/>
+                tools:text="ini id" />
 
             <TextView
                 android:id="@+id/tv_judul"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@color/text"
-                android:textStyle="bold"
                 android:textSize="16sp"
+                android:textStyle="bold"
                 tools:text="ini judul" />
 
         </LinearLayout>
@@ -77,17 +77,17 @@
         android:id="@+id/tv_arab"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        tools:text="Ini adalah ayat"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
         android:textAlignment="center"
         android:textColor="@color/text"
         android:textSize="24sp"
         android:textStyle="bold"
-        android:layout_marginTop="24dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/header_doa" />
+        app:layout_constraintTop_toBottomOf="@id/header_doa"
+        tools:text="Ini adalah ayat" />
 
     <TextView
         android:id="@+id/tv_latin"
@@ -113,11 +113,11 @@
         android:layout_marginEnd="18dp"
         android:justificationMode="inter_word"
         android:textAlignment="center"
-        tools:text="ini artinya"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_latin" />
+        app:layout_constraintTop_toBottomOf="@id/tv_latin"
+        tools:text="ini artinya" />
 
     <ProgressBar
         android:id="@+id/progress_bar"

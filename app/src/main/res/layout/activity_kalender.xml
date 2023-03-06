@@ -21,60 +21,61 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Bulan Ramadhan"
-        android:textSize="20sp"
         android:textColor="#FFFFFF"
-        app:layout_constraintTop_toTopOf="@id/header"
-        app:layout_constraintStart_toStartOf="parent"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@id/header"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="@id/header"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/header" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_tanggal"
         android:layout_width="match_parent"
         android:layout_height="90dp"
-        android:scrollbars="horizontal"
-        android:layout_marginTop="24dp"
         android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
         android:layout_marginEnd="8dp"
-        app:layout_constraintTop_toBottomOf="@id/header"
-        app:layout_constraintStart_toStartOf="parent"
+        android:scrollbars="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
-        tools:listitem="@layout/item_list_kalender"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/header"
+        tools:listitem="@layout/item_list_kalender" />
 
     <TextView
         android:id="@+id/tv_hariIni"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hari Ini"
-        android:textSize="14sp"
-        android:textColor="#4A4949"
-        android:textStyle="bold"
-        android:layout_marginTop="24dp"
         android:layout_marginStart="24dp"
-        app:layout_constraintTop_toBottomOf="@+id/rv_tanggal"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:layout_marginTop="24dp"
+        android:text="Hari Ini"
+        android:textColor="#4A4949"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rv_tanggal" />
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rv_task"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            app:layout_constraintTop_toBottomOf="@id/tv_hariIni"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            tools:listitem="@layout/item_list_task"/>
-`
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_task"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_hariIni"
+        tools:listitem="@layout/item_list_task" />
+    `
+
     <TextView
         android:id="@+id/tv_selesai"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Selesai"
-        android:textSize="14sp"
-        android:textColor="@color/black"
-        android:textStyle="bold"
-        android:layout_marginTop="48dp"
         android:layout_marginStart="24dp"
+        android:layout_marginTop="48dp"
+        android:text="Selesai"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/rv_task"/>
+        app:layout_constraintTop_toBottomOf="@id/rv_task" />
 
     <CheckBox
         android:id="@+id/chck_task3"
@@ -83,8 +84,8 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="10dp"
         android:buttonTint="@color/teal_200"
-        app:layout_constraintTop_toBottomOf="@+id/tv_selesai"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_selesai" />
 
     <TextView
         android:id="@+id/tv_nama_task2"
@@ -93,19 +94,19 @@
         android:text="Nama Task"
         android:textColor="@color/black"
         android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@id/chck_task3"
         app:layout_constraintStart_toEndOf="@id/chck_task3"
-        app:layout_constraintTop_toTopOf="@id/chck_task3"
-        app:layout_constraintBottom_toBottomOf="@id/chck_task3"/>
+        app:layout_constraintTop_toTopOf="@id/chck_task3" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
         android:text="Hari Ini"
         android:textSize="12sp"
-        android:layout_marginEnd="16dp"
+        app:layout_constraintBottom_toBottomOf="@id/tv_nama_task2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@id/tv_nama_task2"
-        app:layout_constraintBottom_toBottomOf="@id/tv_nama_task2"/>
+        app:layout_constraintTop_toTopOf="@id/tv_nama_task2" />
 
     <CheckBox
         android:id="@+id/chck_task4"
@@ -114,8 +115,8 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="10dp"
         android:buttonTint="@color/teal_200"
-        app:layout_constraintTop_toBottomOf="@+id/chck_task3"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chck_task3" />
 
     <TextView
         android:id="@+id/tv_nama_task3"
@@ -124,21 +125,19 @@
         android:text="Nama Task"
         android:textColor="@color/black"
         android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@id/chck_task4"
         app:layout_constraintStart_toEndOf="@id/chck_task4"
-        app:layout_constraintTop_toTopOf="@id/chck_task4"
-        app:layout_constraintBottom_toBottomOf="@id/chck_task4"/>
+        app:layout_constraintTop_toTopOf="@id/chck_task4" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
         android:text="Hari Ini"
         android:textSize="12sp"
-        android:layout_marginEnd="16dp"
+        app:layout_constraintBottom_toBottomOf="@id/tv_nama_task3"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@id/tv_nama_task3"
-        app:layout_constraintBottom_toBottomOf="@id/tv_nama_task3"/>
-
-
+        app:layout_constraintTop_toTopOf="@id/tv_nama_task3" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -6,8 +6,8 @@
     android:layout_marginStart="25dp"
     android:layout_marginTop="15dp"
     android:layout_marginEnd="25dp"
-    android:paddingBottom="4dp"
-    android:background="#F7F8FA">
+    android:background="#F7F8FA"
+    android:paddingBottom="4dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -28,24 +28,24 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:buttonTint="#59CE8F"
-            android:translationX="0dp"
             android:text="Nama Task"
+            android:translationX="0dp"
             android:translationY="0dp"
             app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/tv_task_hari_ini"
             app:layout_constraintStart_toStartOf="@id/vw_line"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintEnd_toStartOf="@id/tv_task_hari_ini"/>
+            app:layout_constraintTop_toTopOf="parent" />
 
-<!--        <TextView-->
-<!--            android:id="@+id/tv_nama_task"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:text="Nama Task"-->
-<!--            android:textColor="@color/black"-->
-<!--            android:textSize="14sp"-->
-<!--            app:layout_constraintBottom_toBottomOf="@id/chck_task"-->
-<!--            app:layout_constraintStart_toEndOf="@id/chck_task"-->
-<!--            app:layout_constraintTop_toTopOf="@id/chck_task" />-->
+        <!--        <TextView-->
+        <!--            android:id="@+id/tv_nama_task"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:text="Nama Task"-->
+        <!--            android:textColor="@color/black"-->
+        <!--            android:textSize="14sp"-->
+        <!--            app:layout_constraintBottom_toBottomOf="@id/chck_task"-->
+        <!--            app:layout_constraintStart_toEndOf="@id/chck_task"-->
+        <!--            app:layout_constraintTop_toTopOf="@id/chck_task" />-->
 
         <TextView
             android:id="@+id/tv_task_hari_ini"
@@ -56,8 +56,8 @@
             android:textSize="12sp"
             app:layout_constraintBottom_toBottomOf="@id/chck_task"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@id/chck_task"
-            app:layout_constraintStart_toEndOf="@id/chck_task"/>
+            app:layout_constraintStart_toEndOf="@id/chck_task"
+            app:layout_constraintTop_toTopOf="@id/chck_task" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 
