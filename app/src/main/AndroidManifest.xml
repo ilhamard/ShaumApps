@@ -51,6 +51,9 @@
             android:exported="false" />
 
         <activity
+            android:name=".ui.jadwal_shalat.JadwalShalatActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.doa.DoaActivity"
             android:exported="false"
             android:parentActivityName=".ui.HomePageActivity" />
