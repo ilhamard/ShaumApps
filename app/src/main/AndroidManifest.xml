@@ -63,15 +63,19 @@
             android:exported="false"
             android:parentActivityName=".ui.HomePageActivity" />
         <activity
+            android:name=".ui.kutipan.KutipanActivity"
+            android:exported="false"
+            android:parentActivityName=".ui.HomePageActivity" />
+        <activity
             android:name=".ui.HomePageActivity"
             android:exported="false" />
-        <activity
-            android:name=".ui.jadwal_shalat.JadwalShalatActivity"
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
+<!--        <activity-->
+<!--            android:name=".ui.jadwal_shalat.JadwalShalatActivity"-->
+<!--            android:exported="false">-->
+<!--            <meta-data-->
+<!--                android:name="android.app.lib_name"-->
+<!--                android:value="" />-->
+<!--        </activity>-->
         <activity
             android:name=".ui.MainActivity"
             android:exported="true">

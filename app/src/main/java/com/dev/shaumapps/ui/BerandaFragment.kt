@@ -10,6 +10,7 @@ import com.dev.shaumapps.databinding.FragmentBerandaBinding
 import com.dev.shaumapps.ui.doa.DoaActivity
 import com.dev.shaumapps.ui.hadis.HadisActivity
 import com.dev.shaumapps.ui.jadwal_shalat.JadwalShalatActivity
+import com.dev.shaumapps.ui.kutipan.KutipanActivity
 import com.dev.shaumapps.ui.tasbih.TasbihActivity
 
 /**
@@ -32,12 +33,12 @@ class BerandaFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.circleBgDoa.setOnClickListener {
+        binding.doa.setOnClickListener {
             val intent = Intent(requireContext(), DoaActivity::class.java)
             startActivity(intent)
         }
 
-        binding.circleBgTasbih.setOnClickListener {
+        binding.bgTasbih.setOnClickListener {
             val intent = Intent(requireContext(), TasbihActivity::class.java)
             startActivity(intent)
         }
@@ -46,8 +47,11 @@ class BerandaFragment : Fragment() {
             startActivity(Intent(requireContext(), HadisActivity::class.java))
         }
 
-        binding.circleBgJam.setOnClickListener {
+        binding.bgJadwalSholat.setOnClickListener {
             startActivity(Intent(requireContext(), JadwalShalatActivity::class.java))
+        }
+        binding.circleBgKutipan.setOnClickListener {
+            startActivity(Intent(requireContext(), KutipanActivity:: class.java))
         }
     }
 }
