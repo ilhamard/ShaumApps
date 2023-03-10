@@ -10,10 +10,6 @@ import com.dev.shaumapps.R
 class KutipanAdapter(private val kutipanList: ArrayList<Kutipan>) :
     RecyclerView.Adapter<KutipanAdapter.KutipanViewHolder>() {
 
-    class KutipanViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val imageView : ImageView = itemView.findViewById(R.id.img_kutipan)
-    }
-
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): KutipanViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.items_kutipan, parent, false)
         return KutipanViewHolder(view)
@@ -26,5 +22,9 @@ class KutipanAdapter(private val kutipanList: ArrayList<Kutipan>) :
     override fun onBindViewHolder(holder: KutipanViewHolder, position: Int) {
         val kutipan = kutipanList[position]
         holder.imageView.setImageResource(kutipan.image)
+    }
+
+    class KutipanViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+        val imageView : ImageView = itemView.findViewById(R.id.img_itm_kutipan)
     }
 }

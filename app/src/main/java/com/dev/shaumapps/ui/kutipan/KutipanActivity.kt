@@ -30,12 +30,13 @@ class KutipanActivity : AppCompatActivity() {
         recyclerView.adapter = kutipanAdapter
     }
     private fun imgList(){
-        kutipanList.add(Kutipan(R.id.img_kutipan))
-//        kutipanList.add(Kutipan(R.id.img_kutipan))
-//        kutipanList.add(Kutipan(R.id.img_kutipan))
-//        kutipanList.add(Kutipan(R.id.img_kutipan))
-//        kutipanList.add(Kutipan(R.id.img_kutipan))
-//        kutipanList.add(Kutipan(R.id.img_kutipan))
+        kutipanList.add(Kutipan(R.drawable.kutipan))
+        kutipanList.add(Kutipan(R.drawable.kutipan))
+//        kutipanList.add(Kutipan(R.drawable.kutipan))
+//        kutipanList.add(Kutipan(R.drawable.kutipan))
+//        kutipanList.add(Kutipan(R.drawable.kutipan))
+//        kutipanList.add(Kutipan(R.drawable.kutipan))
+//        kutipanList.add(Kutipan(R.drawable.kutipan))
 //        kutipanList.add(Kutipan(R.id.img_kutipan))
 //        kutipanList.add(Kutipan(R.id.img_kutipan))
 //        kutipanList.add(Kutipan(R.id.img_kutipan))
