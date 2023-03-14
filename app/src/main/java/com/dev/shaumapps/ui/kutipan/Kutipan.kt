@@ -1,3 +1,7 @@
 package com.dev.shaumapps.ui.kutipan
 
-data class Kutipan(val image: Int)
+import android.os.Parcelable
+import kotlinx.parcelize.Parcelize
+
+@Parcelize
+data class Kutipan(val image: Int): Parcelable

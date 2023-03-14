@@ -20,6 +20,13 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+            android:name=".DetailKutipanActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".CompassActivityNew"
             android:exported="false">
             <meta-data
@@ -51,13 +58,15 @@
             android:exported="false" />
 
         <activity
+            android:name=".ui.asmaul_husna.AsmaulHusnaActivity"
+            android:exported="false"/>
+        <activity
             android:name=".ui.jadwal_shalat.JadwalShalatActivity"
             android:exported="false" />
         <activity
             android:name=".ui.doa.DoaActivity"
             android:exported="false"
             android:parentActivityName=".ui.HomePageActivity" />
-
         <activity
             android:name=".ui.tasbih.TasbihActivity"
             android:exported="false"
@@ -68,14 +77,13 @@
             android:parentActivityName=".ui.HomePageActivity" />
         <activity
             android:name=".ui.HomePageActivity"
-            android:exported="false" />
-<!--        <activity-->
-<!--            android:name=".ui.jadwal_shalat.JadwalShalatActivity"-->
-<!--            android:exported="false">-->
-<!--            <meta-data-->
-<!--                android:name="android.app.lib_name"-->
-<!--                android:value="" />-->
-<!--        </activity>-->
+            android:exported="false" /> <!-- <activity -->
+        <!-- android:name=".ui.jadwal_shalat.JadwalShalatActivity" -->
+        <!-- android:exported="false"> -->
+        <!-- <meta-data -->
+        <!-- android:name="android.app.lib_name" -->
+        <!-- android:value="" /> -->
+        <!-- </activity> -->
         <activity
             android:name=".ui.MainActivity"
             android:exported="true">
@@ -89,10 +97,6 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
-
-        <!--        <meta-data-->
-        <!--            android:name="com.google.android.geo.API_KEY"-->
-        <!--            android:value="AIzaSyBi2ycYbB1lkUQ23RtB034-IJwi2gaJC08" />-->
     </application>
 
 </manifest>

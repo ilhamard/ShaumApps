@@ -7,11 +7,13 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.dev.shaumapps.databinding.FragmentBerandaBinding
+import com.dev.shaumapps.ui.asmaul_husna.AsmaulHusnaActivity
 import com.dev.shaumapps.ui.doa.DoaActivity
 import com.dev.shaumapps.ui.hadis.HadisActivity
 import com.dev.shaumapps.ui.jadwal_shalat.JadwalShalatActivity
 import com.dev.shaumapps.ui.kutipan.KutipanActivity
 import com.dev.shaumapps.ui.tasbih.TasbihActivity
+
 
 /**
  * A simple [Fragment] subclass.
@@ -52,6 +54,10 @@ class BerandaFragment : Fragment() {
         }
         binding.circleBgKutipan.setOnClickListener {
             startActivity(Intent(requireContext(), KutipanActivity:: class.java))
+        }
+
+        binding.circleBgAsmaulhusna.setOnClickListener {
+            startActivity(Intent(requireContext(), AsmaulHusnaActivity::class.java))
         }
     }
 }

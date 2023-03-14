@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">ShaumApps</string>
+    <string name="asmaulpertama">Allah ﷻ mempunyai kasih sayang yang sangat luas, meliputi seluruh makhluk-Nya. Allah ﷻ mengasihi seluruh makhluk-Nya dengan memberikan berbagai kenikmatan. (Dalil: QS: Al Fatihah 1 dan 3, Thohaa 5, Al Mulk 29, Ar-Rohman 1, Al-Isra: 110).</string>
 
     <string-array name="data_tanggal">
         <item>1</item>
@@ -32,6 +33,313 @@
         <item>28</item>
         <item>29</item>
         <item>30</item>
+    </string-array>
+
+    <string-array name="data_asmaul_makna">
+        <item>Allah ﷻ  mempunyai kasih sayang yang sangat luas, meliputi seluruh makhluk-Nya. Allah ﷻ mengasihi seluruh makhluk-Nya dengan memberikan berbagai kenikmatan. (Dalil: QS: Al Fatihah 1 dan 3, Thohaa 5, Al Mulk 29, Ar-Rohman 1, Al-Isra: 110).</item>
+        <item>Allah ﷻ  Maha Penyayang kepada hamba-Nya yang beriman. (Dalil: QS: Al-Fatihah 1 dan 3, Al Baqarah: 163, Fushilat 2, Al-Hasyr 22)</item>
+        <item> Allah ﷻ berkuasa atas segala sesuatu baik dalam hal memerintah maupun melarang. Arti lain Al Malik adalah memiliki sesuatu. Segala sesuatu butuh kepada Allah ﷻ Subhanahu wa Ta’ala sedangkan Allah ﷻ tidak membutuhkan segala sesuatu. (Dalil: QS Al-Hasyr: 23, Al-Mukminun: 116, ‘Ali Imran: 26).</item>
+        <item>Allah ﷻ Mahasuci dari segala sesuatu yang bersifat kurang dan cacat. Asmaul husna ini memiliki makna kesempurnaan, terpuji dengan segala kebaikan dan keutamaan. (Dalil: QS:Al-Hasyr 23, Al-Jumuah: 1).</item>
+        <item>Allah ﷻ terbebas dari kekurangan, cacat dan segala sesuatu yang tidak sesuai dengan keagungan dan kesempurnaan Nya. Allah ﷻ juga menyelamatkan dan memberikan kesejahteraan kepada hamba-Nya. (Dalil: QS Al-Hasyr:23).</item>
+        <item>Allah ﷻ adalah Dzat yang menjadi tempat pelarian dan perlindungan bagi orang yang merasa ketakutan sehingga mendapatkan keamanan. (Dalil: QS:Al Hasyr 23).</item>
+        <item>Allah ﷻ Maha Mengawasi dan Menyaksikan seluruh makhluk-Nya, berkuasa atas mereka dengan penuh perhatian dan kekuasaan, memberi mereka rezeki dan kehidupan. (Dalil: QS Al Hasyr 23).</item>
+        <item>Allah ﷻ adalah Dzat yang Mahaperkasa yang tidak bisa dikalahkan oleh sesuatupun, Mahakuat dan mengalahkan segala sesuatu. (Dalil: QS Al Hasyr 23, ‘Ali Imran 62, Al Mulk 2, Fathir 10).</item>
+        <item>Allah ﷻ berkuasa untuk memaksakan kehendak-Nya kepada hamba-Nya, berkuasa memerintah dan melarang sehingga makhluk hanya bisa sami’na wa atha’na. Nama Al Jabbar juga bermakna kuat dan tahan sehingga tidak ada yang bisa berbuat buruk dan membahayakan-Nya. (Dalil: QS Al Hasyr 23).</item>
+        <item>Allah ﷻ adalah Dzat yang memiliki kesombongan dan kebesaran. Kesombongan adalah pakaian Allah ﷻ yang tidak boleh dipakai oleh hamba-Nya. (Dalil:  QS Al Hasyr 23).</item>
+        <item>Allah ﷻ Maha Pencipta. Dialah yang menciptakan alam semesta dan seluruh makhluk-Nya. Baik malaikat, iblis, jin, manusia, hewan maupun tumbuhan, seluruhnya adalah ciptaan Allah ﷻ. (Dalil: QS Al Hasyr 4, Al Mukminun 14, Fathir 3).</item>
+        <item>Allah ﷻ adalah Dzat yang membuat sesuatu dari ketiadaan. Dia menciptakan dan membentuk sesuai bentuk dan ukuran yang Dia kehendaki. (Dalil: QS Al Hasyr 24, Al-Baqarah 54).</item>
+        <item>Allah ﷻ menciptakan segala sesuatu dan membeda-bedakan mereka dengan bentuknya masing-masing sesuai kehendak-Nya. (Dalil: QS Al Hasyr 24,  Al Infithar 8, Ghoffiir 64).</item>
+        <item>Al Ghoffaar berasal dari kata al ghofru yang berarti menutupi. Allah ﷻ senang menutupi dosa hamba-Nya dan mengabaikan kesalahan-kesalahan mereka. (Dalil: QS:Az-Zumar 5, Shad 66).</item>
+        <item>Allah ﷻ memiliki kekuasaan penuh dalam mengungguli dan memaksa orang yang kuat dan berkuasa. Semua yang Allah ﷻ inginkan pada hamba-Nya pasti terjadi. (Dalil: QS Az-Zumar ayat 4, Shad  65).</item>
+        <item>Allah ﷻ Maha Pemberi Karunia kepada hamba-Nya. Tanpa diminta oleh makhluk dan tanpa meminta imbalan kepada makhluk. (Dalil: QS Shad 9 dan 35, ‘Ali Imran 8).</item>
+        <item>Allah ﷻ Maha Pemberi rezeki dan menyampaikannya kepada hamba-hambaNya. (Dalil: QS Adz Dzaariyat 58, Huud 6).</item>
+        <item>Allah ﷻ membuka rezeki dan rahmat untuk hamba-hambaNya. Dia memudahkan jalan-jalan yang sulit baik dalam urusan dunia maupun akhirat. Al Fattaah juga bermakna menghakimi dan memutuskan. Dia yang memisahkan halal dan haram serta menjelaskan yang benar dan yang salah sehingga yang benar akan menang dan yang salah akan kalah. (Dalil: QS Saba’ 26, Fathiir ayat 2, Al A’rof 89 dan 96).</item>
+        <item>Allah ﷻ maha mengetahui segala sesuatu, baik sebelum atau sesudah sesuatu itu ada. Tiada sesuatu pun di langit dan di bumi yang tidak Allah ﷻ ketahui. (Dalil: QS Saba’ 26, Al Hijr 86, Al Baqarah 32.)</item>
+        <item>Al Qoobizh artinya menahan dan tidak memberi rezeki atau sejenisnya kepada hamba-Nya. Juga mengandung makna mencabut nyawa ketika seorang hamba meninggal dunia. (Dalil: QS Al Baqarah 245, Asy Syuroo 27).</item>
+        <item>Al Baasith artinya meluaskan dan melapangkan rezeki kepada hamba-Nya. Juga mengandung makna membentangkan nyawa kepada hamba sehingga mendapatkan kehidupan. (Dalil: QS Al Baqarah 245, Asy Syuroo 27).</item>
+        <item>Al Khoofizh artinya menurunkan kesombongan penguasa sehingga mereka menjadi rendah dan hina. Juga bermakna merendahkan orang-orang kafir dengan memasukkan mereka ke dalam neraka. (Dalil: QS Al Waaqi’ah 3).</item>
+        <item>Allah ﷻ meninggikan wali-Nya dan menolong mereka menghadapi musuh. Juga bermakna meninggikan derajat orang-orang yang dikehendaki-Nya sebelum mereka ditinggikan di surga-Nya. (Dalil: QS Al Mujadalah 11, Al Waaqi’ah 3).</item>
+        <item>Allah Maha Memuliakan sehingga hamba tersebut menjadi benar-benar mulia. Tentu mereka adalah orang-orang yang beriman kepada-Nya. (Dalil: QS ‘Ali Imran 26, Fathir 10).</item>
+        <item>Allah ﷻ Maha Menghinakan sehingga orang yang dihinakan tersebut menjadi benar-benar hina. Tentu mereka adalah orang-orang kafir dan orang-orang yang memusuhi-Nya.  (Dalil: QS ‘Ali Imran 26).</item>
+        <item>Allah Maha Mendengar segala sesuatu, baik yang keras maupun yang pelan, baik yang terang-terangan maupun yang rahasia. Allah Maha Mendengar segala doa hamba-Nya dan mengabulkan doa yang sungguh-sungguh dan penuh harap kepada-Nya. (Dalil: QS Al Baqarah 127).</item>
+        <item>Allah Maha Melihat dan Menyaksikan segala sesuatu, baik yang tampak maupun yang tersembunyi. Tiada sesuatu pun baik dalam batu di perut bumi maupun di luar angkasa melainkan Allah melihatnya. Demikian pula seluruh amal perbuatan hamba dan isi hatinya. (Dalil: QS Asy Syura 11, Al Isra 1, Al Baqarah 127).</item>
+        <item>Al Hakam artinya Allah menjadikan sesuatu rapi dan kuat. Nama Al Hakam juga bisa berarti hakim yakni Allah ﷻ memutuskan sesuatu di antara para hambaNya baik di dunia maupun di akhirat. Al Hakam juga berarti Allah yang menetapkan hukum dan tidak ada sesuatu pun yang bisa menyanggahnya. (Dalil: QS Al An’aam 114, Al Qashash 70).</item>
+        <item>Allah Maha Adil, hanya melakukan sesuatu yang pantas dan sudah seharusnya. Allah menghukumi dengan kebenaran dan tidak pernah berlaku zalim pada hamba-Nya. (Dalil: QS An Nahl 90).</item>
+        <item>Allah ﷻ sangat baik dan lembut perbuatan-Nya. Dia sangat lembut kepada hamba-Nya tanpa mereka ketahui serta meyediakan segala kebutuhan hamba meskipun mereka tidak menyadarinya. (Dalil: QS Yuusuf 100, Al An’am 103).</item>
+        <item>Allah Maha Mengetahui hal yang terjadi pada masa lalu dan masa yang akan datang. Mengetahui hakikat sesuatu sebelum terjadinya dan hakikat yang tersimpan dalam segala hal. (Dalil: QS Al An’am 18 dan 103).</item>
+        <item>Al Haliim artinya tidak terburu-buru membalas meskipun berkuasa melakukannya. Nama Al Haliim juga berarti Allah ﷻ tidak menahan rezeki atau buru-buru mengazab karena kemaksiatan dan kezaliman makhluk-Nya meskipun Dia berkuasa melakukan itu semua. (Dalil: QS Al Baqarah 235, Al Isroo 44).</item>
+        <item>Al ‘Azhim artinya Allah Maha Agung. Tiada yang melebihi keagungan Allah ﷻ baik dalam Dzat, wujud, ilmu, kekuasaan, pengaruh, kebijaksanaan maupun perintah-Nya. (Dalil: آية الكرسي/ Ayah Al Kursiy (QS Al Baqarah 255), Al Waaqi’ah 96).</item>
+        <item>Al Ghofuur berasal dari kata Al Ghofruu yang berarti menutupi. Menunjukkan Allah ﷻ sangat sering mengampuni dan menutupi dosa hambaNya. (Dalil: QS Al Kahfii 58, Al Hijr 49, Thoohha ayat 82)</item>
+        <item>Allah Maha Menghargai dan Membalas kebaikan. Allah ﷻ memuji hamba-hamba pilihan-Nya dan membalas setiap amal sekecil apa pun amal itu. (Dalil: QS Asy Syuroo 23, Fathir 34).</item>
+        <item>Nama Al ‘Alii menunjukkan bahwa Allah ﷻ memiliki derajat tertinggi. Ketinggian Dzat-Nya tidak terjangkau oleh kemampuan manusia.  (Dalil: QS Al Hajj 62, Al Mu’min/ Al Ghoofir/ Ath Thowl  12).</item>
+        <item>Nama Al Kabiir menunjukkan bahwa Allah Maha Tinggi dan Maha Besar dalam Dzat, sifat dan perbuatan-Nya. Sehingga sama sekali tidak menyerupai makhluk-Nya. (Dalil: QS An Nisaa 34, Luqmaan 30).</item>
+        <item>Nama Al Kabiir menunjukkan bahwa Allah Maha Tinggi dan Maha Besar dalam Dzat, sifat dan perbuatan-Nya. Sehingga sama sekali tidak menyerupai makhluk-Nya. (Dalil: QS An Nisaa 34, Luqmaan 30).</item>
+        <item>Allah Maha Memberi Kecukupan dan menjamin rezeki hamba-Nya.(Dalil: QS An Nisaa 85).</item>
+        <item>Allah ﷻ akan mencukupi segala kebutuhan hamba-Nya. Juga menunjukkan Allah akan menghitung amal perbuatan manusia. (Dalil: QS An Nisaa 6 dan 86).</item>
+        <item>Allah Maha Mulia dalam Dzat dan sifat-Nya. Sempurna dalam Dzat dan sifat-Nya. (Dalil:   QS Ar Rohman 78, Al ‘Aroof 143).</item>
+        <item>Al Kariim artinya banyak memberi dan berbuat kebajikan tanpa diminta. Nama Al Kariim juga berarti memberi tanpa perhitungan, baik yang berhak maupun tidak berhak. (Dalil: QS An Naml 40, Al Infithoor 6).</item>
+        <item>Allah Maha Mengawasi, tidak pernah lalai. Selalu ada dan tak pernah hilang. Selalu mengetahui tentang ciptaan-Nya. (Dalil: QS An Nisaa 1, Al Ahzab 52).</item>
+        <item>Allah Maha Mengabulkan doa. Allah ﷻ mengabulkan doa dan permohonan hamba-Nya. Tak ada doa yang Dia abaikan.(Dalil: QS Huud 61, An Naml 62).</item>
+        <item>Al Waasi’ artinya Maha Luas yang kekuasaa-Nya tidak berbatas. Demikian pula kekuatan, kemampuan, dan kerajaan-Nya tidak terbatas. (Dalil: QS Al Baqarah 147, Al An’am 80).</item>
+        <item>Allah Maha Bijaksana, sangat tepat dalam mengukur dan sangat baik dalam mengatur. Allah ﷻ bersih dari segala perbuatan yang tidak sesuai dengan keagungan dan kesempurnaan-Nya. (Dalil: QS Al Baqarah 32, Al An’aam 18).</item>
+        <item>Allah ﷻ mencintai hamba-Nya yang taat dengan cara memberi mereka nikmat dan kasih sayang. (Dalil: QS Hud 90, Al Buruuj 14).</item>
+        <item>Allah ﷻ sangat luas kemuliaan, ketinggian dan kedudukan-Nya.(Dalil: QS Al Buruuj 15, Huud 73.</item>
+        <item>Allah ﷻ membangkitkan manusia setelah mereka mati untuk dihisab dan diberi balasan di akhirat. (Dalil: QS An Nahl 36, Al An’aam 60).</item>
+        <item>Allah ﷻ mengawasi hamba-Nya, melihat perbuatan mereka, mendengar segala yang diucapkan. Tidak ada yang tersembunyi dari-Nya. (Dalil: QS An Nisaa 79, Al Maa-idah 117).</item>
+        <item>Allah Maha Benar, keberadaan-Nya tidak bisa diingkari, harus diakui. Ia juga berarti Allah ﷻ ada tanpa permulaan hingga selamanya. (Dalil: QS Al Hajj 62, Yunus 32).</item>
+        <item>Allah Maha Memelihara. Dialah yang berkuasa sekehendak-Nya karena kesempurnaan ilmu dan kekuasaan-Nya.(Dalil: QS An Nisa 81, Al An’aam 102).</item>
+        <item>Allah Maha Kuat. Kekuatan dan kekuasaan-Nya sempurna sehingga tidak ada sesuatupun yang tidak bisa didapatkan-Nya. (Dalil: QS Al Hadid 25, Al Ahzab 25).</item>
+        <item>Allah ﷻ memiliki kekuatan yang besar, yang tidak akan melemah karena apa pun. (Dalil: QS Adz-Dzariyat 58, Qaaf 38).</item>
+        <item>Allah ﷻ melakukan seluruh urusan makhluk dan menjamin menyelesaikan semuanya. Al Wali juga berarti Allah ﷻ melindungi hamba-hamba-Nya yang taat. (Dalil: QS Al Baqarah 257, Yunus 101).</item>
+        <item>Allah ﷻ berhak mendapatkan pujian dan pujaan karena memiliki Dzat yang sangat agung, sifat yang sempurna dan kekuasaan tiada tara. (Dalil: QS Al-Baqarah 267, Fathir 15).</item>
+        <item>Allah ﷻ mengetahui segala sesuatu dengan segala gerak dan diamnya. Ia juga berarti Allah ﷻ menghitung dan menulis perbuatan dan perkataan hamba-Nya. (Dalil: QS Al-Jin ayat 28, Yasin 12).</item>
+        <item>Allah Maha Memulai. Yakni memulai menciptakan makhluk dari yang sebelumnya tidak ada menjadi ada.(Dalil: QS Al-Buruj 13).</item>
+        <item>Allah Maha Mengembalikan kehidupan. Yakni menghidupkan kembali makhluk yang setelah mereka mati dan binasa.(Dalil: Surat Al Buruj ayat 13)</item>
+        <item>Allah Maha Menghidupkan. Dia memberikan kehidupan kepada makhluk-Nya dengan meniupkan ruh.(Dalil: QS Al Baqarah 258).</item>
+        <item>Allah Maha Mematikan. Dia membuat makhluk mati setelah hidup dengan mengambil ruh-Nya.(Dalil: QS Al Baqarah 258).</item>
+        <item>Allah Maha Hidup. Allah ﷻ memiliki kehidupan abadi, tidak berpermulaan dan senantiasa abadi.(Dalil: QS Al Baqarah 255).</item>
+        <item>Allah Maha Mandiri, terus menerus mengurus makhluk-Nya. Yakni sangat besar kepengurusan-Nya kepada makhluk-Nya.(Dalil: QS Al Baqarah 255).</item>
+        <item>Allah Maha Mengetahui dan Menemukan. Allah ﷻ menemukan siapa saja yang Dia cari. Tidak ada sesuatupun yang bisa menghalang-halangi.(Dalil: QS Adh Dhuhaa 7 sampai 8).</item>
+        <item>Allah memiliki kemuliaan dan keluasan yang sempurna. Nama ini mirip dengan Al Majiid.(Dalil: HR. Tirmidzi).</item>
+        <item>Allah Maha Tunggal. Hanya satu tiada duanya dan tidak ada yang menyerupai-Nya.(Dalil: Surat Al Baqarah ayat 163).</item>
+        <item>Allah Maha Esa, tiada sekutu bagi-Nya. (Dalil: QS Al Ikhlas 1).</item>
+        <item>Allah Maha Dibutuhkan. Dia dituju ketika makhluk membutuhkan sesuatu. Segala sesuatu butuh kepada-Nya sedangkan Dia tidak butuh sesuatu apa pun.(Dalil: QS Al Ikhlas 2).</item>
+        <item>Berkuasa. Dia memiliki kekuasaan penuh, tiada yang bisa menandingi dan mengalahkan-Nya.(Dalil: QS Fathir 44).</item>
+        <item>Al Muqtadir adalah bentuk lain dari Al Qodir. Kekuasaan Allah ﷻ tidak berpermulaan dan tidak akan berakhir.(Dalil: QS Al Kahfi 45).</item>
+        <item>Allah ﷻ mendahulukan siapa pun yang Dia kehendaki. Sehingga segala sesuatu tepat di urutannya. Termasuk mendahulukan satu kejadian atau perbuatan dari yang lainnya.(Dalil: QS Qof 28).</item>
+        <item>Allah mengakhirkan siapa pun yang Dia kehendaki. Sehingga segala sesuatu tepat di urutannya. Termasuk mengakhirkan satu kejadian atau perbuatan dari yang lainnya.(Dalil: QS Huud 104).</item>
+        <item>Dia ada tanpa didahului oleh sesuatu, tidak ada sesuatupun yang lebih dulu ada dari-Nya.(Dalil: QS Al Hadiid 3).</item>
+        <item>Allah Maha Akhir. Dia kekal abadi selamanya, tidak ada akhirnya.(Dalil: QS Al Hadiid 3).</item>
+        <item>Allah Maha Nyata. Tanda kekuasaan dan kebesaran-Nya demikian nyata terpampang di alam semesta.(Dalil: QS Al Hadiid 3).</item>
+        <item>Allah Maha Ghaib. Dia tersembunyi dari penglihatan makhluk, tidak ada penglihatan yang bisa mencapai-Nya.(Dalil: QS Al Hadiid 3).</item>
+        <item>Allah ﷻ memiliki segala sesuatu dan berkuasa atas mereka termasuk memerintahkan apa saja. Apa yang diperintahkan-Nya harus dilakukan dan hukumNya harus ditegakkan.(Dalil: QS Ar Ro’du 11).</item>
+        <item>Allah Maha Tinggi. Dia paling sempurna dalam ketinggian dan terbebas dari kekurangan.(Dalil: QS Ar Ro’du 9).</item>
+        <item>Allah ﷻ sayang dan melimpahkan kebaikan kepada hamba-Nya. Tidak ada satu makhluk pun yang luput dari kebaikan Allah.(Dalil: QS Ath Thuur 28).</item>
+        <item>Allah Maha Pemberi Taubat. Allah selalu menerima taubat hambaNya dan memaafkan kesalahan mereka. (Dalil: QS At Taubah  104).</item>
+        <item>Allah ﷻ akan menyiksa orang-orang yang durhaka kepada-Nya. Al Muntaqim juga menunjukkan bahwa Allah ﷻ menyiksa orang-orang kafir yang memusuhi Rasul-Nya. (Dalil:  QS Ali ‘Imran 4).</item>
+        <item>Allah Maha Pemaaf. Dengan cara Dia menghapus catatan keburukan seorang hamba sehingga ia tidak dibalas dan disiksa. (Dalil: QS Al Hajj 60).</item>
+        <item>Allah ﷻ sangat mengasihi hamba-Nya. Di dunia, ar Rauf mengasihi dengan memberi nikmat kepada seluruh ciptaan-Nya. Namun di akhirat, ar Rauf hanya mengasihi hamba-Nya yang beriman. (Dalil: QS Al Hasyr 10).</item>
+        <item>Allah Penguasa Alam Semesta. Kekuasaan-Nya meliputi langit dan bumi, sehingga seluruh kehendak-Nya akan terlaksana di alam semesta. (Dalil: QS Ali ‘Imran 26).</item>
+        <item>Allah Pemilik Kebesaran dan Kemuliaan. Dia sempurna dalam Dzat, sifat, dan perbuatanNya serta selalu memberikan nikmat kepada hambaNya. (Dalil: QS Ar Rahman 27).</item>
+        <item>Allah Maha Adil dalam Menghakimi. Allah menolong hamba yang terzalimi hingga mendapatkan haknya kembali. (Dalil:   QS Al Hujurat 9).</item>
+        <item>Allah Maha Mengumpulkan. Yakni mengumpulkan seluruh hamba-Nya di akhirat nanti. Mulai Nabi Adam hingga manusia terakhir. (Dalil: QS An Nisaa 87).</item>
+        <item>Allah Maha Berkecukupan. Dia cukup dengan Dzat-Nya sehingga tidak membutuhkan yang lain. (Dalil:  QS Faathir 15).</item>
+        <item>Allah Maha Memberi Kekayaan. Dia memberi kekayaan kepada siapapun yang Dia kehendaki dengan besaran tertentu sebagaimana kehendak-Nya. (Dalil:  Azh Zhuhaa 8).</item>
+        <item>Allah Maha Mencegah. Dia menahan dan mencegah bahaya dan musibah bagi orang-orang yang Dia kehendaki. (Dalil: QS At Taubah 54).</item>
+        <item>Allah Maha Memberi derita bagi orang-orang yang durhaka kepada-Nya. Siapa pun tidak bisa mencegah penderitaan dan bahaya dari Allah. (Dalil: QS Al An’am 42).</item>
+        <item>Allah Maha Memberi manfaat bagi orang-orang yang Dia kehendaki. Siapapun yang Allah ﷻ beri manfaat, tidak ada satu mahkluk pun yang bisa menghalanginya. (Dalil: QS Al A’rof 188, Yuunus 10).</item>
+        <item>Allah Maha Bercahaya. Dia terang dengan sendiri-Nya dan menerangi makhlukNya. An Nur juga berarti Dia yang menampakkan sesuatu yang Dia kehendaki. (Dalil:  QS An Nuur ayat 3i5 dan 40).</item>
+        <item>Allah memberi petunjuk ke dalam hati orang-orang yang beriman. Sehingga mereka yang Dia kehendaki, mengetahui dan mengikuti kebenaran.(Dalil: QS Al Hajj 54, Yuunus 25.</item>
+        <item>Allah Maha Pencipta. Tidak ada sesuatupun yang bisa menyamai dan menandingiNya baik dalam Dzat, sifat maupun perbuatan. (Dalil:  QS Al Baqarah 117, Al An’am 101).</item>
+        <item>Allah Maha Kekal. Dia tidak akan mati dan tidak akan binasa. Dia abadi selama-lamanya. (Dalil: QS Ar Rahman 27).</item>
+        <item>Allah Maha Pewaris. Yakni segala sesuatu adalah ciptaan-Nya dan akan kembali kepada-Nya. (Dalil : QS Al Hijr 23, Maryam  40).</item>
+        <item>Allah menunjukkan kepada hamba-hamba yang Dia kehendaki sehingga mereka beriman dan mengikuti petunjuk. (Dalil: QS Al Kahfi 10).</item>
+        <item>Allah tidak terpengaruh dengan terjadinya banyak kemaksiatan sehingga buru-buru menghukumnya. Allah ﷻ justru menyimpan atau menahan hukumanNya untuk memberi kesempatan hambaNya bertaubat. (Dalil: QS An Nahl 127, Al Kahfi 28).*/Haryono Madari</item>
+    </string-array>
+
+    <string-array name="data_asmaulHusna">
+        <item>Ar  Rahman</item>
+        <item>Ar  Rahiim</item>
+        <item>Ar  Malik</item>
+        <item>Ar  Quddus</item>
+        <item>As  Salaam</item>
+        <item>Al  Mu`min</item>
+        <item>Al  Muhaimin</item>
+        <item>Al  Aziz</item>
+        <item>Al  Jabbar</item>
+        <item>Al  Mutakabbir</item>
+        <item>Al  Khaliq</item>
+        <item>Al  Baari</item>
+        <item>Al  Mushawwir</item>
+        <item>Al  Ghaffar</item>
+        <item>Al  Qahhaar</item>
+        <item>Al  Wahhaab</item>
+        <item>Al  Razzaaq</item>
+        <item>Al  Fattaah</item>
+        <item>Al  `Aliim</item>
+        <item>Al  Qaabidh</item>
+        <item>Al  Baasith</item>
+        <item>Al  Khaafidh</item>
+        <item>Ar  Raafi</item>
+        <item>Al  Mu`izz</item>
+        <item>Al  Muudzil</item>
+        <item>Al  Samii</item>
+        <item>Al  Bashiir</item>
+        <item>Al  Hakam</item>
+        <item>Al  `Adl</item>
+        <item>Al  Lathiif</item>
+        <item>Al  Khabiir</item>
+        <item>Al  Haliim</item>
+        <item>Al  `Azhiim</item>
+        <item>Al  Ghafuur</item>
+        <item>As  Syakuur</item>
+        <item>Al  `Aliiy</item>
+        <item>Al  Kabiir</item>
+        <item>Al  Hafizh</item>
+        <item>Al  Muqiit</item>
+        <item>Al  Hasiib</item>
+        <item>Al  Jaliil</item>
+        <item>Al  Kariim</item>
+        <item>Ar  Raqiib</item>
+        <item>Al  Mujiib</item>
+        <item>Al  Waasi </item>
+        <item>Al  Hakiim</item>
+        <item>Al  Waduud</item>
+        <item>Al  Majiid</item>
+        <item>Al  Baa`its</item>
+        <item>As  Syahiid </item>
+        <item>Al  Haqq</item>
+        <item>Al  Wakiil</item>
+        <item>Al  Qawiyyu</item>
+        <item>Al  Matiin</item>
+        <item>Al  Waliyy</item>
+        <item>Al  Hamiid</item>
+        <item>Al  Muhshii</item>
+        <item>Al  mubdi</item>
+        <item>Al  Mu`iid</item>
+        <item>Al  Muhyii</item>
+        <item>Al  Mumiitu</item>
+        <item>Al  Hayyu</item>
+        <item>Al  Qayyuum</item>
+        <item>Al  Waajid</item>
+        <item>Al  Maajid</item>
+        <item>Al  `Wahid</item>
+        <item>Al  Ahad</item>
+        <item>Al  Shamad</item>
+        <item>Al  Qaadir</item>
+        <item>Al  Muqtadir</item>
+        <item>Al  Muqaddim</item>
+        <item>Al  Mu`akkhir</item>
+        <item>Al  Awwal</item>
+        <item>Al  Aakhir</item>
+        <item>Az  Zhaahir</item>
+        <item>Ar  Baathin</item>
+        <item>Al  Waali</item>
+        <item>Al  Muta`aalii</item>
+        <item>Al  Barru</item>
+        <item>At  Tawwaab</item>
+        <item>Al  Muntaqim</item>
+        <item>Al  Afuww</item>
+        <item>As  Ra`uuf</item>
+        <item>Malikul Mulk</item>
+        <item>Dzul Jalaali Wal Ikraam</item>
+        <item>Al  Muqsith</item>
+        <item>Al  Jamii`</item>
+        <item>Al  Ghaniyy</item>
+        <item>Al  Mughnii</item>
+        <item>Al  Maani</item>
+        <item>Ad  Dhaar</item>
+        <item>An  Nafii</item>
+        <item>An  Nuur</item>
+        <item>Al  Haadii</item>
+        <item>Al  Badii`</item>
+        <item>Al  Baaqii</item>
+        <item>Al  Waarits</item>
+        <item>Ar  Rasyiid</item>
+        <item>As  Shabuur</item>
+
+    </string-array>
+
+    <string-array name="data_urutNumber">
+        <item>1</item>
+        <item>2</item>/
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+        <item>16</item>
+        <item>17</item>
+        <item>18</item>
+        <item>19</item>
+        <item>20</item>
+        <item>21</item>
+        <item>22</item>
+        <item>23</item>
+        <item>24</item>
+        <item>25</item>
+        <item>26</item>
+        <item>27</item>
+        <item>28</item>
+        <item>29</item>
+        <item>30</item>
+        <item>31</item>
+        <item>32</item>
+        <item>33</item>
+        <item>34</item>
+        <item>35</item>
+        <item>36</item>
+        <item>37</item>
+        <item>38</item>
+        <item>39</item>
+        <item>40</item>
+        <item>41</item>
+        <item>42</item>
+        <item>43</item>
+        <item>44</item>
+        <item>45</item>
+        <item>46</item>
+        <item>47</item>
+        <item>48</item>
+        <item>49</item>
+        <item>50</item>
+        <item>51</item>
+        <item>52</item>
+        <item>53</item>
+        <item>54</item>
+        <item>55</item>
+        <item>56</item>
+        <item>57</item>
+        <item>58</item>
+        <item>59</item>
+        <item>60</item>
+        <item>61</item>
+        <item>62</item>
+        <item>63</item>
+        <item>64</item>
+        <item>65</item>
+        <item>66</item>
+        <item>67</item>
+        <item>68</item>
+        <item>69</item>
+        <item>70</item>
+        <item>71</item>
+        <item>72</item>
+        <item>73</item>
+        <item>74</item>
+        <item>75</item>
+        <item>76</item>
+        <item>77</item>
+        <item>78</item>
+        <item>79</item>
+        <item>80</item>
+        <item>81</item>
+        <item>82</item>
+        <item>83</item>
+        <item>84</item>
+        <item>85</item>
+        <item>86</item>
+        <item>87</item>
+        <item>88</item>
+        <item>89</item>
+        <item>90</item>
+        <item>91</item>
+        <item>92</item>
+        <item>93</item>
+        <item>94</item>
+        <item>95</item>
+        <item>96</item>
+        <item>97</item>
+        <item>98</item>
+        <item>99</item>
     </string-array>
 
     <!--    <string-array name="data_hari">-->
