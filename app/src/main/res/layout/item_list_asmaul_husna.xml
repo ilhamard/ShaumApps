@@ -23,7 +23,8 @@
         app:cardElevation="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/cv_isiAsmaul">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/cons2"
@@ -48,7 +49,7 @@
                 android:layout_height="wrap_content"
                 android:text="99"
                 android:textColor="@color/black"
-                android:textSize="14sp"
+                android:textSize="13sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="@id/img_asmaulhusna"
                 app:layout_constraintEnd_toEndOf="@id/img_asmaulhusna"
@@ -61,7 +62,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="24dp"
                 android:text="Ar Rahman"
-                android:textColor="@color/black"
+                android:textColor="#59CE8F"
                 android:textSize="18sp"
                 app:layout_constraintBottom_toBottomOf="@id/img_asmaulhusna"
                 app:layout_constraintStart_toEndOf="@+id/img_asmaulhusna"
@@ -91,6 +92,7 @@
         android:layout_marginBottom="4dp"
         app:contentPaddingBottom="4dp"
         android:background="#F0EDFF"
+        android:visibility="gone"
         android:orientation="horizontal"
         android:padding="10dp"
         android:paddingBottom="10dp"
@@ -106,7 +108,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="#FFFFFF"
-            android:visibility="gone"
             android:padding="10dp"
             android:paddingBottom="8dp">
 

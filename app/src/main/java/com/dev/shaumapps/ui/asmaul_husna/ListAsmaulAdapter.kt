@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import android.widget.ImageButton
 import android.widget.TextView
 import androidx.appcompat.widget.AppCompatButton
+import androidx.cardview.widget.CardView
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.constraintlayout.widget.ConstraintSet.Constraint
 import androidx.constraintlayout.widget.Constraints
@@ -23,7 +24,7 @@ class ListAsmaulAdapter(private val listAsmaul: ArrayList<AsmaulHusna>): Recycle
         val tvNoAsmaulHusna: TextView = itemViewAsmaul.findViewById(R.id.tv_no_asmaul_husna)
         val isiAsmaulHusna: TextView = itemViewAsmaul.findViewById(R.id.isi_asmaulHusnaMakna)
         val expandView: ConstraintLayout = itemViewAsmaul.findViewById(R.id.cons2)
-        val isExpand: ConstraintLayout = itemViewAsmaul.findViewById(R.id.cons1)
+        val isExpand: CardView = itemViewAsmaul.findViewById(R.id.cv_isiAsmaul)
         val btnExpand: ImageButton = itemViewAsmaul.findViewById(R.id.btn_dropdown)
 
     }
