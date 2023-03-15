@@ -5,20 +5,20 @@
         android:id="@+id/iBeranda"
         android:icon="@drawable/beranda"
         android:title="Beranda" />
-
+    <item
+        android:id="@+id/iKalender"
+        android:icon="@drawable/aktivitas"
+        android:title="Aktivitas" />
     <item
         android:id="@+id/iCatatan"
         android:icon="@drawable/catatan"
         android:title="Catatan" />
 
-    <item
-        android:id="@+id/iKalender"
-        android:icon="@drawable/kalender"
-        android:title="Kalender" />
 
-    <item
-        android:id="@+id/iPengaturan"
-        android:icon="@drawable/pengaturan"
-        android:title="Pengaturan" />
+
+<!--    <item-->
+<!--        android:id="@+id/iPengaturan"-->
+<!--        android:icon="@drawable/pengaturan"-->
+<!--        android:title="Pengaturan" />-->
 
 </menu>
