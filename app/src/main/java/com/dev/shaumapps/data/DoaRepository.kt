@@ -25,10 +25,10 @@ class DoaRepository(private val doaDao: DoaDao) {
         private var instance: com.dev.shaumapps.data.DoaRepository? = null
         fun getInstance(
             doaDao: DoaDao,
-        ): com.dev.shaumapps.data.DoaRepository =
-            com.dev.shaumapps.data.DoaRepository.Companion.instance ?: synchronized(this) {
-                com.dev.shaumapps.data.DoaRepository.Companion.instance
-                    ?: com.dev.shaumapps.data.DoaRepository(doaDao)
-            }.also { com.dev.shaumapps.data.DoaRepository.Companion.instance = it }
+        ): DoaRepository =
+            instance ?: synchronized(this) {
+                instance
+                    ?: DoaRepository(doaDao)
+            }.also { instance = it }
     }
 }

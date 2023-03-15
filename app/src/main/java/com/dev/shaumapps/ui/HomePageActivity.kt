@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import com.dev.shaumapps.R
+import com.dev.shaumapps.ui.todo_list.TodoListFragment
 import nl.joery.animatedbottombar.AnimatedBottomBar
 
 class HomePageActivity : AppCompatActivity() {
@@ -17,7 +18,7 @@ class HomePageActivity : AppCompatActivity() {
         animatedBottomBar = findViewById(R.id.animatedBottomBar)
         if (savedInstanceState == null) {
             animatedBottomBar.selectTabById(R.id.iBeranda, true)
-            fragmentManager = getSupportFragmentManager()
+            fragmentManager = supportFragmentManager
             val homeFragment = BerandaFragment()
             fragmentManager!!.beginTransaction().replace(R.id.fragment_container, homeFragment)
                 .commit()
@@ -32,8 +33,8 @@ class HomePageActivity : AppCompatActivity() {
                 var fragment: Fragment? = null
                 when (newTab.id) {
                     R.id.iBeranda -> fragment = BerandaFragment()
+                    R.id.iAktivitas -> fragment = TodoListFragment()
                     R.id.iCatatan -> fragment = CatatanFragment()
-                    R.id.iKalender -> fragment = KalenderFragment()
 //                    R.id.iPengaturan -> fragment = SettingFragment()
                 }
                 if (fragment != null) {

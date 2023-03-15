@@ -6,13 +6,14 @@
         android:icon="@drawable/beranda"
         android:title="Beranda" />
     <item
-        android:id="@+id/iKalender"
-        android:icon="@drawable/aktivitas"
-        android:title="Aktivitas" />
-    <item
         android:id="@+id/iCatatan"
-        android:icon="@drawable/catatan"
+        android:icon="@drawable/aktivitas"
         android:title="Catatan" />
+
+    <item
+        android:id="@+id/iAktivitas"
+        android:icon="@drawable/catatan"
+        android:title="Aktivitas" />
 
 
 

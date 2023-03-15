@@ -6,7 +6,7 @@ import androidx.room.Entity
 import androidx.room.PrimaryKey
 import kotlinx.parcelize.Parcelize
 
-@Entity
+@Entity(tableName = "todo")
 @Parcelize
 data class Todo(
     @PrimaryKey(autoGenerate = true)
@@ -14,17 +14,14 @@ data class Todo(
     var id: Int = 0,
 
     @ColumnInfo("judul")
-    var judul: String? = null,
+    var judul: String? = "",
 
     @ColumnInfo("deskripsi")
     var deskripsi: String? = null,
 
-    @ColumnInfo("status")
-    var status: Boolean? = false,
+    @ColumnInfo("isDone")
+    var isDone: Boolean? = false,
 
-    @ColumnInfo("created_at")
-    var createdAt: String? = null,
-
-    @ColumnInfo("updated_at")
-    var updatedAt: String? = null,
+    @ColumnInfo("date")
+    var date: String? = null,
 ) : Parcelable

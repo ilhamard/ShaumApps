@@ -4,10 +4,11 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.switchMap
 import androidx.lifecycle.viewModelScope
+import com.dev.shaumapps.data.DoaRepository
 import com.dev.shaumapps.data.local.entity.DoaHarian
 import kotlinx.coroutines.launch
 
-class BookmarkDoaViewModel(private val doaRepository: com.dev.shaumapps.data.DoaRepository) :
+class BookmarkDoaViewModel(private val doaRepository: DoaRepository) :
     ViewModel() {
 
     private val doaData = MutableLiveData<DoaHarian>()

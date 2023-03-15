@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import com.dev.shaumapps.CompassActivityNew
 import com.dev.shaumapps.databinding.FragmentBerandaBinding
 import com.dev.shaumapps.ui.asmaul_husna.AsmaulHusnaActivity
 import com.dev.shaumapps.ui.doa.DoaActivity
@@ -35,29 +36,33 @@ class BerandaFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.doa.setOnClickListener {
+        binding.icDoa.setOnClickListener {
             val intent = Intent(requireContext(), DoaActivity::class.java)
             startActivity(intent)
         }
 
-        binding.bgTasbih.setOnClickListener {
+        binding.icTasbih.setOnClickListener {
             val intent = Intent(requireContext(), TasbihActivity::class.java)
             startActivity(intent)
         }
 
-        binding.circleBgHadits.setOnClickListener {
+        binding.icHadits.setOnClickListener {
             startActivity(Intent(requireContext(), HadisActivity::class.java))
         }
 
-        binding.bgJadwalSholat.setOnClickListener {
+        binding.icJadwalSholat.setOnClickListener {
             startActivity(Intent(requireContext(), JadwalShalatActivity::class.java))
         }
-        binding.circleBgKutipan.setOnClickListener {
+        binding.icKutipan.setOnClickListener {
             startActivity(Intent(requireContext(), KutipanActivity:: class.java))
         }
 
-        binding.circleBgAsmaulhusna.setOnClickListener {
+        binding.icAsmaulhusna.setOnClickListener {
             startActivity(Intent(requireContext(), AsmaulHusnaActivity::class.java))
+        }
+
+        binding.icKiblat.setOnClickListener {
+            startActivity(Intent(requireContext(), CompassActivityNew::class.java))
         }
     }
 }
