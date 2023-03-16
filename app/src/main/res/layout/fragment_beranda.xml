@@ -14,7 +14,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginTop="24dp"
-        android:src="@drawable/profile"
+        android:src="@drawable/profile_ihwan"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -24,7 +24,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
         android:layout_marginTop="5dp"
-        android:text="Selamat pagi!"
+        android:text="Assalamu'alaikum!"
         android:textColor="#787878"
         android:textSize="12dp"
         app:layout_constraintStart_toEndOf="@+id/img_profile"
@@ -36,31 +36,31 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
         android:layout_marginBottom="5dp"
-        android:text="Agus Ihsan Mochamad"
+        android:text="Akhi"
         android:textColor="@color/black"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/img_profile"
         app:layout_constraintStart_toEndOf="@+id/img_profile" />
 
-    <ImageView
-        android:id="@+id/img_bg_notif"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="24dp"
-        app:layout_constraintBottom_toBottomOf="@+id/img_profile"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/img_profile"
-        app:srcCompat="@drawable/white_circle_bg_small" />
+<!--    <ImageView-->
+<!--        android:id="@+id/img_bg_notif"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginEnd="24dp"-->
+<!--        app:layout_constraintBottom_toBottomOf="@+id/img_profile"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="@+id/img_profile"-->
+<!--        app:srcCompat="@drawable/white_circle_bg_small" />-->
 
-    <ImageView
-        android:id="@+id/img_notification"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="@+id/img_bg_notif"
-        app:layout_constraintEnd_toEndOf="@+id/img_bg_notif"
-        app:layout_constraintStart_toStartOf="@+id/img_bg_notif"
-        app:layout_constraintTop_toTopOf="@+id/img_bg_notif"
-        app:srcCompat="@drawable/notification" />
+<!--    <ImageView-->
+<!--        android:id="@+id/img_notification"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        app:layout_constraintBottom_toBottomOf="@+id/img_bg_notif"-->
+<!--        app:layout_constraintEnd_toEndOf="@+id/img_bg_notif"-->
+<!--        app:layout_constraintStart_toStartOf="@+id/img_bg_notif"-->
+<!--        app:layout_constraintTop_toTopOf="@+id/img_bg_notif"-->
+<!--        app:srcCompat="@drawable/notification" />-->
 
     <!-- End Section Header-->
 
