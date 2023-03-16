@@ -2,13 +2,19 @@ package com.dev.shaumapps.ui.todo_list
 
 import android.os.Build
 import android.os.Bundle
+import android.view.View
 import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
+import androidx.core.graphics.drawable.DrawableCompat
 import androidx.lifecycle.ViewModelProvider
+import com.dev.shaumapps.R
 import com.dev.shaumapps.data.local.entity.Todo
 import com.dev.shaumapps.databinding.ActivityTodoAddUpdateBinding
 import com.dev.shaumapps.util.DateHelper
 import com.dev.shaumapps.util.ViewModelFactory
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 class TodoAddUpdateActivity : AppCompatActivity() {
     private lateinit var binding: ActivityTodoAddUpdateBinding
@@ -39,9 +45,13 @@ class TodoAddUpdateActivity : AppCompatActivity() {
         if (isEdit) {
             actionBarTitle = "Update Aktivitas"
             if (todo != null) {
+                binding.fabDelete.visibility = View.VISIBLE
                 todo?.let { todo ->
                     binding.edtTitle.setText(todo.judul)
                     binding.edtDescription.setText(todo.deskripsi)
+                }
+                binding.fabDelete.setOnClickListener {
+                    showDeleteDialog(todo as Todo)
                 }
             }
         } else {
@@ -83,10 +93,44 @@ class TodoAddUpdateActivity : AppCompatActivity() {
                 }
             }
         }
+
+        coloringIconFab()
     }
 
     private fun showToast(message: String) {
         Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
+    }
+
+    private fun coloringIconFab() {
+        val csl = ContextCompat.getColorStateList(this, R.color.white)
+        val fabSubmit: FloatingActionButton = findViewById(R.id.fab_submit)
+        val fabDelete: FloatingActionButton = findViewById(R.id.fab_delete)
+        val drawableSubmit = fabSubmit.drawable?.mutate()
+        val drawableDelete = fabDelete.drawable?.mutate()
+        drawableSubmit?.let {
+            DrawableCompat.setTintList(it, csl)
+            fabSubmit.setImageDrawable(it)
+        }
+        drawableDelete?.let {
+            DrawableCompat.setTintList(it, csl)
+            fabDelete.setImageDrawable(it)
+        }
+    }
+
+    private fun showDeleteDialog(todo: Todo) {
+        val alertDialogBuilder = AlertDialog.Builder(this)
+        with(alertDialogBuilder) {
+            setTitle("Konfirmasi")
+            setMessage("Apakah anda yakin ingin menghapus aktivitas ini?")
+            setCancelable(false)
+            setPositiveButton("Ya") { _, _ ->
+                todoViewModel.deleteTodo(todo)
+                finish()
+            }
+            setNegativeButton("Tidak") { dialog, _ -> dialog.cancel() }
+        }
+        val alertDialog = alertDialogBuilder.create()
+        alertDialog.show()
     }
 
     private fun obtainViewModel(activity: AppCompatActivity): TodoViewModel {

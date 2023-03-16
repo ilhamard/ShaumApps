@@ -6,11 +6,13 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.ViewModelProvider
 import com.dev.shaumapps.CompassActivityNew
 import com.dev.shaumapps.databinding.FragmentBerandaBinding
 import com.dev.shaumapps.ui.asmaul_husna.AsmaulHusnaActivity
 import com.dev.shaumapps.ui.doa.DoaActivity
 import com.dev.shaumapps.ui.hadis.HadisActivity
+import com.dev.shaumapps.ui.hadis.HadisViewModel
 import com.dev.shaumapps.ui.jadwal_shalat.JadwalShalatActivity
 import com.dev.shaumapps.ui.kutipan.KutipanActivity
 import com.dev.shaumapps.ui.tasbih.TasbihActivity
@@ -24,6 +26,8 @@ class BerandaFragment : Fragment() {
     private var _binding: FragmentBerandaBinding? = null
     private val binding get() = _binding!!
 
+    private lateinit var viewModel: HadisViewModel
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?,
@@ -35,6 +39,14 @@ class BerandaFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        viewModel = ViewModelProvider(this)[HadisViewModel::class.java]
+        viewModel.getRandomHadis()
+        viewModel.hadisRespone.observe(viewLifecycleOwner) { data ->
+            binding.apply {
+                "${data.data.contents.id} (${data.data.name})".also { txtHighlightHadits.text = it }
+            }
+        }
 
         binding.icDoa.setOnClickListener {
             val intent = Intent(requireContext(), DoaActivity::class.java)

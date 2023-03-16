@@ -28,6 +28,7 @@
         </activity>
         <activity
             android:name=".ui.todo_list.TodoAddUpdateActivity"
+            android:windowSoftInputMode="adjustResize"
             android:exported="false" />
         <activity
             android:name=".CompassActivityNew"

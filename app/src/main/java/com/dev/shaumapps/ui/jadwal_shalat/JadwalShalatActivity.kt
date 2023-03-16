@@ -119,7 +119,7 @@ class JadwalShalatActivity : AppCompatActivity() {
                 tvTanggalHijr.text = "$tglHijr $bulanHijr $tahunHijr"
             }
 
-            var imsak = getTimeInMillis(waktu.imsak, 1)
+            val imsak = getTimeInMillis(waktu.imsak, 1)
             val shubuh = getTimeInMillis(waktu.fajr, 0)
             Log.d("JadwalShalatActivity", "cek shubuh: $shubuh")
             val terbit = getTimeInMillis(waktu.sunrise, 0)
