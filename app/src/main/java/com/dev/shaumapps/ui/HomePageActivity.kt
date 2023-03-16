@@ -35,7 +35,6 @@ class HomePageActivity : AppCompatActivity() {
                     R.id.iBeranda -> fragment = BerandaFragment()
                     R.id.iAktivitas -> fragment = TodoListFragment()
                     R.id.iCatatan -> fragment = CatatanFragment()
-//                    R.id.iPengaturan -> fragment = SettingFragment()
                 }
                 if (fragment != null) {
                     fragmentManager = supportFragmentManager
