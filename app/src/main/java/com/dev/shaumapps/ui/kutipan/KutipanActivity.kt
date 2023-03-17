@@ -2,7 +2,6 @@ package com.dev.shaumapps.ui.kutipan
 
 import android.content.Intent
 import android.os.Bundle
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -21,7 +20,8 @@ class KutipanActivity : AppCompatActivity() {
         init()
 
     }
-    private fun init(){
+
+    private fun init() {
         recyclerView = findViewById(R.id.recyclerKutipan)
         recyclerView.setHasFixedSize(true)
         recyclerView.layoutManager = GridLayoutManager(this, 2)
@@ -32,13 +32,14 @@ class KutipanActivity : AppCompatActivity() {
         kutipanAdapter = KutipanAdapter(kutipanList)
         recyclerView.adapter = kutipanAdapter
 
-        kutipanAdapter.setOnItemClickCallBack(object : KutipanAdapter.OnItemClickCallBack{
+        kutipanAdapter.setOnItemClickCallBack(object : KutipanAdapter.OnItemClickCallBack {
             override fun onItemClickcallBack(data: Kutipan) {
                 showSelectedImageKutipan(data)
             }
         })
     }
-    private fun imgList(){
+
+    private fun imgList() {
         kutipanList.add(Kutipan(R.drawable.imgkutipan1))
         kutipanList.add(Kutipan(R.drawable.imgkutipan2))
         kutipanList.add(Kutipan(R.drawable.imgkutipan1))
@@ -50,7 +51,8 @@ class KutipanActivity : AppCompatActivity() {
         kutipanList.add(Kutipan(R.drawable.imgkutipan1))
         kutipanList.add(Kutipan(R.drawable.imgkutipan2))
     }
-    private fun showSelectedImageKutipan(kutpan: Kutipan){
+
+    private fun showSelectedImageKutipan(kutpan: Kutipan) {
         val intent = Intent(this@KutipanActivity, DetailKutipanActivity::class.java)
         intent.putExtra(DetailKutipanActivity.EXTRA_KUTIPAN, kutpan.image.toString())
         startActivity(intent)

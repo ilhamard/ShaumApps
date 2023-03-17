@@ -28,8 +28,8 @@
         </activity>
         <activity
             android:name=".ui.todo_list.TodoAddUpdateActivity"
-            android:windowSoftInputMode="adjustResize"
-            android:exported="false" />
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
         <activity
             android:name=".CompassActivityNew"
             android:exported="false">
@@ -62,10 +62,11 @@
             android:exported="false" />
         <activity
             android:name=".ui.asmaul_husna.AsmaulHusnaActivity"
-            android:exported="false"/>
+            android:exported="false" />
         <activity
             android:name=".ui.jadwal_shalat.JadwalShalatActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".ui.HomePageActivity"/>
         <activity
             android:name=".ui.doa.DoaActivity"
             android:exported="false"
@@ -80,13 +81,7 @@
             android:parentActivityName=".ui.HomePageActivity" />
         <activity
             android:name=".ui.HomePageActivity"
-            android:exported="false" /> <!-- <activity -->
-        <!-- android:name=".ui.jadwal_shalat.JadwalShalatActivity" -->
-        <!-- android:exported="false"> -->
-        <!-- <meta-data -->
-        <!-- android:name="android.app.lib_name" -->
-        <!-- android:value="" /> -->
-        <!-- </activity> -->
+            android:exported="false" />
         <activity
             android:name=".ui.MainActivity"
             android:exported="true">

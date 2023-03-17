@@ -17,10 +17,10 @@
             android:id="@+id/img_itm_kutipan"
             android:layout_width="match_parent"
             android:layout_height="265dp"
-            android:scaleType="fitXY"
             android:layout_weight="1"
-            android:src="@drawable/imgkutipan1"/>
+            android:scaleType="fitXY"
+            android:src="@drawable/imgkutipan1" />
 
 
-</LinearLayout>
+    </LinearLayout>
 </androidx.cardview.widget.CardView>

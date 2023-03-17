@@ -15,9 +15,6 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.dev.shaumapps.R
 import com.dev.shaumapps.data.local.entity.Todo
 import com.dev.shaumapps.databinding.FragmentTodoListBinding
-import com.dev.shaumapps.ui.doa.BookmarkDoaViewModel
-import com.dev.shaumapps.ui.doa.ListDoaAdapter
-import com.dev.shaumapps.ui.tasbih.TasbihActivity
 import com.dev.shaumapps.util.ViewModelFactory
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 
@@ -28,7 +25,7 @@ class TodoListFragment : Fragment(), TodoAdapter.OnItemClickListener {
     private lateinit var viewModel: TodoViewModel
     private lateinit var rvAdapter: TodoAdapter
     private lateinit var rvAdapterChecked: TodoAdapter
-    private lateinit var fabAdd : FloatingActionButton
+    private lateinit var fabAdd: FloatingActionButton
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -56,11 +53,11 @@ class TodoListFragment : Fragment(), TodoAdapter.OnItemClickListener {
             startActivity(Intent(requireContext(), TodoAddUpdateActivity::class.java))
         }
 
-        viewModel.getAllTodos().observe(viewLifecycleOwner){
+        viewModel.getAllTodos().observe(viewLifecycleOwner) {
             rvAdapter.setListTodo(it)
         }
 
-        viewModel.getTodoChecked().observe(viewLifecycleOwner){
+        viewModel.getTodoChecked().observe(viewLifecycleOwner) {
             rvAdapterChecked.setListTodo(it)
         }
 
@@ -68,7 +65,7 @@ class TodoListFragment : Fragment(), TodoAdapter.OnItemClickListener {
         setRecyclerViewChecked()
     }
 
-    private fun coloringIconFab(){
+    private fun coloringIconFab() {
         val csl = ContextCompat.getColorStateList(requireContext(), R.color.white)
         val fab = fabAdd
         val drawable = fab.drawable?.mutate()

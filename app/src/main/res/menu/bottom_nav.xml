@@ -16,10 +16,9 @@
         android:title="Aktivitas" />
 
 
-
-<!--    <item-->
-<!--        android:id="@+id/iPengaturan"-->
-<!--        android:icon="@drawable/pengaturan"-->
-<!--        android:title="Pengaturan" />-->
+    <!--    <item-->
+    <!--        android:id="@+id/iPengaturan"-->
+    <!--        android:icon="@drawable/pengaturan"-->
+    <!--        android:title="Pengaturan" />-->
 
 </menu>

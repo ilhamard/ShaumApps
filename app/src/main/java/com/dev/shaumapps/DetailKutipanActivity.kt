@@ -1,8 +1,8 @@
 package com.dev.shaumapps
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import androidx.appcompat.app.AppCompatActivity
 import com.dev.shaumapps.databinding.ActivityDetailKutipanBinding
 
 class DetailKutipanActivity : AppCompatActivity() {
@@ -13,8 +13,8 @@ class DetailKutipanActivity : AppCompatActivity() {
         binding = ActivityDetailKutipanBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val data  = intent.getStringExtra(EXTRA_KUTIPAN)
-        Log.d("DetailKutpan", "cek Hasil $data" )
+        val data = intent.getStringExtra(EXTRA_KUTIPAN)
+        Log.d("DetailKutpan", "cek Hasil $data")
         data?.toInt()?.let { binding.imgDetailKutipan.setImageResource(it) }
     }
 

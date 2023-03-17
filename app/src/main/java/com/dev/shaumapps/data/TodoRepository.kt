@@ -12,7 +12,7 @@ class TodoRepository(private val todoDao: TodoDao) {
         todoDao.saveTodo(todo)
     }
 
-    suspend fun updateTodo(todo: Todo){
+    suspend fun updateTodo(todo: Todo) {
         todoDao.updateTodo(todo)
     }
 

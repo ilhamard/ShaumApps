@@ -12,7 +12,7 @@ object Injection {
         return DoaRepository.getInstance(dao)
     }
 
-    fun provideTodoRepository(context: Context): TodoRepository{
+    fun provideTodoRepository(context: Context): TodoRepository {
         val database = ShaumDatabase.getInstance(context)
         val dao = database.todoDao()
         return TodoRepository.getInstance(dao)

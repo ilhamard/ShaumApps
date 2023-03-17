@@ -10,7 +10,10 @@ import com.dev.shaumapps.ui.doa.BookmarkDoaViewModel
 import com.dev.shaumapps.ui.doa.DoaViewModel
 import com.dev.shaumapps.ui.todo_list.TodoViewModel
 
-class ViewModelFactory private constructor(private val doaRepository: DoaRepository, private val todoRepository: TodoRepository) :
+class ViewModelFactory private constructor(
+    private val doaRepository: DoaRepository,
+    private val todoRepository: TodoRepository,
+) :
     ViewModelProvider.NewInstanceFactory() {
 
     @Suppress("UNCHECKED_CAST")
@@ -19,7 +22,7 @@ class ViewModelFactory private constructor(private val doaRepository: DoaReposit
             return BookmarkDoaViewModel(doaRepository) as T
         } else if (modelClass.isAssignableFrom(DoaViewModel::class.java)) {
             return DoaViewModel() as T
-        } else if (modelClass.isAssignableFrom(TodoViewModel::class.java)){
+        } else if (modelClass.isAssignableFrom(TodoViewModel::class.java)) {
             return TodoViewModel(todoRepository) as T
         }
         throw IllegalArgumentException("Unknown ViewModel class: ${modelClass.name}")
@@ -30,7 +33,10 @@ class ViewModelFactory private constructor(private val doaRepository: DoaReposit
         private var instance: ViewModelFactory? = null
         fun getInstance(context: Context): ViewModelFactory =
             instance ?: synchronized(this) {
-                instance ?: ViewModelFactory(Injection.provideDoaRepository(context), Injection.provideTodoRepository(context))
+                instance ?: ViewModelFactory(
+                    Injection.provideDoaRepository(context),
+                    Injection.provideTodoRepository(context)
+                )
             }.also { instance = it }
     }
 }

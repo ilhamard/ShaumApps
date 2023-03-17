@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#F9FCFB">
@@ -42,25 +41,25 @@
         app:layout_constraintBottom_toBottomOf="@+id/img_profile"
         app:layout_constraintStart_toEndOf="@+id/img_profile" />
 
-<!--    <ImageView-->
-<!--        android:id="@+id/img_bg_notif"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_marginEnd="24dp"-->
-<!--        app:layout_constraintBottom_toBottomOf="@+id/img_profile"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintTop_toTopOf="@+id/img_profile"-->
-<!--        app:srcCompat="@drawable/white_circle_bg_small" />-->
+    <!--    <ImageView-->
+    <!--        android:id="@+id/img_bg_notif"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginEnd="24dp"-->
+    <!--        app:layout_constraintBottom_toBottomOf="@+id/img_profile"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintTop_toTopOf="@+id/img_profile"-->
+    <!--        app:srcCompat="@drawable/white_circle_bg_small" />-->
 
-<!--    <ImageView-->
-<!--        android:id="@+id/img_notification"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        app:layout_constraintBottom_toBottomOf="@+id/img_bg_notif"-->
-<!--        app:layout_constraintEnd_toEndOf="@+id/img_bg_notif"-->
-<!--        app:layout_constraintStart_toStartOf="@+id/img_bg_notif"-->
-<!--        app:layout_constraintTop_toTopOf="@+id/img_bg_notif"-->
-<!--        app:srcCompat="@drawable/notification" />-->
+    <!--    <ImageView-->
+    <!--        android:id="@+id/img_notification"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        app:layout_constraintBottom_toBottomOf="@+id/img_bg_notif"-->
+    <!--        app:layout_constraintEnd_toEndOf="@+id/img_bg_notif"-->
+    <!--        app:layout_constraintStart_toStartOf="@+id/img_bg_notif"-->
+    <!--        app:layout_constraintTop_toTopOf="@+id/img_bg_notif"-->
+    <!--        app:srcCompat="@drawable/notification" />-->
 
     <!-- End Section Header-->
 
@@ -154,13 +153,13 @@
     <!--End Header Section-->
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:background="#fff"
-        android:paddingBottom="24dp"
         android:id="@+id/main_menu"
-        android:elevation="0.5dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
+        android:background="#fff"
+        android:elevation="0.5dp"
+        android:paddingBottom="24dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/card_menu">
@@ -627,11 +626,11 @@
             app:layout_constraintTop_toTopOf="@id/artikel_highlight"></TextView>
 
         <androidx.cardview.widget.CardView
-            app:cardCornerRadius="15dp"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            app:cardBackgroundColor="#EFFFFB"
             android:layout_margin="24dp"
+            app:cardBackgroundColor="#EFFFFB"
+            app:cardCornerRadius="15dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -641,9 +640,9 @@
                 android:id="@+id/txt_highlight_hadits"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:layout_margin="24dp"
                 android:text="Jika awal Ramadhan tiba, maka setan-­setan dan jin dibelenggu, pintu-pintu neraka ditutup, tidak ada satu pintu pun yang dibuka. Sedangkan pintu-pintu surga dibuka, dan tidak satu pintu pun yang ditutup. Lalu ada seruan (pada bulan Ramadhan); Wahai orang yang menginginkan kebaikan, datanglah. Wahai orang yang ingin kejahatan, tahanlah dirimu. Pada setiap malam Allah SWT memiliki orang-orang yang dibebaskan dari neraka"
                 android:textAlignment="center"
-                android:layout_margin="24dp"
                 android:textColor="@color/text" />
 
         </androidx.cardview.widget.CardView>

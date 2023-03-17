@@ -15,6 +15,9 @@ import android.os.Bundle
 import android.os.CountDownTimer
 import android.provider.Settings
 import android.util.Log
+import android.view.Menu
+import android.view.MenuInflater
+import android.view.MenuItem
 import android.widget.Button
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
@@ -47,6 +50,10 @@ class JadwalShalatActivity : AppCompatActivity() {
         binding = ActivityJadwalShalatBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        setSupportActionBar(binding.myToolbar)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        supportActionBar?.title = "Jadwal Shalat"
+
         sp = SoundPool.Builder()
             .setMaxStreams(10)
             .build()
@@ -61,11 +68,6 @@ class JadwalShalatActivity : AppCompatActivity() {
         }
 
         soundId = sp.load(this@JadwalShalatActivity, R.raw.beduk, 1)
-
-        binding.ivSetting.setOnClickListener {
-            Toast.makeText(this, "klik ok", Toast.LENGTH_SHORT).show()
-            getMyLastLocation()
-        }
 
         fusedLocationClient = LocationServices.getFusedLocationProviderClient(this)
         getMyLastLocation()
@@ -195,30 +197,37 @@ class JadwalShalatActivity : AppCompatActivity() {
         }
 
         binding.ivSoundImsak.setOnClickListener {
+            Toast.makeText(this@JadwalShalatActivity, "Fitur ini masih tahap pengembangan", Toast.LENGTH_SHORT).show()
             viewModel.alertSound("Imsak")
             alert("Imsak")
         }
         binding.ivSoundShubuh.setOnClickListener {
+            Toast.makeText(this@JadwalShalatActivity, "Fitur ini masih tahap pengembangan", Toast.LENGTH_SHORT).show()
             viewModel.alertSound("Shubuh")
             alert("Shubuh")
         }
         binding.ivSoundTerbit.setOnClickListener {
+            Toast.makeText(this@JadwalShalatActivity, "Fitur ini masih tahap pengembangan", Toast.LENGTH_SHORT).show()
             viewModel.alertSound("Terbit")
             alert("Terbit")
         }
         binding.ivSoundDzuhur.setOnClickListener {
+            Toast.makeText(this@JadwalShalatActivity, "Fitur ini masih tahap pengembangan", Toast.LENGTH_SHORT).show()
             viewModel.alertSound("Dzuhur")
             alert("Dzuhur")
         }
         binding.ivSoundAshar.setOnClickListener {
+            Toast.makeText(this@JadwalShalatActivity, "Fitur ini masih tahap pengembangan", Toast.LENGTH_SHORT).show()
             viewModel.alertSound("Ashar")
             alert("Ashar")
         }
         binding.ivSoundMaghrib.setOnClickListener {
+            Toast.makeText(this@JadwalShalatActivity, "Fitur ini masih tahap pengembangan", Toast.LENGTH_SHORT).show()
             viewModel.alertSound("Maghrib")
             alert("Maghrib")
         }
         binding.ivSoundIsya.setOnClickListener {
+            Toast.makeText(this@JadwalShalatActivity, "Fitur ini masih tahap pengembangan", Toast.LENGTH_SHORT).show()
             viewModel.alertSound("Isya")
             alert("Isya")
         }
@@ -277,6 +286,24 @@ class JadwalShalatActivity : AppCompatActivity() {
             }
         }
     }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        val inflater: MenuInflater = menuInflater
+        inflater.inflate(R.menu.menu_bar_jadwal_shalat, menu)
+        return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem) =
+        when (item.itemId) {
+            R.id.action_update_loc -> {
+                getMyLastLocation()
+                true
+            }
+            else -> {
+                super.onOptionsItemSelected(item)
+            }
+        }
+
 
     private fun startCountdown() {
         var timeDifference = targetTime - currentTime

@@ -2,7 +2,6 @@ package com.dev.shaumapps.data.local.room
 
 import androidx.lifecycle.LiveData
 import androidx.room.*
-import com.dev.shaumapps.data.local.entity.DoaHarian
 import com.dev.shaumapps.data.local.entity.Todo
 
 @Dao

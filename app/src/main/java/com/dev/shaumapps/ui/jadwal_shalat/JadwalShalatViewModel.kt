@@ -96,8 +96,8 @@ class JadwalShalatViewModel : ViewModel() {
         })
     }
 
-    fun alertSound(shalat: String){
-        when(shalat){
+    fun alertSound(shalat: String) {
+        when (shalat) {
             "Imsak" -> isImsakAlert = !isImsakAlert
             "Shubuh" -> isShubuhAlert = !isShubuhAlert
             "Terbit" -> isTerbitAlert = !isTerbitAlert

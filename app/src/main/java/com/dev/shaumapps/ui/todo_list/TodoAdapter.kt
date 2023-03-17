@@ -5,12 +5,11 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.dev.shaumapps.data.local.entity.DoaHarian
 import com.dev.shaumapps.data.local.entity.Todo
-import com.dev.shaumapps.databinding.ItemListDoaBinding
 import com.dev.shaumapps.databinding.ItemTodoBinding
 
-class TodoAdapter(private val listener: OnItemClickListener) : RecyclerView.Adapter<TodoAdapter.ListTodoViewHolder>() {
+class TodoAdapter(private val listener: OnItemClickListener) :
+    RecyclerView.Adapter<TodoAdapter.ListTodoViewHolder>() {
     private val listTodo = ArrayList<Todo>()
 
     fun setListTodo(listTodo: List<Todo>) {
@@ -40,7 +39,7 @@ class TodoAdapter(private val listener: OnItemClickListener) : RecyclerView.Adap
             binding.apply {
                 checkbox.setOnClickListener {
                     val position = bindingAdapterPosition
-                    if (position != RecyclerView.NO_POSITION){
+                    if (position != RecyclerView.NO_POSITION) {
                         val todo = listTodo[position]
                         listener.onCheckBoxClick(todo, checkbox.isChecked)
                     }
@@ -62,7 +61,7 @@ class TodoAdapter(private val listener: OnItemClickListener) : RecyclerView.Adap
     }
 
     interface OnItemClickListener {
-//        fun onItemClick(todo: Todo)
+        //        fun onItemClick(todo: Todo)
         fun onCheckBoxClick(todo: Todo, isChecked: Boolean)
     }
 }
