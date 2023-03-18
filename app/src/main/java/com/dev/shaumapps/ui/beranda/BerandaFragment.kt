@@ -95,31 +95,31 @@ class BerandaFragment : Fragment() {
 
             when (currentTime) {
                 in imsak until shubuh -> {
-                    binding.tvWaktuShalat.text = "Shubuh, ${waktu.fajr} WIB"
+                    binding.txtWaktuSolat.text = "Shubuh, ${waktu.fajr} WIB"
                     targetTime = shubuh
                 }
                 in shubuh until terbit -> {
-                    binding.tvWaktuShalat.text = "Terbit, ${waktu.sunrise} WIB"
+                    binding.txtWaktuSolat.text = "Terbit, ${waktu.sunrise} WIB"
                     targetTime = terbit
                 }
                 in terbit until dzuhur -> {
-                    binding.tvWaktuShalat.text = "Dzuhur, ${waktu.dhuhr} WIB"
+                    binding.txtWaktuSolat.text = "Dzuhur, ${waktu.dhuhr} WIB"
                     targetTime = dzuhur
                 }
                 in dzuhur until ashar -> {
-                    binding.tvWaktuShalat.text = "Ashar, ${waktu.asr} WIB"
+                    binding.txtWaktuSolat.text = "Ashar, ${waktu.asr} WIB"
                     targetTime = ashar
                 }
                 in ashar until maghrib -> {
-                    binding.tvWaktuShalat.text = "Maghrib, ${waktu.maghrib} WIB"
+                    binding.txtWaktuSolat.text = "Maghrib, ${waktu.maghrib} WIB"
                     targetTime = maghrib
                 }
                 in maghrib until isya -> {
-                    binding.tvWaktuShalat.text = "Isya, ${waktu.isha} WIB"
+                    binding.txtWaktuSolat.text = "Isya, ${waktu.isha} WIB"
                     targetTime = isya
                 }
                 in isya until imsak -> {
-                    binding.tvWaktuShalat.text = "Imsak, ${waktu.imsak} WIB"
+                    binding.txtWaktuSolat.text = "Imsak, ${waktu.imsak} WIB"
                     targetTime = imsak
                 }
             }

@@ -18,7 +18,7 @@ class HomePageActivity : AppCompatActivity() {
         animatedBottomBar = findViewById(R.id.animatedBottomBar)
         if (savedInstanceState == null) {
             animatedBottomBar.selectTabById(R.id.iBeranda, true)
-            fragmentManager = supportFragmentManager
+            fragmentManager = getSupportFragmentManager()
             val homeFragment = BerandaFragment()
             fragmentManager!!.beginTransaction().replace(R.id.fragment_container, homeFragment)
                 .commit()
@@ -33,8 +33,8 @@ class HomePageActivity : AppCompatActivity() {
                 var fragment: Fragment? = null
                 when (newTab.id) {
                     R.id.iBeranda -> fragment = BerandaFragment()
-                    R.id.iAktivitas -> fragment = TodoListFragment()
                     R.id.iCatatan -> fragment = CatatanFragment()
+                    R.id.iAktivitas -> fragment = TodoListFragment()
                 }
                 if (fragment != null) {
                     fragmentManager = supportFragmentManager
