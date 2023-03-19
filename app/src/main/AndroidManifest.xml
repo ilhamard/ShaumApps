@@ -64,6 +64,9 @@
             android:name=".ui.hadis.HadisActivity"
             android:exported="false" />
         <activity
+            android:name="B"
+            android:exported="false" />
+        <activity
             android:name=".ui.doa.BookmarkDoaActivity"
             android:exported="false"
             android:parentActivityName=".ui.doa.DoaActivity" />

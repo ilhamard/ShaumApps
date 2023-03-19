@@ -156,6 +156,10 @@ class BerandaFragment : Fragment() {
         binding.icKiblat.setOnClickListener {
             startActivity(Intent(requireContext(), CompassActivityNew::class.java))
         }
+
+        binding.icKitab.setOnClickListener {
+            Toast.makeText(requireContext(), "Sedang Tahap Pengembangan", Toast.LENGTH_SHORT).show()
+        }
     }
 
     private fun isLocationEnabled(): Boolean {

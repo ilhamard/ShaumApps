@@ -30,6 +30,7 @@
         app:layout_constraintTop_toTopOf="@id/header" />
 
     <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_back"
         android:layout_width="35dp"
         android:layout_height="35dp"
         android:layout_marginStart="24dp"
@@ -38,14 +39,14 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@id/tv_arahKiblat" />
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:layout_width="35dp"
-        android:layout_height="35dp"
-        android:layout_marginEnd="24dp"
-        android:background="@drawable/ic_compas"
-        app:layout_constraintBottom_toBottomOf="@id/tv_arahKiblat"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@id/tv_arahKiblat" />
+<!--    <androidx.appcompat.widget.AppCompatButton-->
+<!--        android:layout_width="35dp"-->
+<!--        android:layout_height="35dp"-->
+<!--        android:layout_marginEnd="24dp"-->
+<!--        android:background="@drawable/ic_compas"-->
+<!--        app:layout_constraintBottom_toBottomOf="@id/tv_arahKiblat"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="@id/tv_arahKiblat" />-->
 
     <ImageView
         android:id="@+id/iv_lokasi"

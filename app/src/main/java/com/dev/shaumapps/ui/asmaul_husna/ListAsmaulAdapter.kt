@@ -8,6 +8,7 @@ import android.widget.TextView
 import androidx.cardview.widget.CardView
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.content.ContextCompat
+import androidx.core.text.HtmlCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.dev.shaumapps.R
 import com.dev.shaumapps.util.AsmaulHusna
@@ -37,6 +38,7 @@ class ListAsmaulAdapter(private val listAsmaul: ArrayList<AsmaulHusna>) :
         holder.tvAsmaulHusna.text = asmauHusna
         holder.tvNoAsmaulHusna.text = noAsmaulHusna
         holder.isiAsmaulHusna.text = AsmaulHusnaMakna
+
 
         holder.expandView.setOnClickListener {
             if (muncul == true) {

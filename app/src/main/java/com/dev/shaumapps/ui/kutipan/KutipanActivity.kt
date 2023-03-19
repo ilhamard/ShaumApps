@@ -42,14 +42,20 @@ class KutipanActivity : AppCompatActivity() {
     private fun imgList() {
         kutipanList.add(Kutipan(R.drawable.imgkutipan1))
         kutipanList.add(Kutipan(R.drawable.imgkutipan2))
-        kutipanList.add(Kutipan(R.drawable.imgkutipan1))
-        kutipanList.add(Kutipan(R.drawable.imgkutipan2))
-        kutipanList.add(Kutipan(R.drawable.imgkutipan1))
-        kutipanList.add(Kutipan(R.drawable.imgkutipan2))
-        kutipanList.add(Kutipan(R.drawable.imgkutipan1))
-        kutipanList.add(Kutipan(R.drawable.imgkutipan2))
-        kutipanList.add(Kutipan(R.drawable.imgkutipan1))
-        kutipanList.add(Kutipan(R.drawable.imgkutipan2))
+        kutipanList.add(Kutipan(R.drawable.imgkutipan3))
+        kutipanList.add(Kutipan(R.drawable.imgkutipan4))
+        kutipanList.add(Kutipan(R.drawable.imgkutipan5))
+        kutipanList.add(Kutipan(R.drawable.imgkutipan6))
+        kutipanList.add(Kutipan(R.drawable.imgkutipan7))
+        kutipanList.add(Kutipan(R.drawable.imgkutipan8))
+        kutipanList.add(Kutipan(R.drawable.imgkutipan9))
+        kutipanList.add(Kutipan(R.drawable.imgkutipan10))
+        kutipanList.add(Kutipan(R.drawable.imgkutipan11))
+        kutipanList.add(Kutipan(R.drawable.imgkutipan12))
+        kutipanList.add(Kutipan(R.drawable.imgkutipan13))
+        kutipanList.add(Kutipan(R.drawable.imgkutipan14))
+        kutipanList.add(Kutipan(R.drawable.imgkutipan15))
+        kutipanList.add(Kutipan(R.drawable.imgkutipan16))
     }
 
     private fun showSelectedImageKutipan(kutpan: Kutipan) {
