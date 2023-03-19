@@ -7,30 +7,35 @@ import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.dev.shaumapps.DetailKutipanActivity
 import com.dev.shaumapps.R
+import com.dev.shaumapps.databinding.ActivityKutipanBinding
 
 class KutipanActivity : AppCompatActivity() {
-    private lateinit var recyclerView: RecyclerView
+    private lateinit var binding: ActivityKutipanBinding
     private lateinit var kutipanList: ArrayList<Kutipan>
     private lateinit var kutipanAdapter: KutipanAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_kutipan)
+        binding = ActivityKutipanBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+
+        setSupportActionBar(binding.myToolbar)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        supportActionBar?.title = "Kutipan"
 
         init()
 
     }
 
     private fun init() {
-        recyclerView = findViewById(R.id.recyclerKutipan)
-        recyclerView.setHasFixedSize(true)
-        recyclerView.layoutManager = GridLayoutManager(this, 2)
+        binding.recyclerKutipan.setHasFixedSize(true)
+        binding.recyclerKutipan.layoutManager = GridLayoutManager(this, 2)
 
         kutipanList = ArrayList()
         imgList()
 
         kutipanAdapter = KutipanAdapter(kutipanList)
-        recyclerView.adapter = kutipanAdapter
+        binding.recyclerKutipan.adapter = kutipanAdapter
 
         kutipanAdapter.setOnItemClickCallBack(object : KutipanAdapter.OnItemClickCallBack {
             override fun onItemClickcallBack(data: Kutipan) {

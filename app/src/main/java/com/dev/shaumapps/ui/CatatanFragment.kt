@@ -7,12 +7,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
-import androidx.appcompat.widget.AppCompatButton
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.dev.shaumapps.CatatanAddUpdateActivity
-import com.dev.shaumapps.R
 import com.dev.shaumapps.databinding.FragmentCatatanBinding
 import com.dev.shaumapps.ui.catatan.CatatanAdapter
 import com.dev.shaumapps.ui.catatan.CatatanViewModel
@@ -41,7 +39,7 @@ class CatatanFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        btnAdd = requireActivity().findViewById(R.id.btnAdd)
+//        btnAdd = requireActivity().findViewById(R.id.btnAdd)
 
         adapter = CatatanAdapter()
 
@@ -49,18 +47,16 @@ class CatatanFragment : Fragment() {
         binding.rvCatatan.setHasFixedSize(true)
         binding.rvCatatan.adapter = adapter
 
-        val catatanViewModel = obtainViewModel(this@CatatanFragment)
-        catatanViewModel.getAllCatatan().observe(requireActivity()) { listCatatan ->
+        viewModel = obtainViewModel(this@CatatanFragment)
+        viewModel.getAllCatatan().observe(viewLifecycleOwner) { listCatatan ->
             if (listCatatan != null) {
                 adapter.setListCatatan(listCatatan)
             }
         }
 
         binding.btnAdd.setOnClickListener {
-            if (view.id == R.id.fab_add){
-                val intent = Intent(requireContext(), CatatanAddUpdateActivity::class.java)
-                startActivity(intent)
-            }
+            val intent = Intent(requireContext(), CatatanAddUpdateActivity::class.java)
+            startActivity(intent)
         }
 
     }
@@ -70,7 +66,7 @@ class CatatanFragment : Fragment() {
         _binding = null
     }
 
-    private fun obtainViewModel(fragment: Fragment): CatatanViewModel{
+    private fun obtainViewModel(fragment: Fragment): CatatanViewModel {
         val factory = ViewModelFactory.getInstance(fragment.requireActivity().application)
         return ViewModelProvider(fragment, factory)[CatatanViewModel::class.java]
     }
@@ -85,9 +81,7 @@ class CatatanFragment : Fragment() {
 //    }
 
 
-
-
-    companion object{
+    companion object {
         const val ADD_CATATAN_RESULT_OK = Activity.RESULT_FIRST_USER
         const val UPDATE_CATATAN_RESULT_OK = Activity.RESULT_FIRST_USER + 1
     }

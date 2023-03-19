@@ -7,6 +7,8 @@
     <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -35,7 +37,8 @@
         </activity>
         <activity
             android:name=".DetailKutipanActivity"
-            android:exported="false">
+            android:exported="false"
+            android:parentActivityName=".ui.kutipan.KutipanActivity">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -62,7 +65,8 @@
         <!-- android:exported="false" /> -->
         <activity
             android:name=".ui.hadis.HadisActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".ui.HomePageActivity"/>
         <activity
             android:name="B"
             android:exported="false" />
@@ -79,7 +83,8 @@
             android:exported="false" />
         <activity
             android:name=".ui.asmaul_husna.AsmaulHusnaActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".ui.HomePageActivity"/>
         <activity
             android:name=".ui.jadwal_shalat.JadwalShalatActivity"
             android:exported="false"
@@ -112,6 +117,17 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
+
+        <provider
+            android:authorities="com.dev.shaumapps"
+            android:name="androidx.core.content.FileProvider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/paths" />
+        </provider>
     </application>
 
 </manifest>

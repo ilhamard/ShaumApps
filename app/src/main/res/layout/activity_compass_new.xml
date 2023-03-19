@@ -6,47 +6,18 @@
     android:layout_height="match_parent"
     tools:context="com.dev.shaumapps.CompassActivityNew">
 
-    <ImageView
-        android:id="@+id/header"
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/my_toolbar"
         android:layout_width="match_parent"
-        android:layout_height="80dp"
-        android:background="@drawable/bg_header"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-
-    <TextView
-        android:id="@+id/tv_arahKiblat"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Arah Kiblat"
-        android:textColor="#FFFFFF"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="@id/header"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/header" />
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btn_back"
-        android:layout_width="35dp"
-        android:layout_height="35dp"
-        android:layout_marginStart="24dp"
-        android:background="@drawable/ic_kembali"
-        app:layout_constraintBottom_toBottomOf="@id/tv_arahKiblat"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/tv_arahKiblat" />
-
-<!--    <androidx.appcompat.widget.AppCompatButton-->
-<!--        android:layout_width="35dp"-->
-<!--        android:layout_height="35dp"-->
-<!--        android:layout_marginEnd="24dp"-->
-<!--        android:background="@drawable/ic_compas"-->
-<!--        app:layout_constraintBottom_toBottomOf="@id/tv_arahKiblat"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintTop_toTopOf="@id/tv_arahKiblat" />-->
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/primary"
+        android:elevation="4dp"
+        android:paddingEnd="16dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navigationIcon="@drawable/baseline_arrow_back_24"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:titleTextColor="@color/white" />
 
     <ImageView
         android:id="@+id/iv_lokasi"

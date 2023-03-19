@@ -82,18 +82,18 @@ class TasbihActivity : AppCompatActivity() {
             binding.progressBar.setProgressWithAnimation(progress.toFloat(), 200)
         }
 
-        binding.btnReset.setOnClickListener {
+        binding.frReset.setOnClickListener {
             viewModel.resetCount()
             binding.hitung.text = viewModel.count.toString()
             binding.progressBar.progress = viewModel.count.toFloat()
         }
 
-        binding.vibrate.setOnClickListener {
+        binding.frVibrate.setOnClickListener {
             viewModel.alertWithVibrate()
             alert()
         }
 
-        binding.sound.setOnClickListener {
+        binding.frSound.setOnClickListener {
             viewModel.alertWithSound()
             alert()
         }

@@ -13,12 +13,15 @@ class AsmaulHusnaActivity : AppCompatActivity() {
     private lateinit var rvAsmaul: RecyclerView
     private lateinit var binding: ActivityAsmaulHusnaBinding
     private val listAsmaul = ArrayList<AsmaulHusna>()
-    private val muncul = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityAsmaulHusnaBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        setSupportActionBar(binding.myToolbar)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        supportActionBar?.title = "Asmaul Husna"
 
         rvAsmaul = findViewById(R.id.rv_asmaul_husna)
         rvAsmaul.setHasFixedSize(true)

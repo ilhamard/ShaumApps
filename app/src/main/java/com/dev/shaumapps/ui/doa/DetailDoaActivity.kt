@@ -119,6 +119,11 @@ class DetailDoaActivity : AppCompatActivity() {
         }
     }
 
+    override fun onSupportNavigateUp(): Boolean {
+        onBackPressed()
+        return true
+    }
+
     private fun setBookmarkState(state: Boolean) {
         if (menu == null) return
         val menuItem = menu?.findItem(R.id.action_add_bookmark_doa)

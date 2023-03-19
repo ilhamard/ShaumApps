@@ -60,39 +60,61 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageButton
-        android:id="@+id/sound"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
+    <RelativeLayout
+        android:id="@+id/fr_sound"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="4dp"
         android:layout_marginTop="24dp"
         android:layout_marginEnd="16dp"
-        android:background="@drawable/sound"
-        app:layout_constraintEnd_toStartOf="@id/vibrate"
+        app:layout_constraintEnd_toStartOf="@id/fr_vibrate"
         app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/progress_bar" />
+        app:layout_constraintTop_toBottomOf="@id/progress_bar">
 
-    <ImageButton
-        android:id="@+id/vibrate"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
+        <ImageView
+            android:id="@+id/sound"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/sound" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/fr_vibrate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="4dp"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
-        android:background="@drawable/vibrate"
-        app:layout_constraintBottom_toBottomOf="@id/sound"
-        app:layout_constraintEnd_toStartOf="@id/btn_reset"
-        app:layout_constraintStart_toEndOf="@id/sound"
-        app:layout_constraintTop_toTopOf="@id/sound" />
+        app:layout_constraintBottom_toBottomOf="@id/fr_sound"
+        app:layout_constraintEnd_toStartOf="@id/fr_reset"
+        app:layout_constraintStart_toEndOf="@id/fr_sound"
+        app:layout_constraintTop_toTopOf="@id/fr_sound">
 
-    <ImageButton
-        android:id="@+id/btn_reset"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
+        <ImageView
+            android:id="@+id/vibrate"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/vibrate" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/fr_reset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="4dp"
         android:layout_marginStart="16dp"
-        android:background="@drawable/reset"
-        app:layout_constraintBottom_toBottomOf="@id/vibrate"
+        app:layout_constraintBottom_toBottomOf="@id/fr_vibrate"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/vibrate"
-        app:layout_constraintTop_toTopOf="@id/vibrate" />
+        app:layout_constraintStart_toEndOf="@id/fr_vibrate"
+        app:layout_constraintTop_toTopOf="@id/fr_vibrate">
+
+        <ImageView
+            android:id="@+id/btn_reset"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/reset" />
+    </RelativeLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
