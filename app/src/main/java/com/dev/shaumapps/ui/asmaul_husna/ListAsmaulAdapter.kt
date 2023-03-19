@@ -1,5 +1,9 @@
 package com.dev.shaumapps.ui.asmaul_husna
 
+import android.graphics.Typeface
+import android.text.Spannable
+import android.text.SpannableString
+import android.text.style.StyleSpan
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -25,6 +29,7 @@ class ListAsmaulAdapter(private val listAsmaul: ArrayList<AsmaulHusna>) :
         val isExpand: CardView = itemViewAsmaul.findViewById(R.id.cv_isiAsmaul)
         val btnExpand: ImageButton = itemViewAsmaul.findViewById(R.id.btn_dropdown)
 
+
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ListViewHolder {
@@ -34,11 +39,25 @@ class ListAsmaulAdapter(private val listAsmaul: ArrayList<AsmaulHusna>) :
     }
 
     override fun onBindViewHolder(holder: ListViewHolder, position: Int) {
-        val (asmauHusna, noAsmaulHusna, AsmaulHusnaMakna) = listAsmaul[position]
+        val (asmauHusna, noAsmaulHusna, asmaulHusnaMakna) = listAsmaul[position]
         holder.tvAsmaulHusna.text = asmauHusna
         holder.tvNoAsmaulHusna.text = noAsmaulHusna
-        holder.isiAsmaulHusna.text = AsmaulHusnaMakna
+//        holder.isiAsmaulHusna.text = AsmaulHusnaMakna
+//        holder.isiAsmaulHusna.text = HtmlCompat.fromHtml(
+//            asmaulHusnaMakna,
+//            HtmlCompat.FROM_HTML_MODE_LEGACY);
+        val startIndex = asmaulHusnaMakna.indexOf('(')
+        val endIndex = asmaulHusnaMakna.lastIndexOf(')')
 
+        val spannableString = SpannableString(asmaulHusnaMakna)
+        spannableString.setSpan(
+            StyleSpan(Typeface.ITALIC),
+            startIndex,
+            endIndex + 1,
+            Spannable.SPAN_EXCLUSIVE_EXCLUSIVE
+
+        )
+        holder.isiAsmaulHusna.text = spannableString
 
         holder.expandView.setOnClickListener {
             if (muncul == true) {

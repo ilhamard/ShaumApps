@@ -19,15 +19,15 @@
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
         app:titleTextColor="@color/white" />
 
-    <ImageView
-        android:id="@+id/iv_lokasi"
-        android:layout_width="20dp"
-        android:layout_height="20dp"
-        android:layout_marginTop="25dp"
-        android:background="@drawable/ic_location"
-        app:layout_constraintEnd_toStartOf="@id/tv_lokasiTerkini"
-        app:layout_constraintStart_toStartOf="@id/tv_arahKiblat"
-        app:layout_constraintTop_toBottomOf="@id/header" />
+<!--    <ImageView-->
+<!--        android:id="@+id/iv_lokasi"-->
+<!--        android:layout_width="20dp"-->
+<!--        android:layout_height="20dp"-->
+<!--        android:layout_marginTop="25dp"-->
+<!--        android:background="@drawable/ic_location"-->
+<!--        app:layout_constraintEnd_toStartOf="@id/tv_lokasiTerkini"-->
+<!--        app:layout_constraintStart_toStartOf="@id/tv_arahKiblat"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/header" />-->
 
     <TextView
         android:id="@+id/tv_lokasiTerkini"
@@ -38,9 +38,9 @@
         android:text="Lokasi terkini"
         android:textColor="@color/black"
         android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="@id/tv_arahKiblat"
-        app:layout_constraintStart_toEndOf="@id/iv_lokasi"
-        app:layout_constraintTop_toBottomOf="@id/header" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/my_toolbar" />
 
     <TextView
         android:id="@+id/tv_derajat"
@@ -52,7 +52,7 @@
         android:textColor="@color/black"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="@id/tv_lokasiTerkini"
-        app:layout_constraintStart_toStartOf="@id/iv_lokasi"
+        app:layout_constraintStart_toStartOf="@id/tv_lokasiTerkini"
         app:layout_constraintTop_toBottomOf="@id/tv_lokasiTerkini" />
 
     <TextView
@@ -72,6 +72,7 @@
         android:id="@+id/img_compass_kiblat"
         android:layout_width="300dp"
         android:layout_height="300dp"
+        android:layout_marginBottom="50dp"
         android:background="@drawable/kompas_kiblat"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

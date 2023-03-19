@@ -47,7 +47,6 @@ class DetailKutipanActivity : AppCompatActivity() {
 
     override fun onOptionsItemSelected(item: MenuItem) = when(item.itemId){
         R.id.action_share_kutipan -> {
-            Toast.makeText(this, "Hik,", Toast.LENGTH_SHORT).show()
             val bitmapDrawable: BitmapDrawable = binding.imgDetailKutipan.drawable as BitmapDrawable
             val bitmap = bitmapDrawable.bitmap
             shareImage(bitmap)
