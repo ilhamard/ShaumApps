@@ -69,10 +69,10 @@ class TodoAddUpdateActivity : AppCompatActivity() {
             val description = binding.edtDescription.text.toString().trim()
             when {
                 title.isEmpty() -> {
-                    binding.edtTitle.error = "Ga bole kosong atuh!"
+                    binding.edtTitle.error = "Judul harus diisi!"
                 }
                 description.isEmpty() -> {
-                    binding.edtDescription.error = "Ga bole kosong ah!"
+                    binding.edtDescription.error = "Deskripsi harus diisi!"
                 }
                 else -> {
                     todo.let { todo ->
@@ -81,13 +81,11 @@ class TodoAddUpdateActivity : AppCompatActivity() {
                     }
                     if (isEdit) {
                         todoViewModel.updateTodo(todo as Todo)
-                        showToast("Diupdate lah!")
                     } else {
                         todo?.let { todo ->
                             todo.date = DateHelper.getCurrentDate()
                         }
                         todoViewModel.insertTodo(todo as Todo)
-                        showToast("Ditambahkan hohoy!")
                     }
                     finish()
                 }

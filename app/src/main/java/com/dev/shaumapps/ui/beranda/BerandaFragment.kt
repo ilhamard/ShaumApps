@@ -158,7 +158,7 @@ class BerandaFragment : Fragment() {
         }
 
         binding.icKitab.setOnClickListener {
-            Toast.makeText(requireContext(), "Sedang Tahap Pengembangan", Toast.LENGTH_SHORT).show()
+            Toast.makeText(context, "Fitur ini masih tahap pengembangan", Toast.LENGTH_SHORT).show()
         }
     }
 

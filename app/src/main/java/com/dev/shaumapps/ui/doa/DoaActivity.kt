@@ -3,10 +3,7 @@ package com.dev.shaumapps.ui.doa
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
-import android.view.KeyEvent
-import android.view.Menu
-import android.view.MenuInflater
-import android.view.MenuItem
+import android.view.*
 import android.view.inputmethod.EditorInfo
 import android.widget.TextView
 import android.widget.Toast
@@ -38,7 +35,14 @@ class DoaActivity : AppCompatActivity() {
 
         viewModel.doaRespone.observe(this) {
             rvAdapter.setListDoa(it)
-            Log.d("DoaActivity", "cek search : $it")
+        }
+
+        viewModel.isLoading.observe(this) {
+            if (it == true) {
+                binding.progressBar.visibility = View.VISIBLE
+            } else {
+                binding.progressBar.visibility = View.GONE
+            }
         }
 
         setRecyclerView()
@@ -47,12 +51,6 @@ class DoaActivity : AppCompatActivity() {
             override fun onEditorAction(v: TextView?, actionId: Int, event: KeyEvent?): Boolean {
                 if (actionId == EditorInfo.IME_ACTION_SEARCH) {
                     val inputed: String = binding.edtSearch.text.toString()
-                    Log.d("DoaActivity", "hilang ha: $inputed")
-                    Toast.makeText(
-                        this@DoaActivity,
-                        "Mencari sesuatu yang hilang : $inputed",
-                        Toast.LENGTH_SHORT
-                    ).show()
 
                     if (inputed.isNotEmpty()) {
                         viewModel.getDoaByJudul(inputed)

@@ -35,7 +35,7 @@ class TodoListFragment : Fragment(), TodoAdapter.OnItemClickListener {
         _binding = FragmentTodoListBinding.inflate(inflater, container, false)
 
         (activity as AppCompatActivity).setSupportActionBar(binding.myToolbar)
-        (activity as AppCompatActivity).supportActionBar?.title = "Kategori Umum"
+        (activity as AppCompatActivity).supportActionBar?.title = "Aktivitas"
 
         return binding.root
     }

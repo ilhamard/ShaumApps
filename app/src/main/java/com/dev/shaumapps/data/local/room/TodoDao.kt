@@ -15,7 +15,7 @@ interface TodoDao {
     @Query("DELETE FROM todo WHERE judul = :judul")
     suspend fun deleteTodo(judul: String)
 
-    @Query("SELECT * FROM todo WHERE isDone = false ORDER BY id ASC")
+    @Query("SELECT * FROM todo WHERE isDone = false ORDER BY id DESC")
     fun getAllTodo(): LiveData<List<Todo>>
 
     @Query("SELECT * FROM todo WHERE isDone = true")

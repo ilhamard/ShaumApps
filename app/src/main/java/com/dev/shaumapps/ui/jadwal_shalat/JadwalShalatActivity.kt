@@ -199,93 +199,93 @@ class JadwalShalatActivity : AppCompatActivity() {
         binding.ivSoundImsak.setOnClickListener {
             Toast.makeText(this@JadwalShalatActivity, "Fitur ini masih tahap pengembangan", Toast.LENGTH_SHORT).show()
             viewModel.alertSound("Imsak")
-            alert("Imsak")
+//            alert("Imsak")
         }
         binding.ivSoundShubuh.setOnClickListener {
             Toast.makeText(this@JadwalShalatActivity, "Fitur ini masih tahap pengembangan", Toast.LENGTH_SHORT).show()
             viewModel.alertSound("Shubuh")
-            alert("Shubuh")
+//            alert("Shubuh")
         }
         binding.ivSoundTerbit.setOnClickListener {
             Toast.makeText(this@JadwalShalatActivity, "Fitur ini masih tahap pengembangan", Toast.LENGTH_SHORT).show()
             viewModel.alertSound("Terbit")
-            alert("Terbit")
+//            alert("Terbit")
         }
         binding.ivSoundDzuhur.setOnClickListener {
             Toast.makeText(this@JadwalShalatActivity, "Fitur ini masih tahap pengembangan", Toast.LENGTH_SHORT).show()
             viewModel.alertSound("Dzuhur")
-            alert("Dzuhur")
+//            alert("Dzuhur")
         }
         binding.ivSoundAshar.setOnClickListener {
             Toast.makeText(this@JadwalShalatActivity, "Fitur ini masih tahap pengembangan", Toast.LENGTH_SHORT).show()
             viewModel.alertSound("Ashar")
-            alert("Ashar")
+//            alert("Ashar")
         }
         binding.ivSoundMaghrib.setOnClickListener {
             Toast.makeText(this@JadwalShalatActivity, "Fitur ini masih tahap pengembangan", Toast.LENGTH_SHORT).show()
             viewModel.alertSound("Maghrib")
-            alert("Maghrib")
+//            alert("Maghrib")
         }
         binding.ivSoundIsya.setOnClickListener {
             Toast.makeText(this@JadwalShalatActivity, "Fitur ini masih tahap pengembangan", Toast.LENGTH_SHORT).show()
             viewModel.alertSound("Isya")
-            alert("Isya")
+//            alert("Isya")
         }
     }
 
-    private fun alert(shalat: String) {
-        when (shalat) {
-            "Imsak" -> {
-                if (viewModel.isImsakAlert) {
-                    binding.ivSoundImsak.setImageResource(R.drawable.icon_on_sound)
-                } else {
-                    binding.ivSoundImsak.setImageResource(R.drawable.icon_off_sound)
-                }
-            }
-            "Shubuh" -> {
-                if (viewModel.isShubuhAlert) {
-                    binding.ivSoundShubuh.setImageResource(R.drawable.icon_on_sound)
-                } else {
-                    binding.ivSoundShubuh.setImageResource(R.drawable.icon_off_sound)
-                }
-            }
-            "Terbit" -> {
-                if (viewModel.isTerbitAlert) {
-                    binding.ivSoundTerbit.setImageResource(R.drawable.icon_on_sound)
-                } else {
-                    binding.ivSoundTerbit.setImageResource(R.drawable.icon_off_sound)
-                }
-            }
-            "Dzuhur" -> {
-                if (viewModel.isDzuhurAlert) {
-                    binding.ivSoundDzuhur.setImageResource(R.drawable.icon_on_sound)
-                } else {
-                    binding.ivSoundDzuhur.setImageResource(R.drawable.icon_off_sound)
-                }
-            }
-            "Ashar" -> {
-                if (viewModel.isAsharAlert) {
-                    binding.ivSoundAshar.setImageResource(R.drawable.icon_on_sound)
-                } else {
-                    binding.ivSoundAshar.setImageResource(R.drawable.icon_off_sound)
-                }
-            }
-            "Maghrib" -> {
-                if (viewModel.isMaghribAlert) {
-                    binding.ivSoundMaghrib.setImageResource(R.drawable.icon_on_sound)
-                } else {
-                    binding.ivSoundMaghrib.setImageResource(R.drawable.icon_off_sound)
-                }
-            }
-            "Isya" -> {
-                if (viewModel.isIsyaAlert) {
-                    binding.ivSoundIsya.setImageResource(R.drawable.icon_on_sound)
-                } else {
-                    binding.ivSoundIsya.setImageResource(R.drawable.icon_off_sound)
-                }
-            }
-        }
-    }
+//    private fun alert(shalat: String) {
+//        when (shalat) {
+//            "Imsak" -> {
+//                if (viewModel.isImsakAlert) {
+//                    binding.ivSoundImsak.setImageResource(R.drawable.icon_on_sound)
+//                } else {
+//                    binding.ivSoundImsak.setImageResource(R.drawable.icon_off_sound)
+//                }
+//            }
+//            "Shubuh" -> {
+//                if (viewModel.isShubuhAlert) {
+//                    binding.ivSoundShubuh.setImageResource(R.drawable.icon_on_sound)
+//                } else {
+//                    binding.ivSoundShubuh.setImageResource(R.drawable.icon_off_sound)
+//                }
+//            }
+//            "Terbit" -> {
+//                if (viewModel.isTerbitAlert) {
+//                    binding.ivSoundTerbit.setImageResource(R.drawable.icon_on_sound)
+//                } else {
+//                    binding.ivSoundTerbit.setImageResource(R.drawable.icon_off_sound)
+//                }
+//            }
+//            "Dzuhur" -> {
+//                if (viewModel.isDzuhurAlert) {
+//                    binding.ivSoundDzuhur.setImageResource(R.drawable.icon_on_sound)
+//                } else {
+//                    binding.ivSoundDzuhur.setImageResource(R.drawable.icon_off_sound)
+//                }
+//            }
+//            "Ashar" -> {
+//                if (viewModel.isAsharAlert) {
+//                    binding.ivSoundAshar.setImageResource(R.drawable.icon_on_sound)
+//                } else {
+//                    binding.ivSoundAshar.setImageResource(R.drawable.icon_off_sound)
+//                }
+//            }
+//            "Maghrib" -> {
+//                if (viewModel.isMaghribAlert) {
+//                    binding.ivSoundMaghrib.setImageResource(R.drawable.icon_on_sound)
+//                } else {
+//                    binding.ivSoundMaghrib.setImageResource(R.drawable.icon_off_sound)
+//                }
+//            }
+//            "Isya" -> {
+//                if (viewModel.isIsyaAlert) {
+//                    binding.ivSoundIsya.setImageResource(R.drawable.icon_on_sound)
+//                } else {
+//                    binding.ivSoundIsya.setImageResource(R.drawable.icon_off_sound)
+//                }
+//            }
+//        }
+//    }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         val inflater: MenuInflater = menuInflater
