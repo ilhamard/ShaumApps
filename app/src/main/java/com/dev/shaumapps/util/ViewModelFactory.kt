@@ -15,7 +15,7 @@ import com.dev.shaumapps.ui.todo_list.TodoViewModel
 class ViewModelFactory private constructor(
     private val doaRepository: DoaRepository,
     private val todoRepository: TodoRepository,
-    private val catatanRepository: CatatanRepository
+    private val catatanRepository: CatatanRepository,
 ) :
     ViewModelProvider.NewInstanceFactory() {
 
@@ -27,7 +27,7 @@ class ViewModelFactory private constructor(
             return DoaViewModel() as T
         } else if (modelClass.isAssignableFrom(TodoViewModel::class.java)) {
             return TodoViewModel(todoRepository) as T
-        } else if (modelClass.isAssignableFrom(CatatanViewModel::class.java)){
+        } else if (modelClass.isAssignableFrom(CatatanViewModel::class.java)) {
             return CatatanViewModel(catatanRepository) as T
         }
         throw IllegalArgumentException("Unknown ViewModel class: ${modelClass.name}")

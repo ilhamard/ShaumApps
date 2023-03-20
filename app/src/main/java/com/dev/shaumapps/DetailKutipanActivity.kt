@@ -2,22 +2,16 @@ package com.dev.shaumapps
 
 import android.content.Intent
 import android.graphics.Bitmap
-import android.graphics.BitmapFactory
 import android.graphics.drawable.BitmapDrawable
 import android.net.Uri
 import android.os.Bundle
-import android.util.Log
 import android.view.Menu
 import android.view.MenuInflater
 import android.view.MenuItem
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.FileProvider
-import androidx.core.graphics.drawable.toDrawable
 import com.dev.shaumapps.databinding.ActivityDetailKutipanBinding
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.launch
 import java.io.File
 import java.io.FileOutputStream
 
@@ -34,7 +28,7 @@ class DetailKutipanActivity : AppCompatActivity() {
         supportActionBar?.title = "Detail Kutipan"
 
         val data = intent.getStringExtra(EXTRA_KUTIPAN)
-        if (data != null){
+        if (data != null) {
             binding.imgDetailKutipan.setImageResource(data.toInt())
         }
     }
@@ -45,7 +39,7 @@ class DetailKutipanActivity : AppCompatActivity() {
         return true
     }
 
-    override fun onOptionsItemSelected(item: MenuItem) = when(item.itemId){
+    override fun onOptionsItemSelected(item: MenuItem) = when (item.itemId) {
         R.id.action_share_kutipan -> {
             val bitmapDrawable: BitmapDrawable = binding.imgDetailKutipan.drawable as BitmapDrawable
             val bitmap = bitmapDrawable.bitmap
@@ -57,7 +51,7 @@ class DetailKutipanActivity : AppCompatActivity() {
         }
     }
 
-    private fun shareImage(bitmap: Bitmap){
+    private fun shareImage(bitmap: Bitmap) {
         val uri = getImageToShare(bitmap)
         val intent = Intent(Intent.ACTION_SEND)
 
@@ -80,7 +74,7 @@ class DetailKutipanActivity : AppCompatActivity() {
             outputStream.flush()
             outputStream.close()
             uri = FileProvider.getUriForFile(this, "com.dev.shaumapps", file)
-        } catch (e: Exception){
+        } catch (e: Exception) {
             Toast.makeText(this, "${e.message}", Toast.LENGTH_SHORT).show()
         }
         return uri

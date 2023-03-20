@@ -197,37 +197,65 @@ class JadwalShalatActivity : AppCompatActivity() {
         }
 
         binding.ivSoundImsak.setOnClickListener {
-            Toast.makeText(this@JadwalShalatActivity, "Fitur ini masih tahap pengembangan", Toast.LENGTH_SHORT).show()
+            Toast.makeText(
+                this@JadwalShalatActivity,
+                "Fitur ini masih tahap pengembangan",
+                Toast.LENGTH_SHORT
+            ).show()
             viewModel.alertSound("Imsak")
 //            alert("Imsak")
         }
         binding.ivSoundShubuh.setOnClickListener {
-            Toast.makeText(this@JadwalShalatActivity, "Fitur ini masih tahap pengembangan", Toast.LENGTH_SHORT).show()
+            Toast.makeText(
+                this@JadwalShalatActivity,
+                "Fitur ini masih tahap pengembangan",
+                Toast.LENGTH_SHORT
+            ).show()
             viewModel.alertSound("Shubuh")
 //            alert("Shubuh")
         }
         binding.ivSoundTerbit.setOnClickListener {
-            Toast.makeText(this@JadwalShalatActivity, "Fitur ini masih tahap pengembangan", Toast.LENGTH_SHORT).show()
+            Toast.makeText(
+                this@JadwalShalatActivity,
+                "Fitur ini masih tahap pengembangan",
+                Toast.LENGTH_SHORT
+            ).show()
             viewModel.alertSound("Terbit")
 //            alert("Terbit")
         }
         binding.ivSoundDzuhur.setOnClickListener {
-            Toast.makeText(this@JadwalShalatActivity, "Fitur ini masih tahap pengembangan", Toast.LENGTH_SHORT).show()
+            Toast.makeText(
+                this@JadwalShalatActivity,
+                "Fitur ini masih tahap pengembangan",
+                Toast.LENGTH_SHORT
+            ).show()
             viewModel.alertSound("Dzuhur")
 //            alert("Dzuhur")
         }
         binding.ivSoundAshar.setOnClickListener {
-            Toast.makeText(this@JadwalShalatActivity, "Fitur ini masih tahap pengembangan", Toast.LENGTH_SHORT).show()
+            Toast.makeText(
+                this@JadwalShalatActivity,
+                "Fitur ini masih tahap pengembangan",
+                Toast.LENGTH_SHORT
+            ).show()
             viewModel.alertSound("Ashar")
 //            alert("Ashar")
         }
         binding.ivSoundMaghrib.setOnClickListener {
-            Toast.makeText(this@JadwalShalatActivity, "Fitur ini masih tahap pengembangan", Toast.LENGTH_SHORT).show()
+            Toast.makeText(
+                this@JadwalShalatActivity,
+                "Fitur ini masih tahap pengembangan",
+                Toast.LENGTH_SHORT
+            ).show()
             viewModel.alertSound("Maghrib")
 //            alert("Maghrib")
         }
         binding.ivSoundIsya.setOnClickListener {
-            Toast.makeText(this@JadwalShalatActivity, "Fitur ini masih tahap pengembangan", Toast.LENGTH_SHORT).show()
+            Toast.makeText(
+                this@JadwalShalatActivity,
+                "Fitur ini masih tahap pengembangan",
+                Toast.LENGTH_SHORT
+            ).show()
             viewModel.alertSound("Isya")
 //            alert("Isya")
         }

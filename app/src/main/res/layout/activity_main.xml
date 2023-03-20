@@ -7,12 +7,12 @@
     tools:context=".ui.MainActivity">
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/card_ihwan"
+        android:id="@+id/card_ikhwan"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginEnd="12dp"
-        app:cardBackgroundColor="#EFFFFB"
+        app:cardBackgroundColor="@color/secondary"
         app:cardCornerRadius="15dp"
         app:cardElevation="0dp"
         app:layout_constraintBottom_toTopOf="@id/btn_start"
@@ -57,12 +57,12 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="12dp"
         android:layout_marginEnd="24dp"
-        app:cardBackgroundColor="#EFFFFB"
+        app:cardBackgroundColor="@color/secondary"
         app:cardCornerRadius="15dp"
         app:cardElevation="0dp"
         app:layout_constraintBottom_toTopOf="@id/btn_start"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/card_ihwan"
+        app:layout_constraintStart_toEndOf="@id/card_ikhwan"
         app:layout_constraintTop_toTopOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout

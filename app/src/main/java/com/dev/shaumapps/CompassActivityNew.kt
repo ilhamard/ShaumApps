@@ -10,7 +10,6 @@ import android.view.MenuInflater
 import android.view.MenuItem
 import android.view.animation.Animation
 import android.view.animation.RotateAnimation
-import android.widget.ImageView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.dev.shaumapps.databinding.ActivityCompassNewBinding
@@ -45,7 +44,7 @@ class CompassActivityNew : AppCompatActivity(), SensorEventListener {
     }
 
     override fun onOptionsItemSelected(item: MenuItem) =
-        when(item.itemId){
+        when (item.itemId) {
             R.id.action_update_loc -> {
                 true
             }

@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#F9FCFB">
@@ -12,11 +11,10 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-
         <ImageView
             android:id="@+id/img_profile"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
             android:layout_marginStart="24dp"
             android:layout_marginTop="24dp"
             android:src="@drawable/profile_ihwan"
@@ -28,7 +26,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
-            android:layout_marginTop="5dp"
             android:text="Assalamu'alaikum!"
             android:textColor="#787878"
             android:textSize="12dp"
@@ -44,8 +41,8 @@
             android:text="Akhi"
             android:textColor="@color/black"
             android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="@+id/img_profile"
-            app:layout_constraintStart_toEndOf="@+id/img_profile" />
+            app:layout_constraintStart_toEndOf="@+id/img_profile"
+            app:layout_constraintTop_toBottomOf="@id/txt_greeting" />
 
         <!--    <ImageView-->
         <!--        android:id="@+id/img_bg_notif"-->

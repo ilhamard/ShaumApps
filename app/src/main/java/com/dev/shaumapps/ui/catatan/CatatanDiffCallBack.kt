@@ -3,7 +3,10 @@ package com.dev.shaumapps.ui.catatan
 import androidx.recyclerview.widget.DiffUtil
 import com.dev.shaumapps.data.local.entity.CatatanData
 
-class CatatanDiffCallBack(private val oldCatatanList: List<CatatanData>, private val newCatatanList: List<CatatanData>): DiffUtil.Callback() {
+class CatatanDiffCallBack(
+    private val oldCatatanList: List<CatatanData>,
+    private val newCatatanList: List<CatatanData>,
+) : DiffUtil.Callback() {
     override fun getOldListSize(): Int {
         return oldCatatanList.size
     }

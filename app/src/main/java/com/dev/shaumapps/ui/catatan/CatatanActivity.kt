@@ -1,12 +1,9 @@
 package com.dev.shaumapps.ui.catatan
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
-import com.dev.shaumapps.CatatanAddUpdateActivity
-import com.dev.shaumapps.R
 import com.dev.shaumapps.databinding.ActivityCatatanBinding
 import com.dev.shaumapps.util.ViewModelFactory
 
@@ -36,7 +33,6 @@ class CatatanActivity : AppCompatActivity() {
         binding?.rvCatatan?.adapter = adapter
 
 
-
     }
 
     override fun onDestroy() {
@@ -44,11 +40,10 @@ class CatatanActivity : AppCompatActivity() {
         _binding = null
     }
 
-    private fun obtainViewModel(activity: AppCompatActivity): CatatanViewModel{
+    private fun obtainViewModel(activity: AppCompatActivity): CatatanViewModel {
         val factory = ViewModelFactory.getInstance(activity.application)
         return ViewModelProvider(activity, factory).get(CatatanViewModel::class.java)
     }
-
 
 
 }

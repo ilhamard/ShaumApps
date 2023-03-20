@@ -8,21 +8,22 @@ import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager2.widget.ViewPager2
 import com.dev.shaumapps.R
 
-class BerandaAdapter (private val sliderList: ArrayList<Int>, private val viewpager2: ViewPager2) :
+class BerandaAdapter(private val sliderList: ArrayList<Int>, private val viewpager2: ViewPager2) :
     RecyclerView.Adapter<BerandaAdapter.BerandaViewHolder>() {
 
-    class BerandaViewHolder (sliderView: View) : RecyclerView.ViewHolder(sliderView){
-        val imageView : ImageView = sliderView.findViewById(R.id.img_slider1)
+    class BerandaViewHolder(sliderView: View) : RecyclerView.ViewHolder(sliderView) {
+        val imageView: ImageView = sliderView.findViewById(R.id.img_slider1)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BerandaViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.item_list_slider_beranda, parent, false)
+        val view = LayoutInflater.from(parent.context)
+            .inflate(R.layout.item_list_slider_beranda, parent, false)
         return BerandaViewHolder(view)
     }
 
     override fun onBindViewHolder(holder: BerandaViewHolder, position: Int) {
         holder.imageView.setImageResource(sliderList[position])
-        if (position == sliderList.size-1){
+        if (position == sliderList.size - 1) {
             viewpager2.post(runnable)
         }
     }

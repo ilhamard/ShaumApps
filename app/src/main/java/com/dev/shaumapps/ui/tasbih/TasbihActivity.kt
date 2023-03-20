@@ -2,7 +2,6 @@ package com.dev.shaumapps.ui.tasbih
 
 import android.content.Context
 import android.content.res.ColorStateList
-import android.graphics.Rect
 import android.media.SoundPool
 import android.os.*
 import android.util.Log

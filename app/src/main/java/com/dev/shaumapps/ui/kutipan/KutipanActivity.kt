@@ -4,7 +4,6 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import com.dev.shaumapps.DetailKutipanActivity
 import com.dev.shaumapps.R
 import com.dev.shaumapps.databinding.ActivityKutipanBinding

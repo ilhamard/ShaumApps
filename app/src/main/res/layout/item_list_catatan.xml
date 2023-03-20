@@ -19,10 +19,10 @@
         android:paddingBottom="10dp"
         app:cardCornerRadius="5dp"
         app:cardElevation="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent">
+        app:layout_constraintTop_toTopOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/cons2"
@@ -36,41 +36,41 @@
                 android:id="@+id/tx_judul"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Judul"
-                android:textSize="16sp"
-                android:textColor="@color/black"
-                android:textStyle="bold"
                 android:layout_marginStart="8dp"
+                android:text="Judul"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"/>
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/tx_tanggal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Senin, 18 Maret"
-                android:textSize="14sp"
                 android:textColor="@color/black"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="@id/tx_judul"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="@id/tx_judul"
-                app:layout_constraintBottom_toBottomOf="@id/tx_judul"/>
+                app:layout_constraintTop_toTopOf="@id/tx_judul" />
 
             <TextView
                 android:id="@+id/tx_dekripsi"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="Ketika memberikan penjelasan, Quraish Shihab dalam buku ini mengawali dengan pendapat-pendapat filosof atau ilmuan sesuai bidangnya. Misalnya saat mendefinisikan agama,Ketika memberikan penjelasan, Quraish Shihab dalam buku ini mengawali dengan pendapat-pendapat filosof atau ilmuan sesuai bidangnya. Misalnya saat mendefinisikan agama, ..."
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="8dp"
                 android:ellipsize="end"
                 android:maxLines="3"
-                android:layout_marginStart="8dp"
-                android:layout_marginEnd="8dp"
-                android:layout_marginTop="12dp"
+                android:text="Ketika memberikan penjelasan, Quraish Shihab dalam buku ini mengawali dengan pendapat-pendapat filosof atau ilmuan sesuai bidangnya. Misalnya saat mendefinisikan agama,Ketika memberikan penjelasan, Quraish Shihab dalam buku ini mengawali dengan pendapat-pendapat filosof atau ilmuan sesuai bidangnya. Misalnya saat mendefinisikan agama, ..."
                 android:textColor="@color/black"
                 android:textSize="12sp"
                 android:textStyle="bold"
-                app:layout_constraintTop_toBottomOf="@+id/tx_judul"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"/>
+                app:layout_constraintTop_toBottomOf="@+id/tx_judul" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

@@ -34,6 +34,7 @@ import com.dev.shaumapps.ui.jadwal_shalat.JadwalShalatViewModel
 import com.dev.shaumapps.ui.kutipan.KutipanActivity
 import com.dev.shaumapps.ui.tasbih.TasbihActivity
 import com.google.android.gms.location.*
+import okio.IOException
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -65,6 +66,18 @@ class BerandaFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        val gender = arguments?.getString(HomePageActivity.EXTRA_GENDER)
+
+        if (gender != null) {
+            if (gender == "ikhwan") {
+                binding.imgProfile.setImageResource(R.drawable.ihwan)
+                binding.txtUsername.text = "Akhi"
+            } else if (gender == "akhwat") {
+                binding.imgProfile.setImageResource(R.drawable.akhwat)
+                binding.txtUsername.text = "Ukhti"
+            }
+        }
 
         viewModelHadis = ViewModelProvider(this)[HadisViewModel::class.java]
         viewModelHadis.getRandomHadis()
@@ -188,15 +201,27 @@ class BerandaFragment : Fragment() {
                     if (location != null) {
                         val geocoder = Geocoder(requireContext(), Locale.getDefault())
                         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
-                            geocoder.getFromLocation(
-                                location.latitude,
-                                location.longitude,
-                                1
-                            ) {
-                                Log.d("JadwalShalatActivity", "cek lagi : ${it[0].subAdminArea}")
-                                kota = it[0].subAdminArea
-                                viewModelShalat.setJadwalShalat(kota = kota)
-                                binding.tvLocation.text = it[0].subAdminArea
+                            try {
+                                geocoder.getFromLocation(
+                                    location.latitude,
+                                    location.longitude,
+                                    1
+                                ) {
+                                    Log.d(
+                                        "JadwalShalatActivity",
+                                        "cek lagi : ${it[0].subAdminArea}"
+                                    )
+                                    kota = it[0].subAdminArea
+                                    viewModelShalat.setJadwalShalat(kota = kota)
+                                    binding.tvLocation.text = it[0].subAdminArea
+                                }
+                            } catch (e: IOException) {
+                                Log.e("BerandaFragment", "Error getting location", e)
+                                Toast.makeText(
+                                    context,
+                                    "Gagal mengambil lokasi. Mohon cek koneksi internet anda!",
+                                    Toast.LENGTH_SHORT
+                                ).show()
                             }
                         } else {
                             val area: MutableList<Address>? =
@@ -226,20 +251,29 @@ class BerandaFragment : Fragment() {
                                     val geocoder =
                                         Geocoder(requireContext(), Locale.getDefault())
                                     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
-                                        if (location != null) {
-                                            geocoder.getFromLocation(
-                                                location.latitude,
-                                                location.longitude,
-                                                1
-                                            ) {
-                                                Log.d(
-                                                    "JadwalShalatActivity",
-                                                    "cek lagi : ${it[0].subAdminArea}"
-                                                )
-                                                kota = it[0].subAdminArea
-                                                viewModelShalat.setJadwalShalat(kota = kota)
-                                                binding.tvLocation.text = it[0].subAdminArea
+                                        try {
+                                            if (location != null) {
+                                                geocoder.getFromLocation(
+                                                    location.latitude,
+                                                    location.longitude,
+                                                    1
+                                                ) {
+                                                    Log.d(
+                                                        "JadwalShalatActivity",
+                                                        "cek lagi : ${it[0].subAdminArea}"
+                                                    )
+                                                    kota = it[0].subAdminArea
+                                                    viewModelShalat.setJadwalShalat(kota = kota)
+                                                    binding.tvLocation.text = it[0].subAdminArea
+                                                }
                                             }
+                                        } catch (e: IOException) {
+                                            Log.e("BerandaFragment", "Error getting location", e)
+                                            Toast.makeText(
+                                                context,
+                                                "Gagal mengambil lokasi. Mohon cek koneksi internet anda!",
+                                                Toast.LENGTH_SHORT
+                                            ).show()
                                         }
                                     } else {
                                         val area: MutableList<Address>? =
@@ -382,5 +416,14 @@ class BerandaFragment : Fragment() {
     companion object {
         private const val PERMISSION_REQUEST_ACCESS_LOCATOIN = 100
         const val TAG = "BerandaFragment"
+        const val ARG_GENDER = "gender"
+
+        fun newInstance(gender: String?): BerandaFragment {
+            val fragment = BerandaFragment()
+            val args = Bundle()
+            args.putString(HomePageActivity.EXTRA_GENDER, gender)
+            fragment.arguments = args
+            return fragment
+        }
     }
 }

@@ -49,7 +49,8 @@
             android:windowSoftInputMode="adjustResize" />
         <activity
             android:name=".CompassActivityNew"
-            android:exported="false">
+            android:exported="false"
+            android:parentActivityName=".ui.HomePageActivity">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -66,10 +67,7 @@
         <activity
             android:name=".ui.hadis.HadisActivity"
             android:exported="false"
-            android:parentActivityName=".ui.HomePageActivity"/>
-        <activity
-            android:name="B"
-            android:exported="false" />
+            android:parentActivityName=".ui.HomePageActivity" />
         <activity
             android:name=".ui.doa.BookmarkDoaActivity"
             android:exported="false"
@@ -84,7 +82,7 @@
         <activity
             android:name=".ui.asmaul_husna.AsmaulHusnaActivity"
             android:exported="false"
-            android:parentActivityName=".ui.HomePageActivity"/>
+            android:parentActivityName=".ui.HomePageActivity" />
         <activity
             android:name=".ui.jadwal_shalat.JadwalShalatActivity"
             android:exported="false"
@@ -119,8 +117,8 @@
         </activity>
 
         <provider
-            android:authorities="com.dev.shaumapps"
             android:name="androidx.core.content.FileProvider"
+            android:authorities="com.dev.shaumapps"
             android:exported="false"
             android:grantUriPermissions="true">
 
