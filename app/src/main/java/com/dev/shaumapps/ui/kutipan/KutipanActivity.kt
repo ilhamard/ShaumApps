@@ -61,6 +61,20 @@ class KutipanActivity : AppCompatActivity() {
         kutipanList.add(Kutipan(R.drawable.imgkutipan14))
         kutipanList.add(Kutipan(R.drawable.imgkutipan15))
         kutipanList.add(Kutipan(R.drawable.imgkutipan16))
+        kutipanList.add(Kutipan(R.drawable.imgkutipan17))
+        kutipanList.add(Kutipan(R.drawable.imgkutipan18))
+        kutipanList.add(Kutipan(R.drawable.imgkutipan19))
+        kutipanList.add(Kutipan(R.drawable.imgkutipan20))
+        kutipanList.add(Kutipan(R.drawable.imgkutipan21))
+        kutipanList.add(Kutipan(R.drawable.imgkutipan22))
+        kutipanList.add(Kutipan(R.drawable.imgkutipan23))
+        kutipanList.add(Kutipan(R.drawable.imgkutipan24))
+        kutipanList.add(Kutipan(R.drawable.imgkutipan25))
+        kutipanList.add(Kutipan(R.drawable.imgkutipan26))
+        kutipanList.add(Kutipan(R.drawable.imgkutipan27))
+        kutipanList.add(Kutipan(R.drawable.imgkutipan28))
+        kutipanList.add(Kutipan(R.drawable.imgkutipan29))
+
     }
 
     private fun showSelectedImageKutipan(kutpan: Kutipan) {
