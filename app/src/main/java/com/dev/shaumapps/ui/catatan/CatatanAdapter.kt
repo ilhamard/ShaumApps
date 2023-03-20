@@ -11,11 +11,13 @@ import com.dev.shaumapps.databinding.ItemListCatatanBinding
 
 class CatatanAdapter : RecyclerView.Adapter<CatatanViewHolder>() {
     private val listCatatan = ArrayList<CatatanData>()
+
     fun setListCatatan(listCatatan: List<CatatanData>) {
         val diffCallBack = CatatanDiffCallBack(this.listCatatan, listCatatan)
         val diffResult = DiffUtil.calculateDiff(diffCallBack)
         this.listCatatan.clear()
         this.listCatatan.addAll(listCatatan)
+        notifyDataSetChanged()
         diffResult.dispatchUpdatesTo(this)
     }
 

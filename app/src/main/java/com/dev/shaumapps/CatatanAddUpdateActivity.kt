@@ -1,6 +1,7 @@
 package com.dev.shaumapps
 
 import android.os.Bundle
+import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
@@ -28,6 +29,10 @@ class CatatanAddUpdateActivity : AppCompatActivity() {
         _binding = ActivityCatatanAddUpdateBinding.inflate(layoutInflater)
         setContentView(binding?.root)
 
+        binding?.fabDelete?.setOnClickListener {
+            showDeleteDialog(catatanData as CatatanData)
+        }
+
         catatanViewModel = obtainViewModel(this@CatatanAddUpdateActivity)
 
         catatanData = intent.getParcelableExtra(EXTRA_CATATAN)
@@ -44,9 +49,13 @@ class CatatanAddUpdateActivity : AppCompatActivity() {
             actionBarCatatan = getString(R.string.change)
             btnCatatan = getString(R.string.update)
             if (catatanData != null) {
+                binding?.fabDelete?.visibility = View.VISIBLE
                 catatanData?.let { catatanData ->
                     binding?.edtTitle?.setText(catatanData.judulCatatan)
                     binding?.edtDescription?.setText(catatanData.deskripsi)
+                }
+                binding?.fabDelete?.setOnClickListener {
+                    showDeleteDialog(catatanData as CatatanData)
                 }
             }
         } else {
@@ -126,10 +135,10 @@ class CatatanAddUpdateActivity : AppCompatActivity() {
     }
 
 
-    override fun onDestroy() {
-        super.onDestroy()
-        _binding = null
-    }
+//    override fun onDestroy() {
+//        super.onDestroy()
+//        _binding = null
+//    }
 
     private fun obtainViewModel(activity: AppCompatActivity): CatatanViewModel {
         val factory = ViewModelFactory.getInstance(activity.application)

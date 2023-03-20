@@ -41,7 +41,7 @@ class ListAsmaulAdapter(private val listAsmaul: ArrayList<AsmaulHusna>) :
         val (asmauHusna, noAsmaulHusna, asmaulHusnaMakna) = listAsmaul[position]
         holder.tvAsmaulHusna.text = asmauHusna
         holder.tvNoAsmaulHusna.text = noAsmaulHusna
-//        holder.isiAsmaulHusna.text = AsmaulHusnaMakna
+//        holder.isiAsmaulHusna.text = asmaulHusnaMakna
 //        holder.isiAsmaulHusna.text = HtmlCompat.fromHtml(
 //            asmaulHusnaMakna,
 //            HtmlCompat.FROM_HTML_MODE_LEGACY);

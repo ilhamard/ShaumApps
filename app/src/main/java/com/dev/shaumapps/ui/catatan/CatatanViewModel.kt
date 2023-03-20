@@ -8,27 +8,27 @@ import com.dev.shaumapps.data.CatatanRepository
 import com.dev.shaumapps.data.local.entity.CatatanData
 import kotlinx.coroutines.launch
 
-class CatatanViewModel(private val catatanRepository: CatatanRepository) : ViewModel() {
+class CatatanViewModel(private val catatanRepository: CatatanRepository) : ViewModel(){
 
     private val catatanDataVw = MutableLiveData<CatatanData>()
 
-    fun setCatatanHarian(catatanData: CatatanData) {
+    fun setCatatanHarian(catatanData: CatatanData){
         catatanDataVw.value = catatanData
     }
 
-    fun insertCatatan(catatanData: CatatanData) {
+    fun insertCatatan(catatanData: CatatanData){
         viewModelScope.launch {
             catatanRepository.saveCatatan(catatanData)
         }
     }
 
-    fun updateCatatan(catatanData: CatatanData) {
+    fun updateCatatan(catatanData: CatatanData){
         viewModelScope.launch {
             catatanRepository.updateCatatan(catatanData)
         }
     }
 
-    fun deleteCatatan(catatanData: CatatanData) {
+    fun deleteCatatan(catatanData: CatatanData){
         viewModelScope.launch {
             catatanRepository.deleteCatatan(catatanData.judulCatatan.toString())
         }

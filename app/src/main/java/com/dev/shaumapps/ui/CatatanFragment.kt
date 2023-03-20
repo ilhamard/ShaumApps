@@ -11,17 +11,25 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.dev.shaumapps.CatatanAddUpdateActivity
+import com.dev.shaumapps.R
+import com.dev.shaumapps.data.local.entity.CatatanData
+import com.dev.shaumapps.data.local.room.ShaumDatabase
 import com.dev.shaumapps.databinding.FragmentCatatanBinding
 import com.dev.shaumapps.ui.catatan.CatatanAdapter
 import com.dev.shaumapps.ui.catatan.CatatanViewModel
 import com.dev.shaumapps.util.ViewModelFactory
 import com.google.android.material.floatingactionbutton.FloatingActionButton
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
 
-class CatatanFragment : Fragment() {
+class CatatanFragment : Fragment(){
     private var _binding: FragmentCatatanBinding? = null
     private val binding get() = _binding!!
 
-    private lateinit var adapter: CatatanAdapter
+    private val db by lazy { ShaumDatabase }
+
+    private lateinit var rvCatatanFrag: CatatanAdapter
 
     private lateinit var viewModel: CatatanViewModel
     private lateinit var btnAdd: FloatingActionButton
@@ -36,28 +44,33 @@ class CatatanFragment : Fragment() {
         return binding.root
     }
 
+//    override fun onStart() {
+//        super.onStart()
+//        CoroutineScope(Dispatchers.IO).launch {
+//
+//        }
+//    }
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        btnAdd = requireActivity().findViewById(R.id.fab_add)
+
 //        btnAdd = requireActivity().findViewById(R.id.btnAdd)
 
-        adapter = CatatanAdapter()
-
-        binding.rvCatatan.layoutManager = LinearLayoutManager(requireContext())
-        binding.rvCatatan.setHasFixedSize(true)
-        binding.rvCatatan.adapter = adapter
+        rvCatatanFrag = CatatanAdapter()
 
         viewModel = obtainViewModel(this@CatatanFragment)
         viewModel.getAllCatatan().observe(viewLifecycleOwner) { listCatatan ->
-            if (listCatatan != null) {
-                adapter.setListCatatan(listCatatan)
-            }
+                rvCatatanFrag.setListCatatan(listCatatan)
         }
 
         binding.btnAdd.setOnClickListener {
             val intent = Intent(requireContext(), CatatanAddUpdateActivity::class.java)
             startActivity(intent)
         }
+
+        setRecyclerCatatan()
 
     }
 
@@ -66,19 +79,20 @@ class CatatanFragment : Fragment() {
         _binding = null
     }
 
+
     private fun obtainViewModel(fragment: Fragment): CatatanViewModel {
         val factory = ViewModelFactory.getInstance(fragment.requireActivity().application)
         return ViewModelProvider(fragment, factory)[CatatanViewModel::class.java]
     }
 
-//    private fun setRecyclerCatatan(){
-//        rvCatatan = CatatanAdapter(this)
-//        binding.rvCatatan.apply {
-//            layoutManager = LinearLayoutManager(requireContext())
-//            setHasFixedSize(true)
-//            adapter = rvCatatan
-//        }
-//    }
+    private fun setRecyclerCatatan(){
+        rvCatatanFrag = CatatanAdapter()
+        binding.rvCatatan.apply {
+            layoutManager = LinearLayoutManager(requireContext())
+            setHasFixedSize(true)
+            adapter = rvCatatanFrag
+        }
+    }
 
 
     companion object {
