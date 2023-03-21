@@ -1,4 +1,4 @@
-package com.dev.shaumapps
+package com.dev.shaumapps.ui.catatan
 
 import android.os.Bundle
 import android.view.View
@@ -8,30 +8,23 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.core.graphics.drawable.DrawableCompat
 import androidx.lifecycle.ViewModelProvider
+import com.dev.shaumapps.R
 import com.dev.shaumapps.data.local.entity.CatatanData
 import com.dev.shaumapps.databinding.ActivityCatatanAddUpdateBinding
-import com.dev.shaumapps.ui.catatan.CatatanViewModel
 import com.dev.shaumapps.util.DateHelper
 import com.dev.shaumapps.util.ViewModelFactory
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 class CatatanAddUpdateActivity : AppCompatActivity() {
-
     private var isEdit = false
     private var catatanData: CatatanData? = null
     private lateinit var catatanViewModel: CatatanViewModel
-
-    private var _binding: ActivityCatatanAddUpdateBinding? = null
-    private val binding get() = _binding
+    private lateinit var binding: ActivityCatatanAddUpdateBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        _binding = ActivityCatatanAddUpdateBinding.inflate(layoutInflater)
-        setContentView(binding?.root)
-
-        binding?.fabDelete?.setOnClickListener {
-            showDeleteDialog(catatanData as CatatanData)
-        }
+        binding = ActivityCatatanAddUpdateBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
         catatanViewModel = obtainViewModel(this@CatatanAddUpdateActivity)
 
@@ -43,38 +36,36 @@ class CatatanAddUpdateActivity : AppCompatActivity() {
         }
 
         val actionBarCatatan: String
-        val btnCatatan: String
 
         if (isEdit) {
             actionBarCatatan = getString(R.string.change)
-            btnCatatan = getString(R.string.update)
             if (catatanData != null) {
-                binding?.fabDelete?.visibility = View.VISIBLE
+                binding.fabDeleteCatatan.visibility = View.VISIBLE
                 catatanData?.let { catatanData ->
-                    binding?.edtTitle?.setText(catatanData.judulCatatan)
-                    binding?.edtDescription?.setText(catatanData.deskripsi)
+                    binding.edtTitle.setText(catatanData.judulCatatan)
+                    binding.edtDescription.setText(catatanData.deskripsi)
                 }
-                binding?.fabDelete?.setOnClickListener {
+                binding.fabDeleteCatatan.setOnClickListener {
                     showDeleteDialog(catatanData as CatatanData)
                 }
             }
         } else {
             actionBarCatatan = getString(R.string.add)
-            btnCatatan = getString(R.string.save)
         }
 
-        supportActionBar?.title = actionBarCatatan
+        setSupportActionBar(binding.myToolbar)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        supportActionBar?.title = actionBarCatatan
 
-        binding?.fabSubmit?.setOnClickListener {
-            val title = binding?.edtTitle?.text.toString().trim()
-            val deskripsi = binding?.edtDescription?.text.toString().trim()
+        binding.fabSubmitCatatan.setOnClickListener {
+            val title = binding.edtTitle.text.toString().trim()
+            val deskripsi = binding.edtDescription.text.toString().trim()
             when {
                 title.isEmpty() -> {
-                    binding?.edtTitle?.error = "Judul Tidak Boleh Kosong"
+                    binding.edtTitle.error = "Judul Tidak Boleh Kosong"
                 }
                 deskripsi.isEmpty() -> {
-                    binding?.edtDescription?.error = "Deskripsi Tidak Boleh Kosong"
+                    binding.edtDescription.error = "Deskripsi Tidak Boleh Kosong"
                 }
                 else -> {
                     catatanData.let { catatanData ->
@@ -83,7 +74,7 @@ class CatatanAddUpdateActivity : AppCompatActivity() {
                     }
                     if (isEdit) {
                         catatanViewModel.updateCatatan(catatanData as CatatanData)
-                        showToast("Apakah Ada Yang Di Update")
+                        showToast("Data berhasil diubah")
                     } else {
                         catatanData?.let { catatanData ->
                             catatanData.tanggal = DateHelper.getCurrentDate()
@@ -98,14 +89,19 @@ class CatatanAddUpdateActivity : AppCompatActivity() {
         coloringIconFab()
     }
 
+    override fun onSupportNavigateUp(): Boolean {
+        onBackPressed()
+        return true
+    }
+
     private fun showToast(message: String) {
         Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
     }
 
     private fun coloringIconFab() {
         val csl = ContextCompat.getColorStateList(this, R.color.white)
-        val fabSubmit: FloatingActionButton = findViewById(R.id.fab_submit)
-        val fabDelete: FloatingActionButton = findViewById(R.id.fab_delete)
+        val fabSubmit: FloatingActionButton = findViewById(R.id.fab_submit_catatan)
+        val fabDelete: FloatingActionButton = findViewById(R.id.fab_delete_catatan)
         val drawableSubmit = fabSubmit.drawable?.mutate()
         val drawableDelete = fabDelete.drawable?.mutate()
         drawableSubmit?.let {
@@ -134,21 +130,12 @@ class CatatanAddUpdateActivity : AppCompatActivity() {
         alertDialog.show()
     }
 
-
-//    override fun onDestroy() {
-//        super.onDestroy()
-//        _binding = null
-//    }
-
     private fun obtainViewModel(activity: AppCompatActivity): CatatanViewModel {
         val factory = ViewModelFactory.getInstance(activity.application)
         return ViewModelProvider(activity, factory).get(CatatanViewModel::class.java)
     }
 
-
     companion object {
         const val EXTRA_CATATAN = "extra_catatan"
-        const val ALERT_DIALOG_CLOSE = 10
-        const val ALERT_DIALOG_DELETE = 20
     }
 }

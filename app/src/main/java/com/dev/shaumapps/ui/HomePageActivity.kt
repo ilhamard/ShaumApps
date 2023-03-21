@@ -3,14 +3,13 @@ package com.dev.shaumapps.ui
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.FragmentManager
 import com.dev.shaumapps.R
+import com.dev.shaumapps.ui.catatan.CatatanFragment
 import com.dev.shaumapps.ui.todo_list.TodoListFragment
 import nl.joery.animatedbottombar.AnimatedBottomBar
 
 class HomePageActivity : AppCompatActivity() {
     private lateinit var animatedBottomBar: AnimatedBottomBar
-    var fragmentManager: FragmentManager? = null
     var gender: String? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {

@@ -22,7 +22,6 @@ import android.widget.Toast
 import androidx.core.app.ActivityCompat
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import com.dev.shaumapps.CompassActivityNew
 import com.dev.shaumapps.R
 import com.dev.shaumapps.databinding.FragmentBerandaBinding
 import com.dev.shaumapps.ui.asmaul_husna.AsmaulHusnaActivity
@@ -31,6 +30,7 @@ import com.dev.shaumapps.ui.hadis.HadisActivity
 import com.dev.shaumapps.ui.hadis.HadisViewModel
 import com.dev.shaumapps.ui.jadwal_shalat.JadwalShalatActivity
 import com.dev.shaumapps.ui.jadwal_shalat.JadwalShalatViewModel
+import com.dev.shaumapps.ui.kiblat.KiblatActivity
 import com.dev.shaumapps.ui.kutipan.KutipanActivity
 import com.dev.shaumapps.ui.tasbih.TasbihActivity
 import com.google.android.gms.location.*
@@ -38,12 +38,7 @@ import okio.IOException
 import java.text.SimpleDateFormat
 import java.util.*
 
-
-/**
- * A simple [Fragment] subclass.
- */
 class BerandaFragment : Fragment() {
-
     private var _binding: FragmentBerandaBinding? = null
     private val binding get() = _binding!!
     private lateinit var fusedLocationClient: FusedLocationProviderClient
@@ -167,7 +162,7 @@ class BerandaFragment : Fragment() {
         }
 
         binding.icKiblat.setOnClickListener {
-            startActivity(Intent(requireContext(), CompassActivityNew::class.java))
+            startActivity(Intent(requireContext(), KiblatActivity::class.java))
         }
 
         binding.icKitab.setOnClickListener {

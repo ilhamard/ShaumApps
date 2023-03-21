@@ -5,7 +5,6 @@ import com.dev.shaumapps.data.local.entity.Todo
 import com.dev.shaumapps.data.local.room.TodoDao
 
 class TodoRepository(private val todoDao: TodoDao) {
-
     fun getAllTodos(): LiveData<List<Todo>> = todoDao.getAllTodo()
 
     suspend fun saveTodo(todo: Todo) {

@@ -5,7 +5,6 @@ import com.dev.shaumapps.data.local.entity.DoaHarian
 import com.dev.shaumapps.data.local.room.DoaDao
 
 class DoaRepository(private val doaDao: DoaDao) {
-
     fun getBookmarkedDoa(): LiveData<List<DoaHarian>> = doaDao.getBookmarkedDoa()
 
     suspend fun saveDoa(doaHarian: DoaHarian) {

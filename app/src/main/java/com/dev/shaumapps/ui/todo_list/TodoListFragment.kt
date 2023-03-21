@@ -1,6 +1,5 @@
 package com.dev.shaumapps.ui.todo_list
 
-import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -21,7 +20,6 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton
 class TodoListFragment : Fragment(), TodoAdapter.OnItemClickListener {
     private var _binding: FragmentTodoListBinding? = null
     private val binding get() = _binding!!
-
     private lateinit var viewModel: TodoViewModel
     private lateinit var rvAdapter: TodoAdapter
     private lateinit var rvAdapterChecked: TodoAdapter
@@ -43,7 +41,7 @@ class TodoListFragment : Fragment(), TodoAdapter.OnItemClickListener {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        fabAdd = requireActivity().findViewById(R.id.fab_add)
+        fabAdd = requireActivity().findViewById(R.id.fab_add_todo)
 
         coloringIconFab()
 
@@ -65,16 +63,6 @@ class TodoListFragment : Fragment(), TodoAdapter.OnItemClickListener {
         setRecyclerViewChecked()
     }
 
-    private fun coloringIconFab() {
-        val csl = ContextCompat.getColorStateList(requireContext(), R.color.white)
-        val fab = fabAdd
-        val drawable = fab.drawable?.mutate()
-        drawable?.let {
-            DrawableCompat.setTintList(it, csl)
-            fab.setImageDrawable(it)
-        }
-    }
-
     override fun onResume() {
         super.onResume()
 
@@ -85,6 +73,16 @@ class TodoListFragment : Fragment(), TodoAdapter.OnItemClickListener {
         super.onPause()
 
         fabAdd.visibility = View.GONE
+    }
+
+    private fun coloringIconFab() {
+        val csl = ContextCompat.getColorStateList(requireContext(), R.color.white)
+        val fab = fabAdd
+        val drawable = fab.drawable?.mutate()
+        drawable?.let {
+            DrawableCompat.setTintList(it, csl)
+            fab.setImageDrawable(it)
+        }
     }
 
     private fun setRecyclerView() {
@@ -112,10 +110,5 @@ class TodoListFragment : Fragment(), TodoAdapter.OnItemClickListener {
 
     override fun onCheckBoxClick(todo: Todo, isChecked: Boolean) {
         viewModel.onTodoCheckedChanged(todo, isChecked)
-    }
-
-    companion object {
-        const val ADD_HAFALAN_RESULT_OK = Activity.RESULT_FIRST_USER
-        const val UPDATE_HAFALAN_RESULT_OK = Activity.RESULT_FIRST_USER + 1
     }
 }

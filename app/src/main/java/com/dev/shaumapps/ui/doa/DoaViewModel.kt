@@ -11,10 +11,8 @@ import retrofit2.Callback
 import retrofit2.Response
 
 class DoaViewModel : ViewModel() {
-
     private val _doaResponse = MutableLiveData<List<DoaHarianResponseItem>>()
     val doaRespone: LiveData<List<DoaHarianResponseItem>> = _doaResponse
-
     private val _isLoading = MutableLiveData<Boolean>()
     val isLoading: LiveData<Boolean> = _isLoading
 

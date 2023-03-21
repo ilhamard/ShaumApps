@@ -11,18 +11,27 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.core.content.ContextCompat
+import androidx.lifecycle.asLiveData
+import androidx.lifecycle.lifecycleScope
 import com.dev.shaumapps.R
 import com.dev.shaumapps.databinding.ActivityMainBinding
+import com.dev.shaumapps.util.SessionManager
+import kotlinx.coroutines.launch
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
     private var isIkhwan = false
     private var isAkhwat = false
+    private lateinit var sessionManager: SessionManager
+    private val userGender: String? = null
+
     override fun onCreate(savedInstanceState: Bundle?) {
         binding = ActivityMainBinding.inflate(layoutInflater)
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+
+        sessionManager = SessionManager(this)
 
         binding.cardIkhwan.setOnClickListener {
             binding.cardIkhwan.background = selectedItemColor()
@@ -40,13 +49,37 @@ class MainActivity : AppCompatActivity() {
             isAkhwat = true
         }
 
+        var isObserverTriggered = false
+        sessionManager.user_gender.asLiveData().observe(this) { userGender ->
+            if (!isObserverTriggered && userGender != null) {
+                isObserverTriggered = true
+                Intent(this@MainActivity, HomePageActivity::class.java).also {
+                    it.putExtra(HomePageActivity.EXTRA_GENDER, userGender)
+                    it.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+                    startActivity(it)
+                }
+            }
+        }
+
         binding.btnStart.setOnClickListener {
             val intent = Intent(this@MainActivity, HomePageActivity::class.java)
             if (isIkhwan) {
+                isObserverTriggered = true
                 intent.putExtra(HomePageActivity.EXTRA_GENDER, "ikhwan")
+                intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+                lifecycleScope.launch {
+                    sessionManager.clearUserGender()
+                    sessionManager.saveUserGender("ikhwan")
+                }
                 startActivity(intent)
             } else if (isAkhwat) {
+                isObserverTriggered = true
                 intent.putExtra(HomePageActivity.EXTRA_GENDER, "akhwat")
+                intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+                lifecycleScope.launch {
+                    sessionManager.clearUserGender()
+                    sessionManager.saveUserGender("akhwat")
+                }
                 startActivity(intent)
             } else {
                 Toast.makeText(this, "Pilih terlebih dahulu jenis kelamin", Toast.LENGTH_SHORT)

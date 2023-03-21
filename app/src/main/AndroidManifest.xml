@@ -22,21 +22,15 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
-            android:name=".CatatanAddUpdateActivity"
-            android:exported="false">
+            android:name=".ui.catatan.CatatanAddUpdateActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".ui.catatan.CatatanActivity"
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity
-            android:name=".DetailKutipanActivity"
+            android:name=".ui.kutipan.DetailKutipanActivity"
             android:exported="false"
             android:parentActivityName=".ui.kutipan.KutipanActivity">
             <meta-data
@@ -48,22 +42,13 @@
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name=".CompassActivityNew"
+            android:name=".ui.kiblat.KiblatActivity"
             android:exported="false"
             android:parentActivityName=".ui.HomePageActivity">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
-        <activity
-            android:name=".ui.compass.CompassActivity"
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity> <!-- <activity -->
-        <!-- android:name=".ui.doa.DoaActivity" -->
-        <!-- android:exported="false" /> -->
         <activity
             android:name=".ui.hadis.HadisActivity"
             android:exported="false"

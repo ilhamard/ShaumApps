@@ -5,8 +5,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.dev.shaumapps.R
+import com.dev.shaumapps.data.local.entity.AsmaulHusna
 import com.dev.shaumapps.databinding.ActivityAsmaulHusnaBinding
-import com.dev.shaumapps.util.AsmaulHusna
 
 class AsmaulHusnaActivity : AppCompatActivity() {
 
@@ -28,8 +28,6 @@ class AsmaulHusnaActivity : AppCompatActivity() {
 
         listAsmaul.addAll(getAsmaulList())
         showAsmaul()
-
-
     }
 
     private fun getAsmaulList(): ArrayList<AsmaulHusna> {

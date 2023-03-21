@@ -12,10 +12,8 @@ import com.dev.shaumapps.R
 import com.dev.shaumapps.databinding.ActivityDoaBinding
 
 class DoaActivity : AppCompatActivity() {
-
     private lateinit var binding: ActivityDoaBinding
     private lateinit var viewModel: DoaViewModel
-
     private lateinit var rvAdapter: ListDoaAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {

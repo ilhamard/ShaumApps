@@ -14,7 +14,6 @@ import com.dev.shaumapps.databinding.ActivityDetailDoaBinding
 import com.dev.shaumapps.util.ViewModelFactory
 
 class DetailDoaActivity : AppCompatActivity() {
-
     private lateinit var binding: ActivityDetailDoaBinding
     private lateinit var viewModel: DoaViewModel
     private lateinit var bookmarkViewModel: BookmarkDoaViewModel

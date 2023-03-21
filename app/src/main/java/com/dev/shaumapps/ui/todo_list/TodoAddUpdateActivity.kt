@@ -3,7 +3,6 @@ package com.dev.shaumapps.ui.todo_list
 import android.os.Build
 import android.os.Bundle
 import android.view.View
-import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
@@ -18,7 +17,6 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 class TodoAddUpdateActivity : AppCompatActivity() {
     private lateinit var binding: ActivityTodoAddUpdateBinding
-
     private lateinit var todoViewModel: TodoViewModel
     private var isEdit = false
     private var todo: Todo? = null
@@ -95,8 +93,9 @@ class TodoAddUpdateActivity : AppCompatActivity() {
         coloringIconFab()
     }
 
-    private fun showToast(message: String) {
-        Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
+    override fun onSupportNavigateUp(): Boolean {
+        onBackPressed()
+        return true
     }
 
     private fun coloringIconFab() {
@@ -138,7 +137,5 @@ class TodoAddUpdateActivity : AppCompatActivity() {
 
     companion object {
         const val EXTRA_TODO = "extra_todo"
-        const val ALERT_DIALOG_CLOSE = 10
-        const val ALERT_DIALOG_DELETE = 20
     }
 }

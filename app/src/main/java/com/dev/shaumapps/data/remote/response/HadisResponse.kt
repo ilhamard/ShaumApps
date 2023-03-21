@@ -3,7 +3,6 @@ package com.dev.shaumapps.data.remote.response
 import com.google.gson.annotations.SerializedName
 
 data class HadisResponse(
-
     @field:SerializedName("code")
     val code: Int,
 
@@ -18,7 +17,6 @@ data class HadisResponse(
 )
 
 data class DataHadis(
-
     @field:SerializedName("contents")
     val contents: Contents,
 
@@ -33,7 +31,6 @@ data class DataHadis(
 )
 
 data class Contents(
-
     @field:SerializedName("number")
     val number: Int,
 

@@ -5,9 +5,7 @@ import com.dev.shaumapps.data.local.entity.CatatanData
 import com.dev.shaumapps.data.local.room.CatatanDao
 
 class CatatanRepository(private var catatanDao: CatatanDao) {
-
     fun getAllCatatan(): LiveData<List<CatatanData>> = catatanDao.getAllCatatan()
-
 
     suspend fun saveCatatan(catatanData: CatatanData) {
         catatanDao.saveCatatan(catatanData)
@@ -21,19 +19,6 @@ class CatatanRepository(private var catatanDao: CatatanDao) {
         catatanDao.deleteCatatan(judulCatatan)
     }
 
-
-//    fun saveCatatan(catatanData: CatatanData){
-//        executorService.execute { catatanDao.saveCatatan(catatanData) }
-//    }
-//
-//    fun deleteCatatan(judulCatatan: String){
-//        executorService.execute { catatanDao.deleteCatatan(judulCatatan) }
-//    }
-//
-//    fun updateCatatan(catatanData: CatatanData){
-//        executorService.execute { catatanDao.updateCatatan(catatanData) }
-//    }
-
     companion object {
         @Volatile
         private var instance: CatatanRepository? = null
@@ -46,19 +31,3 @@ class CatatanRepository(private var catatanDao: CatatanDao) {
             }.also { instance = it }
     }
 }
-//    fun getAllCatatan(): LiveData<List<CatatanData>> = catatanDao.getAllCatatan()
-//
-//    fun saveCatatan(catatanData: CatatanData){
-//        catatanDao.saveCatatan
-//    }
-//
-//    suspend fun updateCatatan(catatanData: CatatanData){
-//        catatanDao.updateCatatan(catatanData)
-//    }
-//
-//    suspend fun deleteCatatan(judul: String){
-//        catatanDao.deleteCatatan(judul)
-//    }
-//
-
-//}

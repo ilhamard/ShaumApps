@@ -1,7 +1,6 @@
 package com.dev.shaumapps.ui.todo_list
 
 import android.content.Intent
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
@@ -16,7 +15,6 @@ class TodoAdapter(private val listener: OnItemClickListener) :
         this.listTodo.clear()
         this.listTodo.addAll(listTodo)
         notifyDataSetChanged()
-        Log.d("BookmarkedTodoAdapter", "cek adapter ${listTodo.size}")
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ListTodoViewHolder {
@@ -61,7 +59,6 @@ class TodoAdapter(private val listener: OnItemClickListener) :
     }
 
     interface OnItemClickListener {
-        //        fun onItemClick(todo: Todo)
         fun onCheckBoxClick(todo: Todo, isChecked: Boolean)
     }
 }

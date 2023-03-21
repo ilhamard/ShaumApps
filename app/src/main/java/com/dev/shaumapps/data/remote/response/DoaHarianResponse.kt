@@ -2,14 +2,7 @@ package com.dev.shaumapps.data.remote.response
 
 import com.google.gson.annotations.SerializedName
 
-data class DoaHarianResponse(
-
-    @field:SerializedName("DoaHarianResponse")
-    val doaHarianResponse: List<DoaHarianResponseItem>,
-)
-
 data class DoaHarianResponseItem(
-
     @field:SerializedName("ayat")
     val ayat: String,
 

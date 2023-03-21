@@ -20,13 +20,13 @@ import android.view.MenuInflater
 import android.view.MenuItem
 import android.widget.Button
 import android.widget.Toast
-import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.lifecycle.ViewModelProvider
 import com.dev.shaumapps.R
 import com.dev.shaumapps.databinding.ActivityJadwalShalatBinding
 import com.google.android.gms.location.*
+import okio.IOException
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -123,7 +123,7 @@ class JadwalShalatActivity : AppCompatActivity() {
 
             val imsak = getTimeInMillis(waktu.imsak, 1)
             val shubuh = getTimeInMillis(waktu.fajr, 0)
-            Log.d("JadwalShalatActivity", "cek shubuh: $shubuh")
+            Log.d(TAG, "cek shubuh: $shubuh")
             val terbit = getTimeInMillis(waktu.sunrise, 0)
             val dzuhur = getTimeInMillis(waktu.dhuhr, 0)
             val ashar = getTimeInMillis(waktu.asr, 0)
@@ -335,8 +335,8 @@ class JadwalShalatActivity : AppCompatActivity() {
 
     private fun startCountdown() {
         var timeDifference = targetTime - currentTime
-        Log.d("JadwalShalatActivity", "cek targettime : $targetTime")
-        Log.d("JadwalShalatActivity", "cek currenttime : $currentTime")
+        Log.d(TAG, "cek targettime : $targetTime")
+        Log.d(TAG, "cek currenttime : $currentTime")
         if (timeDifference < 0) {
             timeDifference += 24 * 60 * 60 * 1000
         }
@@ -374,37 +374,6 @@ class JadwalShalatActivity : AppCompatActivity() {
         return calendar.timeInMillis
     }
 
-    private fun getTimeInMillisForImsak(time: String): Long {
-        val calendar = Calendar.getInstance()
-        val dateFormat = SimpleDateFormat("HH:mm", Locale.getDefault())
-
-        calendar.time = dateFormat.parse(time) as Date
-        calendar.set(Calendar.SECOND, 0)
-        calendar.set(Calendar.MILLISECOND, 0)
-        calendar.set(Calendar.DAY_OF_MONTH, 1)
-
-        return calendar.timeInMillis
-    }
-
-    private val requestPermissionLauncher =
-        registerForActivityResult(
-            ActivityResultContracts.RequestMultiplePermissions()
-        ) { permission ->
-            when {
-                permission[Manifest.permission.ACCESS_FINE_LOCATION] ?: false -> {
-                    //Precise location access granted.
-                    getMyLastLocation()
-                }
-                permission[Manifest.permission.ACCESS_COARSE_LOCATION] ?: false -> {
-                    //Only approximate location access granted.
-                    getMyLastLocation()
-                }
-                else -> {
-                    // No location access granted.
-                }
-            }
-        }
-
     private fun isLocationEnabled(): Boolean {
         val locationManager: LocationManager =
             getSystemService(Context.LOCATION_SERVICE) as LocationManager
@@ -431,15 +400,27 @@ class JadwalShalatActivity : AppCompatActivity() {
                     if (location != null) {
                         val geocoder = Geocoder(this, Locale.getDefault())
                         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
-                            geocoder.getFromLocation(
-                                location.latitude,
-                                location.longitude,
-                                1
-                            ) {
-                                Log.d("JadwalShalatActivity", "cek lagi : ${it[0].subAdminArea}")
-                                kota = it[0].subAdminArea
-                                viewModel.setJadwalShalat(tgl = tgl, kota = kota)
-                                binding.tvLocation.text = it[0].subAdminArea
+                            try {
+                                geocoder.getFromLocation(
+                                    location.latitude,
+                                    location.longitude,
+                                    1
+                                ) {
+                                    Log.d(
+                                        TAG,
+                                        "cek lagi : ${it[0].subAdminArea}"
+                                    )
+                                    kota = it[0].subAdminArea
+                                    viewModel.setJadwalShalat(tgl = tgl, kota = kota)
+                                    binding.tvLocation.text = it[0].subAdminArea
+                                }
+                            } catch (e: IOException) {
+                                Log.e(TAG, "Error getting location", e)
+                                Toast.makeText(
+                                    this,
+                                    "Gagal mengambil lokasi. Mohon cek koneksi internet anda!",
+                                    Toast.LENGTH_SHORT
+                                ).show()
                             }
                         } else {
                             val area: MutableList<Address>? =
@@ -449,7 +430,7 @@ class JadwalShalatActivity : AppCompatActivity() {
                                     1
                                 )
                             Log.d(
-                                "JadwalShalatActivity",
+                                TAG,
                                 "cek lagi : ${area?.get(0)?.subAdminArea}"
                             )
                             kota = area?.get(0)?.subAdminArea
@@ -469,20 +450,36 @@ class JadwalShalatActivity : AppCompatActivity() {
                                     val geocoder =
                                         Geocoder(this@JadwalShalatActivity, Locale.getDefault())
                                     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
-                                        if (location != null) {
-                                            geocoder.getFromLocation(
-                                                location.latitude,
-                                                location.longitude,
-                                                1
-                                            ) {
-                                                Log.d(
-                                                    "JadwalShalatActivity",
-                                                    "cek lagi : ${it[0].subAdminArea}"
-                                                )
-                                                kota = it[0].subAdminArea
-                                                viewModel.setJadwalShalat(tgl = tgl, kota = kota)
-                                                binding.tvLocation.text = it[0].subAdminArea
+                                        try {
+                                            if (location != null) {
+                                                geocoder.getFromLocation(
+                                                    location.latitude,
+                                                    location.longitude,
+                                                    1
+                                                ) {
+                                                    Log.d(
+                                                        TAG,
+                                                        "cek lagi : ${it[0].subAdminArea}"
+                                                    )
+                                                    kota = it[0].subAdminArea
+                                                    viewModel.setJadwalShalat(
+                                                        tgl = tgl,
+                                                        kota = kota
+                                                    )
+                                                    binding.tvLocation.text = it[0].subAdminArea
+                                                }
                                             }
+                                        } catch (e: IOException) {
+                                            Log.e(
+                                                TAG,
+                                                "Error getting location",
+                                                e
+                                            )
+                                            Toast.makeText(
+                                                this@JadwalShalatActivity,
+                                                "Gagal mengambil lokasi. Mohon cek koneksi internet anda!",
+                                                Toast.LENGTH_SHORT
+                                            ).show()
                                         }
                                     } else {
                                         val area: MutableList<Address>? =
@@ -494,7 +491,7 @@ class JadwalShalatActivity : AppCompatActivity() {
                                                 )
                                             }
                                         Log.d(
-                                            "JadwalShalatActivity",
+                                            TAG,
                                             "cek lagi : ${area?.get(0)?.subAdminArea}"
                                         )
                                         kota = area?.get(0)?.subAdminArea

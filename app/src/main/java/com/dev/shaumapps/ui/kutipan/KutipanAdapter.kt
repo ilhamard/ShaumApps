@@ -9,7 +9,6 @@ import com.dev.shaumapps.R
 
 class KutipanAdapter(private val kutipanList: ArrayList<Kutipan>) :
     RecyclerView.Adapter<KutipanAdapter.KutipanViewHolder>() {
-
     private lateinit var onItemClickCallBack: OnItemClickCallBack
 
     fun setOnItemClickCallBack(onItemClickCallBack: OnItemClickCallBack) {

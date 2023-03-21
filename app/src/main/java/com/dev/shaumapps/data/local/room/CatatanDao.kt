@@ -6,7 +6,6 @@ import com.dev.shaumapps.data.local.entity.CatatanData
 
 @Dao
 interface CatatanDao {
-
     @Insert(onConflict = OnConflictStrategy.IGNORE)
     suspend fun saveCatatan(catatanData: CatatanData)
 

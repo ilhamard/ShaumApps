@@ -4,7 +4,6 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.GridLayoutManager
-import com.dev.shaumapps.DetailKutipanActivity
 import com.dev.shaumapps.R
 import com.dev.shaumapps.databinding.ActivityKutipanBinding
 
@@ -23,7 +22,6 @@ class KutipanActivity : AppCompatActivity() {
         supportActionBar?.title = "Kutipan"
 
         init()
-
     }
 
     private fun init() {

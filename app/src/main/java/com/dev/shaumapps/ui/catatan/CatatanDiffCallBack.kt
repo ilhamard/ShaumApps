@@ -22,7 +22,7 @@ class CatatanDiffCallBack(
     override fun areContentsTheSame(oldItemPosition: Int, newItemPosition: Int): Boolean {
         val oldCatatan = oldCatatanList[oldItemPosition]
         val newCatatan = newCatatanList[newItemPosition]
-        return oldCatatan.judulCatatan == newCatatan.judulCatatan && oldCatatan.deskripsi == newCatatan.deskripsi
+        return oldCatatan.judulCatatan == newCatatan.judulCatatan
+                && oldCatatan.deskripsi == newCatatan.deskripsi
     }
-
 }

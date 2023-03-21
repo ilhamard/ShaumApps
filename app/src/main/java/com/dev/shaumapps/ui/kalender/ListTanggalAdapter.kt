@@ -6,7 +6,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.dev.shaumapps.R
-import com.dev.shaumapps.util.Tanggal
+import com.dev.shaumapps.data.local.entity.Tanggal
 
 class ListTanggalAdapter(private val listTanggal: ArrayList<Tanggal>) :
     RecyclerView.Adapter<ListTanggalAdapter.ListViewHolder>() {

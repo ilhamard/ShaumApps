@@ -7,7 +7,7 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.dev.shaumapps.R
-import com.dev.shaumapps.util.TaskHarian
+import com.dev.shaumapps.data.local.entity.TaskHarian
 
 class ListTaskAdapter(private val listTask: ArrayList<TaskHarian>) :
     RecyclerView.Adapter<ListTaskAdapter.ListViewTaskHolder>() {

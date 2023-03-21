@@ -1,11 +1,11 @@
 package com.dev.shaumapps.util
 
 import androidx.recyclerview.widget.DiffUtil
-import com.dev.shaumapps.data.local.entity.DoaHarian
+import com.dev.shaumapps.data.remote.response.DoaHarianResponseItem
 
 class DoaDiffCallback(
-    private val mOldDoaList: List<DoaHarian>,
-    private val mNewDoaList: List<DoaHarian>,
+    private val mOldDoaList: List<DoaHarianResponseItem>,
+    private val mNewDoaList: List<DoaHarianResponseItem>,
 ) : DiffUtil.Callback() {
     override fun getOldListSize(): Int {
         return mOldDoaList.size
@@ -22,6 +22,6 @@ class DoaDiffCallback(
     override fun areContentsTheSame(oldItemPosition: Int, newItemPosition: Int): Boolean {
         val oldEmployee = mOldDoaList[oldItemPosition]
         val newEmployee = mNewDoaList[newItemPosition]
-        return oldEmployee.judul == newEmployee.judul
+        return oldEmployee.artinya == newEmployee.artinya
     }
 }

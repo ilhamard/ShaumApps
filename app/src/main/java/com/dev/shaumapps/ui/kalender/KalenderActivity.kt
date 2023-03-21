@@ -6,9 +6,9 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.dev.shaumapps.R
+import com.dev.shaumapps.data.local.entity.Tanggal
+import com.dev.shaumapps.data.local.entity.TaskHarian
 import com.dev.shaumapps.databinding.ActivityKalenderBinding
-import com.dev.shaumapps.util.Tanggal
-import com.dev.shaumapps.util.TaskHarian
 
 class KalenderActivity : AppCompatActivity() {
     private lateinit var rvTanggal: RecyclerView

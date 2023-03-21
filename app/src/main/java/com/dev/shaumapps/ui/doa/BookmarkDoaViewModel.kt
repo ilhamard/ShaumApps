@@ -10,7 +10,6 @@ import kotlinx.coroutines.launch
 
 class BookmarkDoaViewModel(private val doaRepository: DoaRepository) :
     ViewModel() {
-
     private val doaData = MutableLiveData<DoaHarian>()
 
     fun setDoaHarian(doaHarian: DoaHarian) {
@@ -32,8 +31,4 @@ class BookmarkDoaViewModel(private val doaRepository: DoaRepository) :
     }
 
     fun getBookmarkedDoa() = doaRepository.getBookmarkedDoa()
-
-//    fun isDoaBookmarked(judul: String) {
-//        return mDoaRepository.isDoaBookmarked(judul)
-//    }
 }

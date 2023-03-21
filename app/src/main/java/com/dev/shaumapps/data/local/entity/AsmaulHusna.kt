@@ -1,4 +1,4 @@
-package com.dev.shaumapps.util
+package com.dev.shaumapps.data.local.entity
 
 data class AsmaulHusna(
     var asmaulHusna: String,

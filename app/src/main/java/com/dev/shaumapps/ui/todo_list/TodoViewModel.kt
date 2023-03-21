@@ -1,6 +1,5 @@
 package com.dev.shaumapps.ui.todo_list
 
-import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.dev.shaumapps.data.TodoRepository
@@ -10,21 +9,13 @@ import kotlinx.coroutines.launch
 class TodoViewModel(private val todoRepository: TodoRepository) :
     ViewModel() {
 
-    private val todoData = MutableLiveData<Todo>()
+    fun getAllTodos() = todoRepository.getAllTodos()
 
-    fun setTodoHarian(todo: Todo) {
-        todoData.value = todo
-    }
+    fun getTodoChecked() = todoRepository.getTodoChecked()
 
     fun insertTodo(todo: Todo) {
         viewModelScope.launch {
             todoRepository.saveTodo(todo)
-        }
-    }
-
-    fun onTodoCheckedChanged(todo: Todo, isChecked: Boolean) {
-        viewModelScope.launch {
-            todoRepository.onTodoCheckedChanged(todo, isChecked)
         }
     }
 
@@ -40,24 +31,9 @@ class TodoViewModel(private val todoRepository: TodoRepository) :
         }
     }
 
-//    val checkedStatus = todoData.switchMap {
-//        todoRepository.isTodoChecked(it.judul.toString())
-//    }
-
-//    fun changeStatus(todo: Todo) {
-//        viewModelScope.launch {
-//            if (checkedStatus.value as Boolean) {
-//                todoRepository.deleteTodo(todo.judul)
-//            } else {
-//                todoRepository.saveTodo(todo)
-//            }
-//        }
-//    }
-
-    fun getAllTodos() = todoRepository.getAllTodos()
-    fun getTodoChecked() = todoRepository.getTodoChecked()
-
-//    fun isDoaBookmarked(judul: String) {
-//        return mDoaRepository.isDoaBookmarked(judul)
-//    }
+    fun onTodoCheckedChanged(todo: Todo, isChecked: Boolean) {
+        viewModelScope.launch {
+            todoRepository.onTodoCheckedChanged(todo, isChecked)
+        }
+    }
 }

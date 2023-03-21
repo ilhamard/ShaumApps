@@ -10,9 +10,7 @@ import com.dev.shaumapps.util.ViewModelFactory
 
 class BookmarkDoaActivity : AppCompatActivity() {
     private lateinit var binding: ActivityBookmarkDoaBinding
-
     private lateinit var viewModel: BookmarkDoaViewModel
-
     private lateinit var rvAdapter: BookmarkedDoaAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {

@@ -157,7 +157,6 @@ class TasbihActivity : AppCompatActivity() {
 
     @RequiresApi(Build.VERSION_CODES.O)
     private fun vibrateAlert() {
-
         val vibrator = getSystemService(Context.VIBRATOR_SERVICE) as Vibrator
         val vibrateEffect: VibrationEffect =
             VibrationEffect.createOneShot(500, VibrationEffect.DEFAULT_AMPLITUDE)

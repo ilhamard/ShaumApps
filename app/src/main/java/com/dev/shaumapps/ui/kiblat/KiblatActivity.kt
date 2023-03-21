@@ -1,4 +1,4 @@
-package com.dev.shaumapps
+package com.dev.shaumapps.ui.kiblat
 
 import android.hardware.Sensor
 import android.hardware.SensorEvent
@@ -12,16 +12,17 @@ import android.view.animation.Animation
 import android.view.animation.RotateAnimation
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.dev.shaumapps.databinding.ActivityCompassNewBinding
+import com.dev.shaumapps.R
+import com.dev.shaumapps.databinding.ActivityKiblatBinding
 
-class CompassActivityNew : AppCompatActivity(), SensorEventListener {
-    private lateinit var binding: ActivityCompassNewBinding
+class KiblatActivity : AppCompatActivity(), SensorEventListener {
+    private lateinit var binding: ActivityKiblatBinding
     private var currentDegree = 0f
     private var sensorManager: SensorManager? = null
     private var sensor: Sensor? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityCompassNewBinding.inflate(layoutInflater)
+        binding = ActivityKiblatBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         setSupportActionBar(binding.myToolbar)
@@ -64,9 +65,4 @@ class CompassActivityNew : AppCompatActivity(), SensorEventListener {
     }
 
     override fun onAccuracyChanged(sensor: Sensor, i: Int) {}
-
-//    companion object {
-//        private var sensorManager: SensorManager? = null
-//        private var sensor: Sensor? = null
-//    }
 }

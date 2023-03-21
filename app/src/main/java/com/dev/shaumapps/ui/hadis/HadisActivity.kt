@@ -27,16 +27,12 @@ class HadisActivity : AppCompatActivity() {
             binding.apply {
                 tvArti.visibility = View.VISIBLE
                 tvRiwayat.visibility = View.VISIBLE
-//                tvInit1.visibility = View.GONE
-//                tvInit2.visibility = View.GONE
                 tvArti.text = data.data.contents.id
                 tvRiwayat.text = data.data.name
             }
         }
 
         viewModel.isError.observe(this) {
-//            binding.tvInit1.visibility = View.VISIBLE
-//            binding.tvInit2.visibility = View.VISIBLE
             binding.tvArti.visibility = View.GONE
             binding.tvRiwayat.visibility = View.GONE
         }

@@ -3,7 +3,6 @@ package com.dev.shaumapps.data.remote.response
 import com.google.gson.annotations.SerializedName
 
 data class JadwalShalatResponse(
-
     @field:SerializedName("code")
     val code: Int,
 
@@ -15,7 +14,6 @@ data class JadwalShalatResponse(
 )
 
 data class Offset(
-
     @field:SerializedName("Sunset")
     val sunset: Int,
 
@@ -45,7 +43,6 @@ data class Offset(
 )
 
 data class Gregorian(
-
     @field:SerializedName("date")
     val date: String,
 
@@ -69,7 +66,6 @@ data class Gregorian(
 )
 
 data class Location(
-
     @field:SerializedName("latitude")
     val latitude: Any,
 
@@ -78,7 +74,6 @@ data class Location(
 )
 
 data class Weekday(
-
     @field:SerializedName("en")
     val en: String,
 
@@ -87,7 +82,6 @@ data class Weekday(
 )
 
 data class Meta(
-
     @field:SerializedName("method")
     val method: Method,
 
@@ -114,7 +108,6 @@ data class Meta(
 )
 
 data class Month(
-
     @field:SerializedName("number")
     val number: Int,
 
@@ -126,7 +119,6 @@ data class Month(
 )
 
 data class Method(
-
     @field:SerializedName("name")
     val name: String,
 
@@ -141,7 +133,6 @@ data class Method(
 )
 
 data class Hijri(
-
     @field:SerializedName("date")
     val date: String,
 
@@ -168,7 +159,6 @@ data class Hijri(
 )
 
 data class Params(
-
     @field:SerializedName("Isha")
     val isha: Int,
 
@@ -177,7 +167,6 @@ data class Params(
 )
 
 data class Timings(
-
     @field:SerializedName("Sunset")
     val sunset: String,
 
@@ -213,7 +202,6 @@ data class Timings(
 )
 
 data class Data(
-
     @field:SerializedName("date")
     val date: Date,
 
@@ -225,7 +213,6 @@ data class Data(
 )
 
 data class Designation(
-
     @field:SerializedName("expanded")
     val expanded: String,
 
@@ -234,7 +221,6 @@ data class Designation(
 )
 
 data class Date(
-
     @field:SerializedName("readable")
     val readable: String,
 

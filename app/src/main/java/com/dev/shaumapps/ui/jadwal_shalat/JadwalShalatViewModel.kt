@@ -13,16 +13,12 @@ import java.text.SimpleDateFormat
 import java.util.*
 
 class JadwalShalatViewModel : ViewModel() {
-
     private val _jadwalRespone = MutableLiveData<JadwalShalatResponse>()
     val jadwalRespone: LiveData<JadwalShalatResponse> = _jadwalRespone
-
     private val _setJadwalRespone = MutableLiveData<JadwalShalatResponse>()
     val setJadwalRespone: LiveData<JadwalShalatResponse> = _setJadwalRespone
-
     private val _isError = MutableLiveData<String>()
     val isError: LiveData<String> = _isError
-
     private val _isLoading = MutableLiveData<Boolean>()
     val isLoading: LiveData<Boolean> = _isLoading
 

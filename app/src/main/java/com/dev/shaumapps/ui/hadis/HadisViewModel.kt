@@ -12,13 +12,10 @@ import retrofit2.Response
 import kotlin.random.Random
 
 class HadisViewModel : ViewModel() {
-
     private val _hadisResponse = MutableLiveData<HadisResponse>()
     val hadisRespone: LiveData<HadisResponse> = _hadisResponse
-
     private val _isError = MutableLiveData<String>()
     val isError: LiveData<String> = _isError
-
     private val _isLoading = MutableLiveData<Boolean>()
     val isLoading: LiveData<Boolean> = _isLoading
 
