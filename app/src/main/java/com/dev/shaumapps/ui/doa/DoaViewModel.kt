@@ -13,6 +13,8 @@ import retrofit2.Response
 class DoaViewModel : ViewModel() {
     private val _doaResponse = MutableLiveData<List<DoaHarianResponseItem>>()
     val doaRespone: LiveData<List<DoaHarianResponseItem>> = _doaResponse
+    private val _errorMessage = MutableLiveData<String>()
+    val errorMessage = _errorMessage
     private val _isLoading = MutableLiveData<Boolean>()
     val isLoading: LiveData<Boolean> = _isLoading
 
@@ -55,6 +57,9 @@ class DoaViewModel : ViewModel() {
                     if (responseBody != null) {
                         _doaResponse.value = arrayListOf(responseBody)
                     }
+                } else {
+                    _errorMessage.value = "Response error : $response.code()"
+                    Log.e("DoaActivity", "onFailure: ${response.code()}")
                 }
             }
 

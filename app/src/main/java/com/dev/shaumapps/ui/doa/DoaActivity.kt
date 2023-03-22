@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.*
 import android.view.inputmethod.EditorInfo
 import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -31,6 +32,12 @@ class DoaActivity : AppCompatActivity() {
 
         viewModel.doaRespone.observe(this) {
             rvAdapter.setListDoa(it)
+        }
+
+        viewModel.errorMessage.observe(this){
+            if (it != null){
+                Toast.makeText(this@DoaActivity, "Data tidak ditemukan", Toast.LENGTH_SHORT).show()
+            }
         }
 
         viewModel.isLoading.observe(this) {

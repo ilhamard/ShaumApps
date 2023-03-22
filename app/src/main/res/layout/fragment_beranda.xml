@@ -646,7 +646,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_margin="24dp"
-                    android:text="Jika awal Ramadhan tiba, maka setan-­setan dan jin dibelenggu, pintu-pintu neraka ditutup, tidak ada satu pintu pun yang dibuka. Sedangkan pintu-pintu surga dibuka, dan tidak satu pintu pun yang ditutup. Lalu ada seruan (pada bulan Ramadhan); Wahai orang yang menginginkan kebaikan, datanglah. Wahai orang yang ingin kejahatan, tahanlah dirimu. Pada setiap malam Allah SWT memiliki orang-orang yang dibebaskan dari neraka"
+                    android:text="&quot;Barangsiapa berpuasa Ramadhan atas dasar iman dan mengharap pahala dari Allah, maka dosanya yang telah lalu akan diampuni.&quot; (HR. Bukhari no. 38 dan Muslim no. 760)"
                     android:textAlignment="center"
                     android:textColor="@color/text" />
 
