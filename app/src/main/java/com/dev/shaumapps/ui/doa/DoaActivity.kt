@@ -34,8 +34,8 @@ class DoaActivity : AppCompatActivity() {
             rvAdapter.setListDoa(it)
         }
 
-        viewModel.errorMessage.observe(this){
-            if (it != null){
+        viewModel.errorMessage.observe(this) {
+            if (it != null) {
                 Toast.makeText(this@DoaActivity, "Data tidak ditemukan", Toast.LENGTH_SHORT).show()
             }
         }

@@ -133,7 +133,6 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tv_countdown">
 
-
                 <!--        crete content in the center layout-->
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
@@ -213,10 +212,10 @@
                     <!--            icon imsak-->
                     <ImageView
                         android:id="@+id/iv_imsak"
-                        android:layout_width="26.680dp"
-                        android:layout_height="21.360dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:layout_marginEnd="16dp"
-                        android:src="@drawable/imsak_icon"
+                        android:src="@drawable/imsak"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="@id/iv_imsak"
                         app:layout_constraintTop_toTopOf="parent"
@@ -282,10 +281,10 @@
 
                     <ImageView
                         android:id="@+id/iv_subuh"
-                        android:layout_width="26.680dp"
-                        android:layout_height="21.360dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:layout_marginEnd="16dp"
-                        android:src="@drawable/subuh_icon"
+                        android:src="@drawable/subuh"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="@id/iv_subuh"
                         app:layout_constraintTop_toTopOf="parent"
@@ -351,10 +350,10 @@
 
                     <ImageView
                         android:id="@+id/iv_terbit"
-                        android:layout_width="26.680dp"
-                        android:layout_height="21.360dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:layout_marginEnd="16dp"
-                        android:src="@drawable/terbit_icon"
+                        android:src="@drawable/terbit"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="@id/iv_terbit"
                         app:layout_constraintTop_toTopOf="parent"
@@ -419,10 +418,10 @@
 
                     <ImageView
                         android:id="@+id/iv_dhuha"
-                        android:layout_width="26.680dp"
-                        android:layout_height="21.360dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:layout_marginEnd="16dp"
-                        android:src="@drawable/dhuha_icon"
+                        android:src="@drawable/dhuha"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="@id/iv_dhuha"
                         app:layout_constraintTop_toTopOf="parent"
@@ -486,10 +485,10 @@
 
                     <ImageView
                         android:id="@+id/iv_dzuhur"
-                        android:layout_width="26.680dp"
-                        android:layout_height="21.360dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:layout_marginEnd="16dp"
-                        android:src="@drawable/zuhur_icon"
+                        android:src="@drawable/dzuhur"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="@id/iv_dzuhur"
                         app:layout_constraintTop_toTopOf="parent"
@@ -555,10 +554,10 @@
 
                     <ImageView
                         android:id="@+id/iv_ashar"
-                        android:layout_width="26.680dp"
-                        android:layout_height="21.360dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:layout_marginEnd="16dp"
-                        android:src="@drawable/ashar_icon"
+                        android:src="@drawable/ashar"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="@id/iv_ashar"
                         app:layout_constraintTop_toTopOf="parent"
@@ -624,10 +623,10 @@
 
                     <ImageView
                         android:id="@+id/iv_maghrib"
-                        android:layout_width="26.680dp"
-                        android:layout_height="21.360dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:layout_marginEnd="16dp"
-                        android:src="@drawable/maghrib_icon"
+                        android:src="@drawable/maghrib"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="@id/iv_maghrib"
                         app:layout_constraintTop_toTopOf="parent"
@@ -693,10 +692,10 @@
 
                     <ImageView
                         android:id="@+id/iv_isya"
-                        android:layout_width="26.680dp"
-                        android:layout_height="21.360dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:layout_marginEnd="16dp"
-                        android:src="@drawable/isya_icon"
+                        android:src="@drawable/isya"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="@id/iv_isya"
                         app:layout_constraintTop_toTopOf="parent"

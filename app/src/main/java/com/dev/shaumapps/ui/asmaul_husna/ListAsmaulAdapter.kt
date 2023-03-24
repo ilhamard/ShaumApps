@@ -18,7 +18,8 @@ class ListAsmaulAdapter(private val listAsmaul: ArrayList<AsmaulHusna>) :
     RecyclerView.Adapter<ListAsmaulAdapter.ListViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ListViewHolder {
-        val binding = ItemListAsmaulHusnaBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        val binding =
+            ItemListAsmaulHusnaBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return ListViewHolder(binding)
     }
 
@@ -29,9 +30,10 @@ class ListAsmaulAdapter(private val listAsmaul: ArrayList<AsmaulHusna>) :
 
     override fun getItemCount(): Int = listAsmaul.size
 
-    class ListViewHolder(val binding: ItemListAsmaulHusnaBinding) : RecyclerView.ViewHolder(binding.root) {
+    class ListViewHolder(val binding: ItemListAsmaulHusnaBinding) :
+        RecyclerView.ViewHolder(binding.root) {
 
-        fun bind(item: AsmaulHusna){
+        fun bind(item: AsmaulHusna) {
             val startIndex = item.asmaulHusnaMakna.indexOf('(')
             val endIndex = item.asmaulHusnaMakna.lastIndexOf(')')
             val spannableString = SpannableString(item.asmaulHusnaMakna)
@@ -60,7 +62,7 @@ class ListAsmaulAdapter(private val listAsmaul: ArrayList<AsmaulHusna>) :
                     } else {
                         btnDropdown.setImageDrawable(
                             ContextCompat.getDrawable(
-                                 it.context,
+                                it.context,
                                 R.drawable.arrowdown
                             )
                         )

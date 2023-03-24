@@ -47,7 +47,7 @@ class JadwalShalatActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = com.dev.shaumapps.databinding.ActivityJadwalShalatBinding.inflate(layoutInflater)
+        binding = ActivityJadwalShalatBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         setSupportActionBar(binding.myToolbar)

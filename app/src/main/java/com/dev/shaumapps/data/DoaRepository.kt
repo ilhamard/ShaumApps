@@ -21,7 +21,7 @@ class DoaRepository(private val doaDao: DoaDao) {
 
     companion object {
         @Volatile
-        private var instance: com.dev.shaumapps.data.DoaRepository? = null
+        private var instance: DoaRepository? = null
         fun getInstance(
             doaDao: DoaDao,
         ): DoaRepository =

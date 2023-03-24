@@ -1,16 +1,13 @@
 package com.dev.shaumapps.ui.catatan
 
 import android.content.Intent
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.dev.shaumapps.data.local.entity.CatatanData
 import com.dev.shaumapps.databinding.ItemListCatatanBinding
 import java.text.SimpleDateFormat
-import java.time.format.DateTimeFormatter
 import java.util.*
-import kotlin.collections.ArrayList
 
 class CatatanAdapter : RecyclerView.Adapter<CatatanAdapter.CatatanViewHolder>() {
     private val listCatatan = ArrayList<CatatanData>()
@@ -47,7 +44,12 @@ class CatatanAdapter : RecyclerView.Adapter<CatatanAdapter.CatatanViewHolder>() 
                 txJudul.text = catatanData.judulCatatan
 
                 val inputDateTime = inputFormat.parse(catatanData.tanggal.toString())
-                val outputFormat = if (inputDateTime.after(currentDateTime.apply { add(Calendar.WEEK_OF_YEAR, -1) }.time)){
+                val outputFormat = if (inputDateTime.after(currentDateTime.apply {
+                        add(
+                            Calendar.WEEK_OF_YEAR,
+                            -1
+                        )
+                    }.time)) {
                     outputFormatThisWeek
                 } else {
                     outputFormatOtherWeeks
