@@ -50,7 +50,7 @@
                 android:layout_height="wrap_content"
                 android:text="Senin, 18 Maret"
                 android:textColor="@color/black"
-                android:textSize="10sp"
+                android:textSize="12sp"
                 app:layout_constraintBottom_toBottomOf="@id/tx_judul"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="@id/tx_judul" />
@@ -67,7 +67,7 @@
                 android:maxLines="3"
                 android:text="Ketika memberikan penjelasan, Quraish Shihab dalam buku ini mengawali dengan pendapat-pendapat filosof atau ilmuan sesuai bidangnya. Misalnya saat mendefinisikan agama,Ketika memberikan penjelasan, Quraish Shihab dalam buku ini mengawali dengan pendapat-pendapat filosof atau ilmuan sesuai bidangnya. Misalnya saat mendefinisikan agama, ..."
                 android:textColor="@color/black"
-                android:textSize="12sp"
+                android:textSize="14sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.526"
                 app:layout_constraintStart_toStartOf="parent"
