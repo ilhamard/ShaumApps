@@ -24,6 +24,7 @@ class ListAsmaulAdapter(private val listAsmaul: ArrayList<AsmaulHusna>) :
 
     override fun onBindViewHolder(holder: ListViewHolder, position: Int) {
         holder.bind(listAsmaul[position])
+
     }
 
     override fun getItemCount(): Int = listAsmaul.size
@@ -43,7 +44,7 @@ class ListAsmaulAdapter(private val listAsmaul: ArrayList<AsmaulHusna>) :
             with(binding) {
                 tvAsmaulHusna.text = item.asmaulHusna
                 tvNoAsmaulHusna.text = item.numberAsmaulHuna
-//                isiAsmaulHusna1.text = spannableString
+                isiAsmaulHusnaMakna.text = spannableString
 
                 cons2.setOnClickListener {
                     item.expanded = !item.expanded
