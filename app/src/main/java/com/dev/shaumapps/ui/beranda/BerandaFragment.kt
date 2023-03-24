@@ -1,4 +1,4 @@
-package com.dev.shaumapps.ui
+package com.dev.shaumapps.ui.beranda
 
 import android.Manifest
 import android.app.AlertDialog
@@ -24,6 +24,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.dev.shaumapps.R
 import com.dev.shaumapps.databinding.FragmentBerandaBinding
+import com.dev.shaumapps.ui.HomePageActivity
 import com.dev.shaumapps.ui.asmaul_husna.AsmaulHusnaActivity
 import com.dev.shaumapps.ui.doa.DoaActivity
 import com.dev.shaumapps.ui.hadis.HadisActivity

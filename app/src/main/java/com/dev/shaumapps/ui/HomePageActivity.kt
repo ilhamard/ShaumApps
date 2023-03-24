@@ -4,6 +4,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.dev.shaumapps.R
+import com.dev.shaumapps.ui.beranda.BerandaFragment
 import com.dev.shaumapps.ui.catatan.CatatanFragment
 import com.dev.shaumapps.ui.todo_list.TodoListFragment
 import nl.joery.animatedbottombar.AnimatedBottomBar
