@@ -43,7 +43,8 @@ class ListAsmaulAdapter(private val listAsmaul: ArrayList<AsmaulHusna>) :
             with(binding) {
                 tvAsmaulHusna.text = item.asmaulHusna
                 tvNoAsmaulHusna.text = item.numberAsmaulHuna
-                isiAsmaulHusna1.text = spannableString
+//                isiAsmaulHusna1.text = spannableString
+
                 cons2.setOnClickListener {
                     item.expanded = !item.expanded
                     if (item.expanded) {
