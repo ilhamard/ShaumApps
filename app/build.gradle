@@ -6,11 +6,11 @@ plugins {
 }
 
 android {
-    namespace 'com.dev.shaumapps'
+    namespace 'com.dev.dzikirkita'
     compileSdk 33
 
     defaultConfig {
-        applicationId "com.dev.shaumapps"
+        applicationId "com.dev.dzikirkita"
         minSdk 21
         targetSdk 32
         versionCode 1

@@ -20,4 +20,4 @@
 # hide the original source file name.
 #-renamesourcefileattribute SourceFile
 
--keep class com.dev.shaumapps.data.remote.response.* { *; }
+#-keep class com.dev.dzikirkita.data.remote.response.* { *; }

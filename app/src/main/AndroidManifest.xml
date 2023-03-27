@@ -18,9 +18,15 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.ShaumApps"
+        android:theme="@style/Theme.DzikirKita"
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
+        <activity
+            android:name=".Cobain"
+            android:exported="false" />
+        <activity
+            android:name=".ui.MainActivity"
+            android:exported="false" />
         <activity
             android:name=".ui.catatan.CatatanAddUpdateActivity"
             android:exported="false"
@@ -88,7 +94,10 @@
             android:name=".ui.HomePageActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.MainActivity"
+            android:name=".util.Loading"
+            android:exported="false" />
+        <activity
+            android:name=".ui.SplashActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -103,10 +112,9 @@
 
         <provider
             android:name="androidx.core.content.FileProvider"
-            android:authorities="com.dev.shaumapps"
+            android:authorities="com.dev.dzikirkita"
             android:exported="false"
             android:grantUriPermissions="true">
-
             <meta-data
                 android:name="android.support.FILE_PROVIDER_PATHS"
                 android:resource="@xml/paths" />
