@@ -37,7 +37,7 @@ class JadwalShalatViewModel : ViewModel() {
     fun getJadwalShalat() {
         _isLoading.value = true
         val client = ApiConfig.getApiService()
-            .getJadwalByKota("http://api.aladhan.com/v1/timingsByCity/$formattedDate?city=Jakarta&country=Indonesia&method=11")
+            .getJadwalByKota("http://api.aladhan.com/v1/timingsByCity/$formattedDate?city=Kota%20Jakarta%20Selatan&country=Indonesia&method=11")
         client.enqueue(object : Callback<JadwalShalatResponse> {
             override fun onResponse(
                 call: Call<JadwalShalatResponse>,

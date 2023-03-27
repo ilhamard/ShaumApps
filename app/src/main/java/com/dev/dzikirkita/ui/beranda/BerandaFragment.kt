@@ -85,12 +85,12 @@ class BerandaFragment : Fragment() {
 
         viewModelShalat = ViewModelProvider(this)[JadwalShalatViewModel::class.java]
         fusedLocationClient = LocationServices.getFusedLocationProviderClient(requireActivity())
-        getMyLastLocation()
-
+//        getMyLastLocation()
+        viewModelShalat.getJadwalShalat()
         targetTime = getTimeInMillis("00:00", 0)
         startCountdown()
 
-        viewModelShalat.setJadwalRespone.observe(viewLifecycleOwner) {
+        viewModelShalat.jadwalRespone.observe(viewLifecycleOwner) {
             val waktu = it.data.timings
 
             val imsak = getTimeInMillis(waktu.imsak, 1)
