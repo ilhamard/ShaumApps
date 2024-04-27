@@ -3,6 +3,7 @@ package dev.nocturnbinary.dzikirkita.features.home.presentation
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
+import androidx.compose.foundation.gestures.scrollable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -16,7 +17,9 @@ import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.outlined.LocationOn
 import androidx.compose.material.icons.outlined.Notifications
@@ -66,12 +69,13 @@ fun Home(
         modifier = Modifier
             .fillMaxSize()
             .background(background)
+            .verticalScroll(rememberScrollState())
     ) {
         Column(
             modifier = Modifier
                 .fillMaxWidth()
                 .background(Color.White)
-                .padding(16.dp)
+                .padding(top = 32.dp, bottom = 8.dp, start = 16.dp, end = 16.dp)
         ) {
             Row(
                 modifier = Modifier.fillMaxWidth(),
@@ -120,7 +124,7 @@ fun Home(
                 Box(
                     modifier = Modifier
                         .fillMaxWidth()
-                        .aspectRatio(16f / 9f),
+                        .aspectRatio(4f / 2f),
                     contentAlignment = Alignment.Center
                 ) {
                     Image(
@@ -186,7 +190,6 @@ fun Home(
         Divider(
             modifier = Modifier
                 .shadow(elevation = 8.dp, spotColor = Color.Black)
-                .offset(y = 4.dp)
         )
         Column(
             modifier = Modifier
@@ -202,10 +205,11 @@ fun Home(
             )
             OutlinedCard(
                 modifier = Modifier.fillMaxWidth(),
-                border = BorderStroke(width = 1.dp, color = primary)
+                border = BorderStroke(width = 1.dp, color = primary),
+                shape = MaterialTheme.shapes.medium
             ) {
                 Column(
-                    modifier = Modifier.padding(8.dp)
+                    modifier = Modifier.padding(10.dp)
                 ) {
                     Text(
                         text = uiState.hadits,

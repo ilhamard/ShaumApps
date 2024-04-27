@@ -8,6 +8,7 @@ import dev.nocturnbinary.dzikirkita.BuildConfig
 import dev.nocturnbinary.dzikirkita.features.home.data.HomeRepository
 import dev.nocturnbinary.dzikirkita.features.home.data.HomeRepositoryImpl
 import dev.nocturnbinary.dzikirkita.network.DzikirKitaHttpClientBuilder
+import dev.nocturnbinary.dzikirkita.network.RequestHandler
 import io.ktor.client.HttpClient
 import io.ktor.http.URLProtocol
 
@@ -21,6 +22,9 @@ class AppModule {
             .protocol(URLProtocol.HTTPS)
             .host(BuildConfig.RANDOM_HADITS_HOST)
             .build()
+
+    @Provides
+    fun provideRequestHandler(client: HttpClient): RequestHandler = RequestHandler(client)
 
     @Provides
     fun provideHomeRepository(impl: HomeRepositoryImpl): HomeRepository = impl
