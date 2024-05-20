@@ -1,4 +1,4 @@
-package dev.nocturnbinary.dzikirkita.features.home.data
+package dev.nocturnbinary.dzikirkita.features.hadits.data
 
 import kotlinx.serialization.Serializable
 

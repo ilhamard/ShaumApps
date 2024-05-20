@@ -1,14 +1,14 @@
-package dev.nocturnbinary.dzikirkita.features.home.domain
+package dev.nocturnbinary.dzikirkita.features.hadits.domain
 
-import dev.nocturnbinary.dzikirkita.features.home.data.HomeRepository
-import dev.nocturnbinary.dzikirkita.features.home.data.RandomHaditsApiModel
+import dev.nocturnbinary.dzikirkita.features.hadits.data.HaditsRepository
+import dev.nocturnbinary.dzikirkita.features.hadits.data.RandomHaditsApiModel
 import dev.nocturnbinary.dzikirkita.network.NetworkException
 import dev.nocturnbinary.dzikirkita.network.NetworkResult
 import javax.inject.Inject
 import kotlin.random.Random
 
 class GetRandomHaditsUseCase @Inject constructor(
-    private val homeRepository: HomeRepository
+    private val haditsRepository: HaditsRepository
 ) {
 
     suspend fun invoke(): Resource<RandomHaditsApiModel> {
@@ -38,7 +38,7 @@ class GetRandomHaditsUseCase @Inject constructor(
             "tirmidzi" -> angka = Random.nextInt(3625) + 1
         }
 
-        return when (val result = homeRepository.getRandomHadits(haditsRiwayat = hrRandom, noHadits = angka)) {
+        return when (val result = haditsRepository.getRandomHadits(haditsRiwayat = hrRandom, noHadits = angka)) {
             is NetworkResult.Error -> result.toResourceError()
             is NetworkResult.Success -> Resource.Success(result.result.data)
         }

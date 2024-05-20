@@ -1,25 +1,32 @@
-package dev.nocturnbinary.dzikirkita.features.home.presentation
+package dev.nocturnbinary.dzikirkita.features.hadits.presentation
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
 import dev.nocturnbinary.dzikirkita.features.hadits.domain.GetRandomHaditsUseCase
 import dev.nocturnbinary.dzikirkita.features.hadits.domain.Resource
+import dev.nocturnbinary.dzikirkita.features.home.presentation.HomeUiState
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 @HiltViewModel
-class HomeViewModel @Inject constructor(
+class HaditsViewModel @Inject constructor(
     private val randomHaditsUseCase: GetRandomHaditsUseCase
 ) : ViewModel() {
 
-    private val _uiState = MutableStateFlow(HomeUiState())
-    val uiState: StateFlow<HomeUiState> = _uiState
+    private val _uiState = MutableStateFlow(HaditsUiState())
+    val uiState: StateFlow<HaditsUiState> = _uiState
 
     init {
         getRandomHadits()
+    }
+
+    fun onEvent(event: HaditsUiEvent) {
+        when (event) {
+            HaditsUiEvent.RefreshRandomHadits -> getRandomHadits()
+        }
     }
 
     private fun getRandomHadits() = viewModelScope.launch {

@@ -23,8 +23,8 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
-            DzikirKitaTheme {
-                    HomeScreen(viewModel = hiltViewModel())
+            DzikirKitaTheme(darkTheme = false) {
+                    DzikirKitaApp()
             }
         }
     }

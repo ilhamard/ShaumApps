@@ -1,4 +1,4 @@
-package dev.nocturnbinary.dzikirkita.features.home.domain
+package dev.nocturnbinary.dzikirkita.features.hadits.domain
 
 sealed class Resource<out T> {
     data class Error(val e: ResourceError, val errorMessage: String?) : Resource<Nothing>()

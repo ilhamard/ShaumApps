@@ -5,8 +5,8 @@ import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
 import dev.nocturnbinary.dzikirkita.BuildConfig
-import dev.nocturnbinary.dzikirkita.features.home.data.HomeRepository
-import dev.nocturnbinary.dzikirkita.features.home.data.HomeRepositoryImpl
+import dev.nocturnbinary.dzikirkita.features.hadits.data.HaditsRepository
+import dev.nocturnbinary.dzikirkita.features.hadits.data.HaditsRepositoryImpl
 import dev.nocturnbinary.dzikirkita.network.DzikirKitaHttpClientBuilder
 import dev.nocturnbinary.dzikirkita.network.RequestHandler
 import io.ktor.client.HttpClient
@@ -27,5 +27,5 @@ class AppModule {
     fun provideRequestHandler(client: HttpClient): RequestHandler = RequestHandler(client)
 
     @Provides
-    fun provideHomeRepository(impl: HomeRepositoryImpl): HomeRepository = impl
+    fun provideHaditsRepository(impl: HaditsRepositoryImpl): HaditsRepository = impl
 }

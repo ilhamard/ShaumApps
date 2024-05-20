@@ -3,7 +3,6 @@ package dev.nocturnbinary.dzikirkita.features.home.presentation
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
-import androidx.compose.foundation.gestures.scrollable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -13,7 +12,6 @@ import androidx.compose.foundation.layout.aspectRatio
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
-import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
@@ -25,6 +23,7 @@ import androidx.compose.material.icons.outlined.LocationOn
 import androidx.compose.material.icons.outlined.Notifications
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
+import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.Divider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
@@ -35,7 +34,6 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
-import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
@@ -44,8 +42,10 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
+import androidx.navigation.NavController
 import dev.nocturnbinary.dzikirkita.R
 import dev.nocturnbinary.dzikirkita.ui.components.HeroItemHome
+import dev.nocturnbinary.dzikirkita.ui.navigation.Screen
 import dev.nocturnbinary.dzikirkita.ui.theme.background
 import dev.nocturnbinary.dzikirkita.ui.theme.primary
 import dev.nocturnbinary.dzikirkita.ui.theme.secondary
@@ -54,16 +54,20 @@ import dev.nocturnbinary.dzikirkita.ui.theme.textTwo
 
 @Composable
 fun HomeScreen(
-    viewModel: HomeViewModel
+    viewModel: HomeViewModel,
+    navController: NavController
 ) {
     val uiState = viewModel.uiState.collectAsStateWithLifecycle()
 
-    Home(uiState.value)
+    Home(uiState.value, moveToHadits = {
+        navController.navigate(Screen.Hadits.route)
+    })
 }
 
 @Composable
 fun Home(
-    uiState: HomeUiState
+    uiState: HomeUiState,
+    moveToHadits: () -> Unit
 ) {
     Column(
         modifier = Modifier
@@ -169,10 +173,26 @@ fun Home(
                 modifier = Modifier.fillMaxWidth(),
                 verticalAlignment = Alignment.CenterVertically
             ) {
-                HeroItemHome(image = R.drawable.jam, title = "Jadwal Shalat", modifier = Modifier.weight(1f))
-                HeroItemHome(image = R.drawable.kiblat, title = "Kiblat", modifier = Modifier.weight(1f))
-                HeroItemHome(image = R.drawable.doa, title = "Doa Harian", modifier = Modifier.weight(1f))
-                HeroItemHome(image = R.drawable.tasbih, title = "Tasbih", modifier = Modifier.weight(1f))
+                HeroItemHome(
+                    image = R.drawable.jam,
+                    title = "Jadwal Shalat",
+                    modifier = Modifier.weight(1f)
+                )
+                HeroItemHome(
+                    image = R.drawable.kiblat,
+                    title = "Kiblat",
+                    modifier = Modifier.weight(1f)
+                )
+                HeroItemHome(
+                    image = R.drawable.doa,
+                    title = "Doa Harian",
+                    modifier = Modifier.weight(1f)
+                )
+                HeroItemHome(
+                    image = R.drawable.tasbih,
+                    title = "Tasbih",
+                    modifier = Modifier.weight(1f)
+                )
             }
             Spacer(modifier = Modifier.height(16.dp))
             Row(
@@ -180,17 +200,32 @@ fun Home(
                 verticalAlignment = Alignment.CenterVertically,
                 horizontalArrangement = Arrangement.SpaceBetween,
             ) {
-                HeroItemHome(image = R.drawable.asmaulhusna, title = "Asmaul Husna", modifier = Modifier.weight(1f))
-                HeroItemHome(image = R.drawable.hadits, title = "Hadits", modifier = Modifier.weight(1f))
-                HeroItemHome(image = R.drawable.artikel, title = "Artikel", modifier = Modifier.weight(1f))
-                HeroItemHome(image = R.drawable.kalam, title = "Kutipan", modifier = Modifier.weight(1f))
+                HeroItemHome(
+                    image = R.drawable.asmaulhusna,
+                    title = "Asmaul Husna",
+                    modifier = Modifier.weight(1f)
+                )
+                HeroItemHome(
+                    image = R.drawable.hadits,
+                    title = "Hadits",
+                    modifier = Modifier.weight(1f),
+                    moveToDetail = moveToHadits
+                )
+                HeroItemHome(
+                    image = R.drawable.artikel,
+                    title = "Artikel",
+                    modifier = Modifier.weight(1f)
+                )
+                HeroItemHome(
+                    image = R.drawable.kalam,
+                    title = "Kutipan",
+                    modifier = Modifier.weight(1f)
+                )
             }
+            Spacer(modifier = Modifier.height(16.dp))
         }
+        Divider()
         Spacer(modifier = Modifier.height(16.dp))
-        Divider(
-            modifier = Modifier
-                .shadow(elevation = 8.dp, spotColor = Color.Black)
-        )
         Column(
             modifier = Modifier
                 .fillMaxWidth()
@@ -211,18 +246,32 @@ fun Home(
                 Column(
                     modifier = Modifier.padding(10.dp)
                 ) {
-                    Text(
-                        text = uiState.hadits,
-                        textAlign = TextAlign.Center,
-                        modifier = Modifier.padding(bottom = 8.dp)
-                    )
-                    Text(
-                        text = uiState.haditsRiwayat,
-                        style = MaterialTheme.typography.titleSmall,
-                        color = primary,
-                        modifier = Modifier.fillMaxWidth(),
-                        textAlign = TextAlign.Center
-                    )
+                    if (uiState.isLoading) {
+                        Box(
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .padding(8.dp),
+                            contentAlignment = Alignment.Center
+                        ) {
+                            CircularProgressIndicator()
+                        }
+                    } else {
+                        Text(
+                            text = uiState.hadits,
+                            style = MaterialTheme.typography.bodyMedium,
+                            textAlign = TextAlign.Center,
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .padding(bottom = 8.dp)
+                        )
+                        Text(
+                            text = uiState.haditsRiwayat,
+                            style = MaterialTheme.typography.titleSmall,
+                            color = primary,
+                            modifier = Modifier.fillMaxWidth(),
+                            textAlign = TextAlign.Center
+                        )
+                    }
                 }
             }
         }
@@ -232,5 +281,5 @@ fun Home(
 @Composable
 @Preview(showBackground = true)
 fun HomeScreenPreview() {
-    Home(uiState = HomeUiState())
+    Home(uiState = HomeUiState(), moveToHadits = {})
 }

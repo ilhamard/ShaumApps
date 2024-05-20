@@ -3,6 +3,7 @@ package dev.nocturnbinary.dzikirkita.ui.components
 import androidx.annotation.DrawableRes
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
@@ -27,7 +28,8 @@ import dev.nocturnbinary.dzikirkita.utils.DzikirKitaPreview
 fun HeroItemHome(
     modifier: Modifier = Modifier,
     @DrawableRes image: Int = R.drawable.ihwan,
-    title: String = "Jadwal Shalat"
+    title: String = "Jadwal Shalat",
+    moveToDetail: () -> Unit = {}
     ) {
     Column(
         modifier = modifier,
@@ -37,7 +39,8 @@ fun HeroItemHome(
             modifier = Modifier
                 .size(64.dp)
                 .clip(CircleShape)
-                .background(secondary),
+                .background(secondary)
+                .clickable { moveToDetail() },
             contentAlignment = Alignment.Center,
         ) {
             Image(
