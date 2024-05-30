@@ -5,7 +5,6 @@ import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
 import dev.nocturnbinary.dzikirkita.features.hadits.domain.GetRandomHaditsUseCase
 import dev.nocturnbinary.dzikirkita.features.hadits.domain.Resource
-import dev.nocturnbinary.dzikirkita.features.home.presentation.HomeUiState
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.launch

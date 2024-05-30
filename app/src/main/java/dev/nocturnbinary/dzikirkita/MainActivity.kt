@@ -21,7 +21,6 @@ import dev.nocturnbinary.dzikirkita.ui.theme.DzikirKitaTheme
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
         setContent {
             DzikirKitaTheme(darkTheme = false) {
                     DzikirKitaApp()

@@ -55,19 +55,30 @@ import dev.nocturnbinary.dzikirkita.ui.theme.textTwo
 @Composable
 fun HomeScreen(
     viewModel: HomeViewModel,
-    navController: NavController
+    navController: NavController,
 ) {
     val uiState = viewModel.uiState.collectAsStateWithLifecycle()
 
-    Home(uiState.value, moveToHadits = {
-        navController.navigate(Screen.Hadits.route)
-    })
+    Home(
+        uiState = uiState.value,
+        moveToHadits = {
+            navController.navigate(Screen.Hadits.route)
+        },
+        moveToPrayer = {
+            navController.navigate(Screen.DailyPrayer.route)
+        },
+        moveToTasbeeh = {
+            navController.navigate(Screen.Tasbeeh.route)
+        }
+    )
 }
 
 @Composable
 fun Home(
     uiState: HomeUiState,
-    moveToHadits: () -> Unit
+    moveToHadits: () -> Unit,
+    moveToPrayer: () -> Unit,
+    moveToTasbeeh: () -> Unit,
 ) {
     Column(
         modifier = Modifier
@@ -186,12 +197,14 @@ fun Home(
                 HeroItemHome(
                     image = R.drawable.doa,
                     title = "Doa Harian",
-                    modifier = Modifier.weight(1f)
+                    modifier = Modifier.weight(1f),
+                    moveToDetail = moveToPrayer
                 )
                 HeroItemHome(
                     image = R.drawable.tasbih,
                     title = "Tasbih",
-                    modifier = Modifier.weight(1f)
+                    modifier = Modifier.weight(1f),
+                    moveToDetail = moveToTasbeeh
                 )
             }
             Spacer(modifier = Modifier.height(16.dp))
@@ -241,7 +254,10 @@ fun Home(
             OutlinedCard(
                 modifier = Modifier.fillMaxWidth(),
                 border = BorderStroke(width = 1.dp, color = primary),
-                shape = MaterialTheme.shapes.medium
+                shape = MaterialTheme.shapes.medium,
+                colors = CardDefaults.outlinedCardColors(
+                    containerColor = background
+                ),
             ) {
                 Column(
                     modifier = Modifier.padding(10.dp)
@@ -281,5 +297,5 @@ fun Home(
 @Composable
 @Preview(showBackground = true)
 fun HomeScreenPreview() {
-    Home(uiState = HomeUiState(), moveToHadits = {})
+    Home(uiState = HomeUiState(), moveToHadits = {}, moveToPrayer = {}, moveToTasbeeh = {})
 }
