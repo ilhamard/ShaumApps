@@ -3,6 +3,7 @@ package dev.nocturnbinary.dzikirkita
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowBack
+import androidx.compose.material.icons.filled.Edit
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
@@ -37,7 +38,8 @@ fun DzikirKitaApp(
     Scaffold(
         topBar = {
             if (currentRoute !in listOf(
-                    Screen.Home.route
+                    Screen.Home.route,
+                    Screen.Tasbeeh.route,
                 )
             ) {
                 TopAppBar(
@@ -73,7 +75,7 @@ fun DzikirKitaApp(
                 DailyPrayerDetailScreen(viewModel = hiltViewModel(), id = id.toString())
             }
             composable(Screen.Tasbeeh.route) {
-                TasbeehScreen(viewModel = viewModel())
+                TasbeehScreen(viewModel = viewModel(), navController = navController)
             }
         }
     }
