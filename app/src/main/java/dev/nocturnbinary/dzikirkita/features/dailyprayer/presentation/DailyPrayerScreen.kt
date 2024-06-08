@@ -28,7 +28,7 @@ import androidx.compose.ui.platform.LocalSoftwareKeyboardController
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.navigation.NavController
-import dev.nocturnbinary.dzikirkita.ui.components.DailyPrayerItem
+import dev.nocturnbinary.dzikirkita.ui.components.PrayerOrAsmaulHusnaItem
 import dev.nocturnbinary.dzikirkita.ui.navigation.Screen
 import dev.nocturnbinary.dzikirkita.utils.DzikirKitaPreview
 
@@ -113,7 +113,7 @@ fun DailyPrayer(
 fun ListPrayer(uiState: DailyPrayerUiState, moveToDetail: (String) -> Unit) {
     LazyColumn {
         items(uiState.dailyPrayer) { prayer ->
-            DailyPrayerItem(
+            PrayerOrAsmaulHusnaItem(
                 modifier = Modifier.padding(vertical = 4.dp),
                 no = prayer.id.toInt(),
                 title = prayer.doa,

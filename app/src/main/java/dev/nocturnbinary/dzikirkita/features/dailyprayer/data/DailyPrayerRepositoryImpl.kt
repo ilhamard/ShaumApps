@@ -2,7 +2,6 @@ package dev.nocturnbinary.dzikirkita.features.dailyprayer.data
 
 import dev.nocturnbinary.dzikirkita.network.NetworkResult
 import dev.nocturnbinary.dzikirkita.network.RequestHandler
-import dev.nocturnbinary.dzikirkita.network.Response
 import javax.inject.Inject
 
 class DailyPrayerRepositoryImpl @Inject constructor(

@@ -54,7 +54,9 @@ fun Hadits(
                 Icon(imageVector = Icons.Default.SkipPrevious, contentDescription = null)
             }
             Column(
-                modifier = Modifier.padding(10.dp).weight(1f),
+                modifier = Modifier
+                    .padding(10.dp)
+                    .weight(1f),
             ) {
                 if (uiState.isLoading) {
                     Box(

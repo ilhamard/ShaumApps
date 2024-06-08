@@ -38,7 +38,8 @@ class GetRandomHaditsUseCase @Inject constructor(
             "tirmidzi" -> angka = Random.nextInt(3625) + 1
         }
 
-        return when (val result = haditsRepository.getRandomHadits(haditsRiwayat = hrRandom, noHadits = angka)) {
+        return when (val result =
+            haditsRepository.getRandomHadits(haditsRiwayat = hrRandom, noHadits = angka)) {
             is NetworkResult.Error -> result.toResourceError()
             is NetworkResult.Success -> Resource.Success(result.result.data)
         }
@@ -46,7 +47,7 @@ class GetRandomHaditsUseCase @Inject constructor(
 }
 
 fun NetworkResult.Error<*>.toResourceError(): Resource.Error {
-    return when(exception){
+    return when (exception) {
         is NetworkException.NotFoundException -> Resource.Error(
             ResourceError.SERVICE_UNAVAILABLE,
             exception.message

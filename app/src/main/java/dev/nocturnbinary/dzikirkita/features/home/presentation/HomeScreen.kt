@@ -3,7 +3,6 @@ package dev.nocturnbinary.dzikirkita.features.home.presentation
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
-import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -39,7 +38,6 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
-import androidx.compose.ui.tooling.preview.Devices
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
@@ -62,24 +60,14 @@ fun HomeScreen(
 
     Home(
         uiState = uiState.value,
-        moveToHadits = {
-            navController.navigate(Screen.Hadits.route)
-        },
-        moveToPrayer = {
-            navController.navigate(Screen.DailyPrayer.route)
-        },
-        moveToTasbeeh = {
-            navController.navigate(Screen.Tasbeeh.route)
-        }
+        moveTo = { navController.navigate(it.route) }
     )
 }
 
 @Composable
 fun Home(
     uiState: HomeUiState,
-    moveToHadits: () -> Unit,
-    moveToPrayer: () -> Unit,
-    moveToTasbeeh: () -> Unit,
+    moveTo: (Screen) -> Unit,
 ) {
     Column(
         modifier = Modifier
@@ -193,19 +181,20 @@ fun Home(
                 HeroItemHome(
                     image = R.drawable.kiblat,
                     title = "Kiblat",
-                    modifier = Modifier.weight(1f)
+                    modifier = Modifier.weight(1f),
+                    moveToDetail = { moveTo(Screen.Qibla) }
                 )
                 HeroItemHome(
                     image = R.drawable.doa,
                     title = "Doa Harian",
                     modifier = Modifier.weight(1f),
-                    moveToDetail = moveToPrayer
+                    moveToDetail = { moveTo(Screen.DailyPrayer) }
                 )
                 HeroItemHome(
                     image = R.drawable.tasbih,
                     title = "Tasbih",
                     modifier = Modifier.weight(1f),
-                    moveToDetail = moveToTasbeeh
+                    moveToDetail = { moveTo(Screen.Tasbeeh) }
                 )
             }
             Spacer(modifier = Modifier.height(16.dp))
@@ -216,13 +205,14 @@ fun Home(
                 HeroItemHome(
                     image = R.drawable.asmaulhusna,
                     title = "Asmaul Husna",
-                    modifier = Modifier.weight(1f)
+                    modifier = Modifier.weight(1f),
+                    moveToDetail = { moveTo(Screen.AsmaulHusna) }
                 )
                 HeroItemHome(
                     image = R.drawable.hadits,
                     title = "Hadits",
                     modifier = Modifier.weight(1f),
-                    moveToDetail = moveToHadits
+                    moveToDetail = { moveTo(Screen.Hadits) }
                 )
                 HeroItemHome(
                     image = R.drawable.artikel,
@@ -297,5 +287,5 @@ fun Home(
 @Composable
 @Preview(showBackground = true)
 fun HomeScreenPreview() {
-    Home(uiState = HomeUiState(), moveToHadits = {}, moveToPrayer = {}, moveToTasbeeh = {})
+    Home(uiState = HomeUiState(), moveTo = {})
 }

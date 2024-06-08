@@ -3,7 +3,6 @@ package dev.nocturnbinary.dzikirkita
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowBack
-import androidx.compose.material.icons.filled.Edit
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
@@ -20,10 +19,12 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
+import dev.nocturnbinary.dzikirkita.features.asmaulhusna.presentation.AsmaulHusnaScreen
 import dev.nocturnbinary.dzikirkita.features.dailyprayer.presentation.DailyPrayerDetailScreen
 import dev.nocturnbinary.dzikirkita.features.dailyprayer.presentation.DailyPrayerScreen
 import dev.nocturnbinary.dzikirkita.features.hadits.presentation.HaditsScreen
 import dev.nocturnbinary.dzikirkita.features.home.presentation.HomeScreen
+import dev.nocturnbinary.dzikirkita.features.qibla.QiblaCompassScreen
 import dev.nocturnbinary.dzikirkita.features.tasbeeh.presentation.TasbeehScreen
 import dev.nocturnbinary.dzikirkita.ui.navigation.Screen
 
@@ -76,6 +77,12 @@ fun DzikirKitaApp(
             }
             composable(Screen.Tasbeeh.route) {
                 TasbeehScreen(viewModel = viewModel(), navController = navController)
+            }
+            composable(Screen.Qibla.route) {
+                QiblaCompassScreen()
+            }
+            composable(Screen.AsmaulHusna.route) {
+                AsmaulHusnaScreen()
             }
         }
     }

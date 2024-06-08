@@ -18,7 +18,7 @@ class GetDailyPrayerUseCase @Inject constructor(
 }
 
 fun NetworkResult.Error<*>.toResourceError(): Resource.Error {
-    return when(exception){
+    return when (exception) {
         is NetworkException.NotFoundException -> Resource.Error(
             ResourceError.SERVICE_UNAVAILABLE,
             exception.message

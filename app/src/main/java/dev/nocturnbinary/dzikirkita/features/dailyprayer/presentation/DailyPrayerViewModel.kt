@@ -51,6 +51,7 @@ class DailyPrayerViewModel @Inject constructor(
                     isLoading = false
                 )
             }
+
             is Resource.Error -> {
                 _uiState.value =
                     _uiState.value.copy(isLoading = false, errorMessage = result.e.name)
@@ -67,6 +68,7 @@ class DailyPrayerViewModel @Inject constructor(
                     isLoading = false
                 )
             }
+
             is Resource.Error -> {
                 _prayerDetailState.value =
                     _prayerDetailState.value.copy(isLoading = false, errorMessage = result.e.name)
@@ -83,6 +85,7 @@ class DailyPrayerViewModel @Inject constructor(
                     isLoading = false
                 )
             }
+
             is Resource.Error -> {
                 _uiState.value =
                     _uiState.value.copy(isLoading = false, errorMessage = result.e.name)

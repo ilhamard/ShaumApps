@@ -4,5 +4,8 @@ import dev.nocturnbinary.dzikirkita.network.NetworkResult
 import dev.nocturnbinary.dzikirkita.network.Response
 
 interface HaditsRepository {
-    suspend fun getRandomHadits(haditsRiwayat: String, noHadits: Int): NetworkResult<Response<RandomHaditsApiModel>>
+    suspend fun getRandomHadits(
+        haditsRiwayat: String,
+        noHadits: Int
+    ): NetworkResult<Response<RandomHaditsApiModel>>
 }

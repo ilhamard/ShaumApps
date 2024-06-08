@@ -34,11 +34,14 @@ class TasbeehViewModel : ViewModel() {
             }
 
             is TasbeehUiEvent.EditTargetCount -> {
-                _uiState.value = _uiState.value.copy(isEditMode = !_uiState.value.isEditMode, newTargetCount = _uiState.value.targetCount.toString())
+                _uiState.value = _uiState.value.copy(
+                    isEditMode = !_uiState.value.isEditMode,
+                    newTargetCount = _uiState.value.targetCount.toString()
+                )
             }
 
             is TasbeehUiEvent.NewTargetCountChanged -> {
-                    _uiState.value = _uiState.value.copy(newTargetCount = event.targetCount)
+                _uiState.value = _uiState.value.copy(newTargetCount = event.targetCount)
             }
 
             is TasbeehUiEvent.ConfirmEditTargetCount -> {

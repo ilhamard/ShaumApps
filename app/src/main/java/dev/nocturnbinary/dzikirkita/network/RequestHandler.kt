@@ -13,17 +13,17 @@ import io.ktor.http.contentLength
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 
-class RequestHandler(val httpClient: HttpClient){
+class RequestHandler(val httpClient: HttpClient) {
 
     suspend inline fun <reified B, reified R> executeRequest(
         method: HttpMethod,
         urlPathSegments: List<Any>,
         body: B? = null,
         queryParams: Map<String, Any>? = null
-    ): NetworkResult<R>{
-        return withContext(Dispatchers.IO){
-            try{
-                val response = httpClient.prepareRequest{
+    ): NetworkResult<R> {
+        return withContext(Dispatchers.IO) {
+            try {
+                val response = httpClient.prepareRequest {
                     this.method = method
                     url {
                         val pathSegments = urlPathSegments.map { it.toString() }
@@ -38,13 +38,13 @@ class RequestHandler(val httpClient: HttpClient){
                 }.execute().body<R>()
 
                 NetworkResult.Success(response)
-            } catch (e: Exception){
-                val networkException = if (e is ResponseException){
-                    if (e.response.contentLength() == 0L){
+            } catch (e: Exception) {
+                val networkException = if (e is ResponseException) {
+                    if (e.response.contentLength() == 0L) {
                         NetworkException.UnknownException("No content received from server", e)
                     } else {
                         val errorBody = e.response.body<DefaultError>()
-                        when (e.response.status){
+                        when (e.response.status) {
                             HttpStatusCode.Unauthorized -> NetworkException.UnauthorizedException(
                                 errorBody.message,
                                 e

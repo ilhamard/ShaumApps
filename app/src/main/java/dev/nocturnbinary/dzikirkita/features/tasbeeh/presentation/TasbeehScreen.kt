@@ -304,7 +304,10 @@ private fun vibrationAlert(vibrator: Vibrator) {
 @Composable
 @DzikirKitaPreview
 private fun TasbeehPreview() {
-    Tasbeeh(uiState = TasbeehUiState(tasbeehCount = 10, targetCount = 33), onEvent = {}, navigateBack = {})
+    Tasbeeh(
+        uiState = TasbeehUiState(tasbeehCount = 10, targetCount = 33),
+        onEvent = {},
+        navigateBack = {})
 }
 
 @Composable
