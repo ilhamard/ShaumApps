@@ -6,5 +6,5 @@ data class DailyPrayerUiState(
     val dailyPrayer: List<DailyPrayerApiModel> = listOf(),
     val searchQuery: String = "",
     val isLoading: Boolean = false,
-    val errorMessage: String = ""
+    val errorMessage: String = "",
 )

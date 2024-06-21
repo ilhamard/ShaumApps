@@ -32,7 +32,7 @@ import dev.nocturnbinary.dzikirkita.utils.DzikirKitaPreview
 @Composable
 fun DailyPrayerDetailScreen(
     viewModel: DailyPrayerViewModel,
-    id: String
+    id: String,
 ) {
     LaunchedEffect(Unit) {
         viewModel.getPrayerDetail(id)

@@ -28,7 +28,7 @@ import dev.nocturnbinary.dzikirkita.utils.DzikirKitaPreview
 
 @Composable
 fun HaditsScreen(
-    viewModel: HaditsViewModel
+    viewModel: HaditsViewModel,
 ) {
     val uiState by viewModel.uiState.collectAsStateWithLifecycle()
 
@@ -38,7 +38,7 @@ fun HaditsScreen(
 @Composable
 fun Hadits(
     uiState: HaditsUiState,
-    onEvent: (HaditsUiEvent) -> Unit
+    onEvent: (HaditsUiEvent) -> Unit,
 ) {
     Column(
         modifier = Modifier

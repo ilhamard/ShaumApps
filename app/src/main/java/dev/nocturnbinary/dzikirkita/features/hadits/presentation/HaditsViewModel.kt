@@ -12,7 +12,7 @@ import javax.inject.Inject
 
 @HiltViewModel
 class HaditsViewModel @Inject constructor(
-    private val randomHaditsUseCase: GetRandomHaditsUseCase
+    private val randomHaditsUseCase: GetRandomHaditsUseCase,
 ) : ViewModel() {
 
     private val _uiState = MutableStateFlow(HaditsUiState())

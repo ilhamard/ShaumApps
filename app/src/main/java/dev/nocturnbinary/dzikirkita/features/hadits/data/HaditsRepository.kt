@@ -6,6 +6,6 @@ import dev.nocturnbinary.dzikirkita.network.Response
 interface HaditsRepository {
     suspend fun getRandomHadits(
         haditsRiwayat: String,
-        noHadits: Int
+        noHadits: Int,
     ): NetworkResult<Response<RandomHaditsApiModel>>
 }

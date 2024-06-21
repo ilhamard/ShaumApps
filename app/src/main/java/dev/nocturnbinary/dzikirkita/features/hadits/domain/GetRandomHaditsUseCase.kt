@@ -8,7 +8,7 @@ import javax.inject.Inject
 import kotlin.random.Random
 
 class GetRandomHaditsUseCase @Inject constructor(
-    private val haditsRepository: HaditsRepository
+    private val haditsRepository: HaditsRepository,
 ) {
 
     suspend fun invoke(): Resource<RandomHaditsApiModel> {

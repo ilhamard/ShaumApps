@@ -6,7 +6,7 @@ import dev.nocturnbinary.dzikirkita.network.NetworkResult
 import javax.inject.Inject
 
 class GetPrayerDetailUseCase @Inject constructor(
-    private val dailyPrayerRepository: DailyPrayerRepository
+    private val dailyPrayerRepository: DailyPrayerRepository,
 ) {
     suspend fun invoke(title: String): Resource<List<DailyPrayerApiModel>> {
         return when (val result = dailyPrayerRepository.getPrayerById(title)) {

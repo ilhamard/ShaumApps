@@ -5,7 +5,7 @@ import dev.nocturnbinary.dzikirkita.R
 
 data class AsmaulHusna(
     val asmaulHusna: String,
-    val asmaulHusnaMakna: String
+    val asmaulHusnaMakna: String,
 )
 
 object AsmaulHusnaData {

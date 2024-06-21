@@ -19,7 +19,7 @@ class RequestHandler(val httpClient: HttpClient) {
         method: HttpMethod,
         urlPathSegments: List<Any>,
         body: B? = null,
-        queryParams: Map<String, Any>? = null
+        queryParams: Map<String, Any>? = null,
     ): NetworkResult<R> {
         return withContext(Dispatchers.IO) {
             try {
@@ -100,7 +100,7 @@ class RequestHandler(val httpClient: HttpClient) {
 
     suspend inline fun <reified B, reified R> put(
         urlPathSegments: List<Any>,
-        body: B? = null
+        body: B? = null,
     ): NetworkResult<R> = executeRequest(
         method = HttpMethod.Put,
         urlPathSegments = urlPathSegments.toList(),

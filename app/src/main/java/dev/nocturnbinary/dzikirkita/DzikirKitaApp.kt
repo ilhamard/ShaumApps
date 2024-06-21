@@ -25,13 +25,13 @@ import dev.nocturnbinary.dzikirkita.features.dailyprayer.presentation.DailyPraye
 import dev.nocturnbinary.dzikirkita.features.hadits.presentation.HaditsScreen
 import dev.nocturnbinary.dzikirkita.features.home.presentation.HomeScreen
 import dev.nocturnbinary.dzikirkita.features.qibla.QiblaCompassScreen
-import dev.nocturnbinary.dzikirkita.features.tasbeeh.presentation.TasbeehScreen
+import dev.nocturnbinary.dzikirkita.features.tasbeeh.TasbeehScreen
 import dev.nocturnbinary.dzikirkita.ui.navigation.Screen
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun DzikirKitaApp(
-    navController: NavHostController = rememberNavController()
+    navController: NavHostController = rememberNavController(),
 ) {
     val navBackStackEntry by navController.currentBackStackEntryAsState()
     val currentRoute = navBackStackEntry?.destination?.route
@@ -79,10 +79,10 @@ fun DzikirKitaApp(
                 TasbeehScreen(viewModel = viewModel(), navController = navController)
             }
             composable(Screen.Qibla.route) {
-                QiblaCompassScreen()
+                QiblaCompassScreen(viewModel = hiltViewModel())
             }
             composable(Screen.AsmaulHusna.route) {
-                AsmaulHusnaScreen()
+                AsmaulHusnaScreen(viewModel = hiltViewModel())
             }
         }
     }

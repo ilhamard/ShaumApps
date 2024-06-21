@@ -1,16 +1,32 @@
-package dev.nocturnbinary.dzikirkita.features.dailyprayer.domain
+package dev.nocturnbinary.dzikirkita.features.prayerschedule.domain
 
-import dev.nocturnbinary.dzikirkita.features.dailyprayer.data.DailyPrayerApiModel
-import dev.nocturnbinary.dzikirkita.features.dailyprayer.data.DailyPrayerRepository
+import dev.nocturnbinary.dzikirkita.features.prayerschedule.data.PrayerScheduleApiModel
+import dev.nocturnbinary.dzikirkita.features.prayerschedule.data.PrayerScheduleRepository
 import dev.nocturnbinary.dzikirkita.network.NetworkException
 import dev.nocturnbinary.dzikirkita.network.NetworkResult
+import java.text.SimpleDateFormat
+import java.util.Date
+import java.util.Locale
 import javax.inject.Inject
 
-class GetDailyPrayerUseCase @Inject constructor(
-    private val dailyPrayerRepository: DailyPrayerRepository,
+class GetPrayerScheduleUseCase @Inject constructor(
+    private val prayerScheduleRepository: PrayerScheduleRepository,
 ) {
-    suspend fun invoke(): Resource<List<DailyPrayerApiModel>> {
-        return when (val result = dailyPrayerRepository.getDailyPrayer()) {
+    suspend fun invoke(
+        city: String = "Kota Jakarta Selatan",
+        country: String = "Indonesia",
+        method: Int = 11,
+    ): Resource<PrayerScheduleApiModel> {
+        val currentDate = Date()
+        val formatter = SimpleDateFormat("dd-MM-yyyy", Locale.getDefault())
+        val formattedDate = formatter.format(currentDate)
+
+        return when (val result = prayerScheduleRepository.getPrayerSchedule(
+            date = formattedDate,
+            city = city,
+            country = country,
+            method = method,
+        )) {
             is NetworkResult.Error -> result.toResourceError()
             is NetworkResult.Success -> Resource.Success(result.result)
         }

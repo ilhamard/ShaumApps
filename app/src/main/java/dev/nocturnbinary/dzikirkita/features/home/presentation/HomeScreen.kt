@@ -157,14 +157,17 @@ fun Home(
                                 style = MaterialTheme.typography.bodyMedium
                             )
                         }
-                        Spacer(modifier = Modifier.height(8.dp))
+                        Spacer(modifier = Modifier.height(12.dp))
                         Text(
-                            text = "Ashar 15:23 WIB",
+                            text = uiState.nextPrayerTime,
                             style = MaterialTheme.typography.titleLarge,
                             fontWeight = FontWeight.Bold
                         )
-                        Spacer(modifier = Modifier.height(8.dp))
-                        Text(text = "- 2 : 40 : 43", style = MaterialTheme.typography.bodyLarge)
+                        Spacer(modifier = Modifier.height(12.dp))
+                        Text(
+                            text = "- ${uiState.remainingTime}",
+                            style = MaterialTheme.typography.titleLarge
+                        )
                     }
                 }
             }

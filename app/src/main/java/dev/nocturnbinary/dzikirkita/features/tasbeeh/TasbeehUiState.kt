@@ -1,4 +1,4 @@
-package dev.nocturnbinary.dzikirkita.features.tasbeeh.presentation
+package dev.nocturnbinary.dzikirkita.features.tasbeeh
 
 data class TasbeehUiState(
     val tasbeehCount: Int = 0,
@@ -7,5 +7,5 @@ data class TasbeehUiState(
     val progressCount: Float = 0f,
     val isVibrateAlert: Boolean = false,
     val isSoundAlert: Boolean = false,
-    val isEditMode: Boolean = false
+    val isEditMode: Boolean = false,
 )

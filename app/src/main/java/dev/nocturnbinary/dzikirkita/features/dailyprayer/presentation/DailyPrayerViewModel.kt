@@ -16,7 +16,7 @@ import javax.inject.Inject
 class DailyPrayerViewModel @Inject constructor(
     private val getDailyPrayerUseCase: GetDailyPrayerUseCase,
     private val getPrayerDetailUseCase: GetPrayerDetailUseCase,
-    private val getSearchDailyPrayerUseCase: GetSearchDailyPrayerUseCase
+    private val getSearchDailyPrayerUseCase: GetSearchDailyPrayerUseCase,
 ) : ViewModel() {
 
     private val _uiState = MutableStateFlow(DailyPrayerUiState())

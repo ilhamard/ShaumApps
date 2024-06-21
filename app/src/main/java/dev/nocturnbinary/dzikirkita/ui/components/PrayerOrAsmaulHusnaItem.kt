@@ -35,7 +35,7 @@ fun PrayerOrAsmaulHusnaItem(
     title: String,
     moveToDetail: () -> Unit = {},
     isUpDownVote: Boolean = false,
-    description: String = ""
+    description: String = "",
 ) {
     var isDescriptionVisible by remember { mutableStateOf(false) }
 

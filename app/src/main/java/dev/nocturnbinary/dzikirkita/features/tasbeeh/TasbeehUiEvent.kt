@@ -1,4 +1,4 @@
-package dev.nocturnbinary.dzikirkita.features.tasbeeh.presentation
+package dev.nocturnbinary.dzikirkita.features.tasbeeh
 
 sealed class TasbeehUiEvent {
     data object IncrementTasbeehCount : TasbeehUiEvent()

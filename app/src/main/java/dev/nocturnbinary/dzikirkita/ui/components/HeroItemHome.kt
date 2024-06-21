@@ -29,7 +29,7 @@ fun HeroItemHome(
     modifier: Modifier = Modifier,
     @DrawableRes image: Int = R.drawable.ihwan,
     title: String = "Jadwal Shalat",
-    moveToDetail: () -> Unit = {}
+    moveToDetail: () -> Unit = {},
 ) {
     Column(
         modifier = modifier,

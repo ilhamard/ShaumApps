@@ -35,7 +35,7 @@ import dev.nocturnbinary.dzikirkita.utils.DzikirKitaPreview
 @Composable
 fun DailyPrayerScreen(
     viewModel: DailyPrayerViewModel,
-    navController: NavController
+    navController: NavController,
 ) {
     val uiState by viewModel.uiState.collectAsStateWithLifecycle()
 
@@ -49,7 +49,7 @@ fun DailyPrayerScreen(
 fun DailyPrayer(
     uiState: DailyPrayerUiState,
     onEvent: (DailyPrayerUiEvent) -> Unit,
-    moveToDetail: (String) -> Unit
+    moveToDetail: (String) -> Unit,
 ) {
     val keyboardController = LocalSoftwareKeyboardController.current
 

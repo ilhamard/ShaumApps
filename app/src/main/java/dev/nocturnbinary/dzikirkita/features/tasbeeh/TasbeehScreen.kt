@@ -1,4 +1,4 @@
-package dev.nocturnbinary.dzikirkita.features.tasbeeh.presentation
+package dev.nocturnbinary.dzikirkita.features.tasbeeh
 
 import android.content.Context
 import android.media.MediaPlayer

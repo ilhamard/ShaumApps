@@ -35,6 +35,7 @@ android {
         debug {
             buildConfigField("String", "RANDOM_HADITS_HOST", "\"api.hadith.gading.dev\"")
             buildConfigField("String", "DAILY_PRAYER_HOST", "\"doa-doa-api-ahmadramadhan.fly.dev\"")
+            buildConfigField("String", "PRAYER_SCHEDULE_HOST", "\"api.aladhan.com\"")
         }
     }
     compileOptions {

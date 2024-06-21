@@ -5,7 +5,7 @@ import dev.nocturnbinary.dzikirkita.network.RequestHandler
 import javax.inject.Inject
 
 class DailyPrayerRepositoryImpl @Inject constructor(
-    private val requestHandler: RequestHandler
+    private val requestHandler: RequestHandler,
 ) : DailyPrayerRepository {
     override suspend fun getDailyPrayer(): NetworkResult<List<DailyPrayerApiModel>> {
         return requestHandler.get(
