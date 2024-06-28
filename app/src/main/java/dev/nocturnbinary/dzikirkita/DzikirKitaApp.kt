@@ -46,7 +46,7 @@ fun DzikirKitaApp(
                 TopAppBar(
                     title = { Text(text = "Dzikir Kita") },
                     navigationIcon = {
-                        IconButton(onClick = { }) {
+                        IconButton(onClick = { navController.navigateUp() }) {
                             Icon(
                                 imageVector = Icons.Default.ArrowBack,
                                 contentDescription = "Kembali"

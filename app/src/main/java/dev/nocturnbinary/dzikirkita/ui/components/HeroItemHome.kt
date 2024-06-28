@@ -11,6 +11,7 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -38,7 +39,7 @@ fun HeroItemHome(
     ) {
         Box(
             modifier = Modifier
-                .size(64.dp)
+                .size(56.dp)
                 .clip(CircleShape)
                 .background(secondary)
                 .clickable { moveToDetail() },
@@ -47,11 +48,11 @@ fun HeroItemHome(
             Image(
                 painter = painterResource(id = image),
                 contentDescription = "Ikhwan",
-                modifier = Modifier.size(42.dp),
+                modifier = Modifier.size(36.dp),
             )
         }
         Spacer(modifier = Modifier.height(4.dp))
-        Text(title, color = textTwo, textAlign = TextAlign.Center)
+        Text(title, color = textTwo, textAlign = TextAlign.Center, style = MaterialTheme.typography.bodySmall)
     }
 }
 
