@@ -52,7 +52,7 @@ fun HeroItemHome(
             )
         }
         Spacer(modifier = Modifier.height(4.dp))
-        Text(title, color = textTwo, textAlign = TextAlign.Center, style = MaterialTheme.typography.bodySmall)
+        Text(title, color = textTwo, textAlign = TextAlign.Center, style = MaterialTheme.typography.bodyMedium)
     }
 }
 

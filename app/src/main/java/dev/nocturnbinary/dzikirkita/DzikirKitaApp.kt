@@ -24,6 +24,7 @@ import dev.nocturnbinary.dzikirkita.features.dailyprayer.presentation.DailyPraye
 import dev.nocturnbinary.dzikirkita.features.dailyprayer.presentation.DailyPrayerScreen
 import dev.nocturnbinary.dzikirkita.features.hadits.presentation.HaditsScreen
 import dev.nocturnbinary.dzikirkita.features.home.presentation.HomeScreen
+import dev.nocturnbinary.dzikirkita.features.prayerschedule.presentation.PrayerScheduleScreen
 import dev.nocturnbinary.dzikirkita.features.qibla.QiblaCompassScreen
 import dev.nocturnbinary.dzikirkita.features.tasbeeh.TasbeehScreen
 import dev.nocturnbinary.dzikirkita.ui.navigation.Screen
@@ -83,6 +84,9 @@ fun DzikirKitaApp(
             }
             composable(Screen.AsmaulHusna.route) {
                 AsmaulHusnaScreen(viewModel = hiltViewModel())
+            }
+            composable(Screen.PrayerSchedule.route){
+                PrayerScheduleScreen(viewModel = hiltViewModel())
             }
         }
     }

@@ -59,8 +59,7 @@ class AppModule {
     fun provideAsmaulHusnaRepository(impl: AsmaulHusnaRepositoryImpl): AsmaulHusnaRepository = impl
 
     @Provides
-    fun providePrayerScheduleRepository(impl: PrayerScheduleRepositoryImpl): PrayerScheduleRepository =
-        impl
+    fun providePrayerScheduleRepository(impl: PrayerScheduleRepositoryImpl): PrayerScheduleRepository = impl
 
     @Provides
     fun provideContext(@ApplicationContext context: Context): Context = context

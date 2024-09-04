@@ -13,16 +13,14 @@ class GetPrayerScheduleUseCase @Inject constructor(
     private val prayerScheduleRepository: PrayerScheduleRepository,
 ) {
     suspend fun invoke(
+        date: String = SimpleDateFormat("dd-MM-yyyy", Locale.getDefault()).format(Date()),
         city: String = "Kota Jakarta Selatan",
         country: String = "Indonesia",
         method: Int = 11,
     ): Resource<PrayerScheduleApiModel> {
-        val currentDate = Date()
-        val formatter = SimpleDateFormat("dd-MM-yyyy", Locale.getDefault())
-        val formattedDate = formatter.format(currentDate)
 
         return when (val result = prayerScheduleRepository.getPrayerSchedule(
-            date = formattedDate,
+            date = date,
             city = city,
             country = country,
             method = method,

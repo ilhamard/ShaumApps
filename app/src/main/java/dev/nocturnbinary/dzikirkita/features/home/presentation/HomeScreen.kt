@@ -179,7 +179,8 @@ fun Home(
                 HeroItemHome(
                     image = R.drawable.jam,
                     title = "Jadwal Shalat",
-                    modifier = Modifier.weight(1f)
+                    modifier = Modifier.weight(1f),
+                    moveToDetail = { moveTo(Screen.PrayerSchedule) }
                 )
                 HeroItemHome(
                     image = R.drawable.kiblat,
